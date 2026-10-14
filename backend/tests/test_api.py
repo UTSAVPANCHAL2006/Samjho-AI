@@ -307,3 +307,20 @@ def testEveryoneTogetherHasACeiling(client: Any, monkeypatch: Any) -> None:
         for number in range(3)
     ]
     assert codes[2] == 429  # three different people, but the shared ceiling was 2
+
+
+def testTheLessonIsPreparedWhileTheStudentReadsTheRedPen(client: TestClient, ai: FakeAi, settings: Any) -> None:
+    # The board takes several AI calls (~15 s live): it is started as soon as the red pen is ready, and asking for it
+    # waits for that work instead of doing it twice.
+    from app.api import checks
+
+    settings.prepare_ahead = True
+    attempt = client.post("/api/checks/typed", json={"question_id": QUADRATIC, "lines": ["(x+2)(x+3)=0", "x=-2", "x=-3"]})
+    checkId = attempt.json()["id"]
+    assert checkId in checks.preparing
+    prepared = checks.preparing[checkId].result(timeout=60)
+    assert prepared and prepared["complete"] and prepared["visual"]
+    callsAfterPreparing = len(ai.calls)
+    board = client.get(f"/api/checks/{checkId}/visual", params={"language": "hinglish"}).json()
+    assert board == prepared and len(ai.calls) == callsAfterPreparing  # served from the background work, no new AI call
+    assert client.post("/api/tutor", json={"check_id": checkId, "language": "hinglish"}).status_code == 201

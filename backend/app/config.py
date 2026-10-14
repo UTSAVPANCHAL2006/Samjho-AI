@@ -42,6 +42,8 @@ class Settings(BaseSettings):
 
     # Lines the vision model is less sure about than this must be confirmed by the student.
     confidence_threshold: float = 0.80
+    # After the red pen, prepare the lesson (board + tutor steps) in the background while the student reads it.
+    prepare_ahead: bool = True
 
     # AI models, tried in this order. Every provider speaks the OpenAI chat API.
     # Each entry is "provider:model"; providers: openai, groq, gemini, openrouter. A provider without a key is skipped.

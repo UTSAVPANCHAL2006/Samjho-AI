@@ -83,6 +83,7 @@ def settings(tmp_path: Path) -> Settings:
         openrouter_api_key="",
         speech_provider="browser",
         sarvam_api_key="",
+        prepare_ahead=False,  # background work would race the assertions; one test turns it on
     )
 
 

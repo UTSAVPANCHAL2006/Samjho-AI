@@ -8,6 +8,7 @@ from app.agents.solution import getDetailedSteps
 from app.agents.tutor import TutorState, buildTeachingSteps, findRootLine, runTutorTurn
 from app.ai.models import AiModels
 from app.api import getAi
+from app.api.checks import LESSON_LANGUAGE, waitForPreparation
 from app.db import Check, TutorChat, getDbSession
 from app.schemas import BoardLine, BoardScene, TutorMessageIn, TutorOut, TutorStartIn
 
@@ -90,6 +91,8 @@ def startChat(body: TutorStartIn, session: Session = Depends(getDbSession), ai: 
         raise HTTPException(404, "Check not found.")
     if check.wrong_line is None and check.score >= check.question.marks:
         raise HTTPException(409, "Full marks — there is no mistake to talk about in this check.")
+    if body.language == LESSON_LANGUAGE and waitForPreparation(check.id) is not None:
+        session.expire(check.question)  # the walkthrough steps were just saved by the background work: read them again
     chat = TutorChat(check_id=check.id, check=check, language=body.language, stage="start", messages=[])
     session.add(chat)
     return runTurn(session, chat, "", ai)

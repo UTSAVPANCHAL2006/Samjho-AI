@@ -3,6 +3,7 @@
 
 
 import logging
+from concurrent.futures import Future, ThreadPoolExecutor
 from typing import Any
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile
@@ -37,6 +38,14 @@ router = APIRouter(prefix="/checks", tags=["checks"])
 logger = logging.getLogger(__name__)
 
 MAX_PHOTO_BYTES = 10 * 1024 * 1024
+
+# The lesson after the red pen (the "Understand the mistake" board and the tutor's step-by-step solution) takes several
+# AI calls: ~15 s on the live server. It is started the moment the red pen is ready, while the student reads it; the
+# lesson request then waits for that work instead of starting it again.
+LESSON_LANGUAGE = "hinglish"  # the lesson's default language; another language is made when asked
+PREPARE_WAIT_SECONDS = 90
+preparer = ThreadPoolExecutor(max_workers=2, thread_name_prefix="prepare")
+preparing: dict[str, Future[dict[str, Any] | None]] = {}
 
 
 def loadCheck(session: Session, checkId: str) -> Check:
@@ -81,7 +90,40 @@ def gradeAndSave(session: Session, check: Check, ai: AiModels, settings: Setting
     check.explanation = PHOTO_PROBLEMS.get(result.get("explanation") or "", result.get("explanation"))
     check.mistake = result.get("mistake")
     session.commit()
+    if settings.prepare_ahead and check.status == "graded" and check.wrong_line:
+        startPreparing(session, check.id, ai)
     return toCheckOut(check, settings.confidence_threshold)
+
+
+def startPreparing(session: Session, checkId: str, ai: AiModels) -> None:
+    for key in [key for key, future in preparing.items() if future.done()]:
+        preparing.pop(key, None)  # finished work nobody asked for: it is in the AI cache and the database anyway
+    engine = session.get_bind()
+    preparing[checkId] = preparer.submit(prepareLesson, engine, checkId, ai)
+
+
+def prepareLesson(engine: Any, checkId: str, ai: AiModels) -> dict[str, Any] | None:
+    """Runs in the background with its own database session. Never raises: the lesson is simply made on request."""
+    try:
+        with Session(bind=engine) as session:
+            check = loadCheck(session, checkId)
+            getDetailedSteps(check.question, LESSON_LANGUAGE, ai)  # the tutor's walkthrough, saved on the question
+            session.commit()
+            return buildCheckVisual(session, check, LESSON_LANGUAGE, ai)
+    except Exception:
+        logger.warning("preparing the lesson failed; it will be made when asked", exc_info=True)
+        return None
+
+
+def waitForPreparation(checkId: str) -> dict[str, Any] | None:
+    """The board prepared in the background (waiting for it if it is still being made), or None."""
+    future = preparing.get(checkId)
+    if future is None:
+        return None
+    try:
+        return future.result(timeout=PREPARE_WAIT_SECONDS)
+    except Exception:
+        return None
 
 
 def newCheck(session: Session, questionId: str, studentId: str | None, lines: list[str]) -> Check:
@@ -208,6 +250,14 @@ def getCheckVisual(
 ) -> dict[str, Any]:
     """The concept visual for this attempt: it shows the student's own mistake when there is one."""
     check = loadCheck(session, check_id)
+    if language == LESSON_LANGUAGE:
+        prepared = waitForPreparation(check_id)
+        if prepared and prepared.get("complete"):
+            return prepared
+    return buildCheckVisual(session, check, language, ai)
+
+
+def buildCheckVisual(session: Session, check: Check, language: str, ai: AiModels) -> dict[str, Any]:
     question = check.question
     if check.status != "graded":
         return {"visual": None}
