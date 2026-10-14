@@ -258,7 +258,23 @@ def understandMessage(state: TutorState) -> dict[str, Any]:
         claimCheck = checkClaim(state, claim)
         if askedCorrect is None or claimCheck.get("fixCorrect") is True:
             result.update(claimCheck)  # an answer to a small question is not a failed attempt at the whole line
+    ending = findLastMaths(text) if text else None
+    if ending and ending != claim and stage in ("hints", "walkthrough") and givesFinalAnswer(state, ending):
+        # '21 + 4 = 25, so x = 5': the longest maths is the working, but they ENDED on the right answer. A tutor
+        # that then asks "what is 21 + 4?" is not listening.
+        result["fixCorrect"] = True
     return result
+
+
+def findLastMaths(text: str) -> str | None:
+    """The part the message ends on, after its last 'so' / 'toh' / 'then': '21 + 4 = 25, so x = 5' -> 'x = 5'.
+    It is given to the answer checker whole, so 'x = 2, 3' stays one answer with two roots."""
+    pieces = re.split(r"\.\s|\b(?:so|toh|to|then|therefore|hence|isliye|matlab)\b", text, flags=re.IGNORECASE)
+    for piece in reversed(pieces):
+        piece = piece.strip(" .,:;?!")
+        if re.search(r"\d", piece):
+            return piece
+    return None
 
 
 def buildTeachingSteps(steps: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -450,6 +466,28 @@ FALLBACK_REPLIES = {
 }
 
 
+FALLBACK_REPLIES_EN = {
+    "probe": "Look at line {root_line}: ${root_latex}$. Say the rule you used in this line once more.",
+    "guide_next": "Right! Now look at line {root_line} again: ${root_latex}$. What should change in it?",
+    "guide_retry": "Careful: this gives ${asked_value}$. Now let's go back to line {root_line}.",
+    "diagnose": "{claim_facts} Now look again: where did it go wrong?",
+    "chat_hint": "Look at line {wrong_line}: {facts}",
+    "strong_hint": "Hint: {facts} Now write line {wrong_line} again.",
+    "ask_one_try": "Try once yourself; if you are still stuck, I will show the full solution. Hint: {facts} Now write line {wrong_line} again.",
+    "reveal": "The right answer is ${answer}$. The mistake in line {wrong_line} was: {facts}",
+    "praise": "Well done, you found the mistake yourself!",
+    "walk_start": "Let's do it together. {done_step} Now you tell me: {next_explain}",
+    "walk_next": "Exactly right! {done_step} Next: {next_explain}",
+    "walk_show": "Here we get {done_step} Next: {next_explain}",
+    "walk_simpler": "No problem, let's take a smaller step: {current_explain} What do you get?",
+    "walk_chat": "Let's come back to this step: {current_explain}",
+    "walk_done": "Exactly right! {done_step} Answer: ${answer}$.",
+    "walk_show_done": "Here we get {done_step} So the answer is ${answer}$.",
+    "quick_check_result": "The right answer is ${quick_answer}$. There is a practice question below.",
+    "chat": "Try the practice question — I am right here.",
+}
+
+
 def stepText(steps: list[dict[str, Any]], index: int | None, key: str | None = None) -> str:
     if index is None or not 0 <= index < len(steps):
         return ""
@@ -472,7 +510,8 @@ def buildValues(state: TutorState) -> dict[str, Any]:
         "answer": checker.formatAnswer(state["question"]["answer"]),
         # walk_start explains step 1; walk_next/walk_show confirm the step just worked out, then ask the next one.
         "done_step": stepText(steps, 0 if state["task"] == "walk_start" else current),
-        "next_explain": stepText(steps, state.get("nextStep") or 0, "explain") or "agla step kya hoga?",
+        "next_explain": stepText(steps, state.get("nextStep") or 0, "explain")
+        or ("what is the next step?" if state["language"] == "en" else "agla step kya hoga?"),
         "next_result": stepText(steps, state.get("nextStep") or 0, "latex"),
         "current_explain": stepText(steps, current, "explain") or state["facts"],
         "current_result": stepText(steps, current, "latex"),
@@ -508,7 +547,8 @@ def writeReply(state: TutorState, ai: AiModels) -> dict[str, Any]:
         for turn in (state.get("history") or [])[-8:]:
             messages.append({"role": "user" if turn["role"] == "student" else "assistant", "content": turn["text"]})
         messages.append({"role": "user", "content": state.get("studentText") or "(start)"})
-        reply, asked = splitAsked(ai.askText(messages) or FALLBACK_REPLIES[task].format(**values))
+        fallbacks = FALLBACK_REPLIES_EN if state["language"] == "en" else FALLBACK_REPLIES
+        reply, asked = splitAsked(ai.askText(messages) or fallbacks[task].format(**values))
         reply = restoreLostBackslashes(cleanAddress(" ".join(re.split(r"(?<=[.!?])\s+", reply.strip())[:6])[:800]))
     if state["nextStage"] != "hints":
         asked = None  # small questions are only tracked while guiding towards the fix

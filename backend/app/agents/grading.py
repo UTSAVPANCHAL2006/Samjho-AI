@@ -187,7 +187,7 @@ def guardZeroWithPi(state: GradingState) -> dict[str, Any]:
         return {"lines": lines, "status": "needs_confirmation"}
     if reason:
         return {**zero, "status": reason}
-    if not checker.isFinalAnswerCorrect(question["answer"], latexLines):
+    if not checker.isFinalAnswerCorrect(question["answer"], checker.hideCheckLines(question["answer"], latexLines)):
         # Working for a different question (another chapter exercise, a wrong page) scores 0, with the proof.
         other = checker.findOtherQuestion(
             question.get("text") or "", question["expressions"] or [], question["answer"], latexLines
@@ -214,15 +214,16 @@ def checkStepsWithPi(state: GradingState) -> dict[str, Any]:
     # value is right even when nothing before it can be compared.
     referenceValues = checker.readReferenceValues(question.get("solution") or [], question.get("text") or "")
     steps = checker.markValueLines(steps, question["answer"], latexLines, referenceValues)
-    isAnswerCorrect = checker.isFinalAnswerCorrect(question["answer"], latexLines)
-    if checker.isWrongFinalAnswer(question["answer"], latexLines):
+    answerLines = checker.hideCheckLines(question["answer"], latexLines)  # a check after the answer is not the answer
+    isAnswerCorrect = checker.isFinalAnswerCorrect(question["answer"], answerLines)
+    if checker.isWrongFinalAnswer(question["answer"], answerLines):
         # The answer key decides first: the stated answer is provably wrong, so the mistake is the line where that
         # wrong value first appears (every later line only simplifies it) — even when each line follows from the
         # one before it — and the wrong answer line itself.
         first = checker.findFirstWrongLine(steps)
-        root = checker.findWrongValueLine(question["answer"], latexLines)
-        answerLine = checker.findLastValueLine(latexLines)
-        if answerLine and answerLine != checker.findLastMathsLine(latexLines):
+        root = checker.findWrongValueLine(question["answer"], answerLines)
+        answerLine = checker.findLastValueLine(answerLines)
+        if answerLine and answerLine != checker.findLastMathsLine(answerLines):
             # The real answer line below it could not be read: this line only carries the value, so it keeps its
             # 'carried' mark — one mistake gets one ✗, never a second one on a line in between.
             answerLine = None
@@ -290,7 +291,7 @@ def findMistake(question: dict[str, Any], latexLines: list[str], wrongLine: int)
     slip = findQuadraticFormulaSlip(question["expressions"] or [], wrongLatex)
     if slip:
         return slip
-    isValueRoot = checker.findWrongValueLine(question["answer"], latexLines) == wrongLine
+    isValueRoot = checker.findWrongValueLine(question["answer"], checker.hideCheckLines(question["answer"], latexLines)) == wrongLine
     traps = question.get("traps") or []
     value = checker.readLineValues(latexLines)[wrongLine - 1]
     if isValueRoot:

@@ -1,5 +1,6 @@
 # The two LangGraph agents with a fake AI: GradingGraph (red pen) and TutorGraph (the conversation).
 
+import re
 from pathlib import Path
 from typing import Any
 
@@ -675,3 +676,52 @@ def testMathsThatLostItsBackslashesIsRepairedForDisplay() -> None:
     assert restoreLostBackslashes("angle $90^circ$ (use $pi = 22/7$)") == "angle $90^\\circ$ (use $\\pi = 22/7$)"
     assert restoreLostBackslashes("Say pi times two") == "Say pi times two"  # words outside maths are untouched
     assert restoreLostBackslashes("$\\frac{1}{2}$") == "$\\frac{1}{2}$"  # correct LaTeX is unchanged
+
+
+LINEAR = {
+    "text": "Solve 5x - 4 = 21",
+    "expressions": ["5x - 4 = 21"],
+    "answer": {"type": "solution_set", "variable": "x", "values": ["5"]},
+    "marks": 3,
+    "class_level": 7,
+}
+
+
+def testACheckLineAfterTheRightAnswerIsNotAMistake(ai: FakeAi) -> None:
+    # Students verify: 'Check: 5(5) - 4 = 21'. It was once marked ✗ ("is 21, not 21") and the right answer lost 2 marks.
+    for check in ["\\text{Check: } 5(5) - 4 = 21", "5 \\times 5 - 4 = 21", "LHS = 5(5) - 4 = 21 = RHS"]:
+        result = gradeLines(ai, LINEAR, ["5x - 4 = 21", "5x = 25", "x = 5", check])
+        assert (result["score"], result["wrongLine"]) == (3, None), check
+
+
+def testAWrongAnswerIsStillCaughtWhenACheckFollows(ai: FakeAi) -> None:
+    # The check line hides nothing: a wrong answer, or a false 'check', still costs the marks.
+    wrong = gradeLines(ai, LINEAR, ["5x - 4 = 21", "5x = 17", "x = 17/5", "5(17/5) - 4 = 13"])
+    assert wrong["wrongLine"] == 2 and wrong["score"] < 3
+    falseCheck = gradeLines(ai, LINEAR, ["5x - 4 = 21", "5x = 25", "x = 5", "5(5) - 4 = 20"])
+    assert falseCheck["wrongLine"] == 4
+
+
+def testRootsWrittenOnOneLineAreTheFinalAnswer(ai: FakeAi) -> None:
+    # 'x = 2, 3' is how many students list the roots; it lost the answer mark.
+    for last in ["x = 2, 3", "x = 3, 2", "x = 2 \\text{ or } 3", "x = 2 and 3"]:
+        result = grade(ai, ["x^2 - 2x - 3x + 6 = 0", "x(x - 2) - 3(x - 2) = 0", "(x - 2)(x - 3) = 0", last])
+        assert (result["score"], result["wrongLine"]) == (3, None), last
+    assert grade(ai, ["(x - 2)(x - 3) = 0", "x = 2, 4"])["score"] < 3  # a wrong root still loses the mark
+
+
+def testAStudentWhoEndsOnTheRightAnswerHasFixedIt(ai: FakeAi) -> None:
+    # '... so x = 2, 3' ends on the answer; the tutor once asked "what is 21 + 4?" after a full, right fix.
+    for text in ["x^2 - 5x + 6 = (x-2)(x-3), so x = 2, 3", "pehle 6 = 2 \\times 3 hai, toh x = 2 or x = 3"]:
+        result = runTutorTurn(ai, tutorState("hints", text))
+        assert result["fixCorrect"] is True, text
+        assert result["task"] == "praise"  # not another small question
+
+
+def testEnglishChatNeverFallsBackToHinglish(ai: FakeAi) -> None:
+    # When every AI model is down, an English chat must still get English, not 'Sahi! ... dekho'.
+    from app.agents.tutor import FALLBACK_REPLIES, FALLBACK_REPLIES_EN
+
+    assert FALLBACK_REPLIES_EN.keys() == FALLBACK_REPLIES.keys()
+    result = runTutorTurn(ai, tutorState("hints", "(x+1)(x+6)=0", language="en"))
+    assert result["reply"] and not re.search(r"\b(dekho|sahi|galti|ab|karo|hai)\b", result["reply"], re.IGNORECASE)

@@ -494,3 +494,8 @@ def testEachLineIsParsedOnlyOnce(monkeypatch: pytest.MonkeyPatch) -> None:
     with pytest.raises(LatexParseError):
         parser.parseLatex("\\frac{")  # a line that cannot be read stays unreadable, from the cache too
     assert len(calls) == 3  # '3x + 7', '22', '\\frac{' — each once
+
+
+def testOneNumberWithAThousandsCommaIsNotTwoRoots() -> None:
+    assert checker.splitAnswerLines(["x = 1,000"]) == ["x = 1,000"]
+    assert checker.splitAnswerLines(["x = 2, 3"]) == ["x = 2", "x = 3"]

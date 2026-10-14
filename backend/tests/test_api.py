@@ -282,3 +282,28 @@ def testBlankQuestionPhotoIsNeverSentToTheAi(client: TestClient, ai: FakeAi) -> 
     assert response.json()["status"] == "parse_failed"
     assert "retake" in response.json()["message"]
     assert "image" not in ai.calls
+
+
+def testAFakeForwardedAddressDoesNotGetPastTheLimit(client: Any, monkeypatch: Any) -> None:
+    # X-Forwarded-For is written by the caller: a new fake address per request once walked past the limit.
+    import app.main
+
+    monkeypatch.setitem(app.main.RATE_LIMITS, "photo", 2)
+    codes = [
+        client.post("/api/checks/typed", json={}, headers={"X-Forwarded-For": f"10.0.0.{number}"}).status_code
+        for number in range(3)
+    ]
+    assert codes[2] == 429
+    # Behind Cloudflare each real person has their own address and their own limit.
+    assert client.post("/api/checks/typed", json={}, headers={"CF-Connecting-IP": "203.0.113.9"}).status_code != 429
+
+
+def testEveryoneTogetherHasACeiling(client: Any, monkeypatch: Any) -> None:
+    import app.main
+
+    monkeypatch.setitem(app.main.ALL_VISITORS_LIMITS, "photo", 2)
+    codes = [
+        client.post("/api/checks/typed", json={}, headers={"CF-Connecting-IP": f"203.0.113.{number}"}).status_code
+        for number in range(3)
+    ]
+    assert codes[2] == 429  # three different people, but the shared ceiling was 2

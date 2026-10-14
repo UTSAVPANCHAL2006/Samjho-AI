@@ -377,10 +377,20 @@ def checkSteps(
     names: list[str] = ["*" for _ in history]
     for lineNo, latex in enumerate(lines, start=1):
         name = readQuantityName(latex)
+        roots = splitAnswerLines([latex]) if latex.count("=") == 1 else [latex]
         try:
-            step, current = checkOneLine(
-                lineNo, latex, history, questionSymbols, copyKeys, coefficients, given, knownPoint, names, name
-            )
+            if len(roots) > 1:
+                # 'x = 2, 3': each root is checked like its own 'x = 2' line; all must be right for a ✓
+                verdicts = [
+                    checkOneLine(lineNo, root, history, questionSymbols, copyKeys, coefficients, given, knownPoint)[0].verdict
+                    for root in roots
+                ]
+                verdict = INCORRECT if INCORRECT in verdicts else CORRECT if set(verdicts) == {CORRECT} else UNVERIFIABLE
+                step, current = Step(lineNo, verdict, isAnswerLine=True), None
+            else:
+                step, current = checkOneLine(
+                    lineNo, latex, history, questionSymbols, copyKeys, coefficients, given, knownPoint, names, name
+                )
         except MATHS_ERRORS as error:
             # SymPy could not handle this line. Never accuse on a crash: the line is simply not checked.
             logger.warning("line %s could not be checked: %s", lineNo, type(error).__name__)
@@ -527,11 +537,21 @@ def readValue(value: str) -> sympy.Expr:
     return sympy.nsimplify(parsed) if isinstance(parsed, sympy.Expr) else sympy.nan
 
 
+ANSWER_SEPARATOR = r",|;|\\text\{\s*(?:or|and)\s*\}|\b(?:or|and)\b"
+
+
 def splitAnswerLines(lines: list[str]) -> list[str]:
-    """'x = -2, y = 5' or 'x = 2 or x = 3' on one line -> separate lines, like students also write them."""
+    """'x = -2, y = 5' or 'x = 2 or x = 3' on one line -> separate lines, like students also write them.
+    'x = 2, 3' (one letter, several roots) -> 'x = 2', 'x = 3'. '1,000' is one number, never two roots."""
     split: list[str] = []
     for line in lines:
-        parts = re.split(r",|;|\\text\{\s*(?:or|and)\s*\}|\b(?:or|and)\b", line) if line.count("=") > 1 else [line]
+        if line.count("=") > 1:
+            parts = re.split(ANSWER_SEPARATOR, line)
+        else:
+            roots = re.match(r"^\s*([A-Za-z])\s*=\s*(.+)$", line)
+            values = re.split(ANSWER_SEPARATOR, roots.group(2)) if roots and not re.search(r"\d,\d{3}\b", line) else []
+            values = [value.strip() for value in values if value.strip()]
+            parts = [f"{roots.group(1)} = {value}" for value in values] if roots and len(values) > 1 else [line]
         split.extend(part.strip() for part in parts if part.strip())
     return split
 
@@ -863,6 +883,47 @@ def readFinalValue(line: str) -> sympy.Expr | None:
         if isinstance(value, sympy.Expr) and value.is_number:
             return sympy.nsimplify(value)
     return None
+
+
+def hideCheckLines(answer: dict[str, Any], lines: list[str]) -> list[str]:
+    """Lines after the right answer that only check it ('Check: 5(5) - 4 = 21': a true sum with no unknown) are not
+    a new final answer. They become '' for the final-answer questions, so line numbers stay the same. A true sum
+    can never be a mistake; without this, '21' was compared with x = 5 and a right solution lost marks."""
+    expected = numericAnswerValue(answer)
+    if expected is None:
+        return lines
+    values = readLineValues(lines)
+    reached = [index for index, value in enumerate(values) if value is not None and isMatchingValue(value, expected)]
+    if not reached:
+        return lines
+    shown = list(lines)
+    for index in range(len(lines) - 1, reached[0], -1):
+        if not shown[index].strip() or not re.search(r"\d|=", normalizeLatex(shown[index])):
+            continue  # a word line ('Hence verified') changes nothing
+        if not (isTrueNumberStatement(shown[index]) or CHECK_SIDE_NAME.match(shown[index])):
+            break
+        shown[index] = ""
+    return shown
+
+
+CHECK_SIDE_NAME = re.compile(r"^\s*(\\text\{\s*)?(check\W*)?[LR]\.?\s*H\.?\s*S\.?\s*(\}\s*)?=", re.IGNORECASE)  # 'LHS = ...', 'R.H.S. = ...'
+
+
+def isTrueNumberStatement(latex: str) -> bool:
+    """'5(5) - 4 = 21': both sides are numbers, there is working on the left, and the two sides are equal."""
+    try:
+        parsed = parseLatex(prepareLine(latex))
+    except LatexParseError:
+        return False
+    if not isinstance(parsed, sympy.Eq) or parsed.free_symbols:
+        return False
+    left = normalizeLatex(prepareLine(latex)).split("=")[0]
+    if re.fullmatch(r"\s*-?[\d.]+\s*", left):
+        return False  # '21 = 21' or a bare value: no working to check, so it is an answer, not a check
+    try:
+        return bool(sympy.simplify(parsed.lhs - parsed.rhs) == 0)
+    except MATHS_ERRORS:
+        return False
 
 
 def isWrongFinalAnswer(answer: dict[str, Any], lines: list[str]) -> bool:

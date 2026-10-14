@@ -5,7 +5,7 @@
 // One small state machine keeps every screen predictable.
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { api, ApiError, type Check, type Question } from "@/lib/api";
 import { ensureStudentId } from "@/lib/student";
 import { LinesEditor } from "@/components/lines-editor";
@@ -22,6 +22,17 @@ type Stage =
 
 const errorText = (error: unknown) =>
   error instanceof ApiError ? error.message : "Something went wrong. Please try again.";
+
+/** The question id is read from the address bar in the browser, so the page is one plain static page. A page that
+ * waited for the id on the server (a streamed part) stayed blank on Vercel when opened directly: a refresh, a shared link. */
+export function SolveFromUrl() {
+  const questionId = useSyncExternalStore(neverChanges, readQuestionIdFromUrl, () => null);
+  if (questionId === null) return <div className="surface h-40 animate-pulse bg-paper-deep" aria-label="Loading question" />;
+  return <SolveFlow key={questionId} questionId={questionId} />;
+}
+
+const neverChanges = () => () => {}; // the id only changes with a new page, which mounts this again
+const readQuestionIdFromUrl = () => decodeURIComponent(window.location.pathname.split("/").filter(Boolean)[1] ?? "");
 
 export function SolveFlow({ questionId }: { questionId: string }) {
   const [question, setQuestion] = useState<Question | "loading" | "missing" | "unreachable">("loading");

@@ -1060,6 +1060,38 @@
     "correct"
    ],
    "expected_score": 3
+  },
+  {
+   "id": "linear_correct_with_check",
+   "question": "linear_eq",
+   "category": "alt_method_correct",
+   "lines": [
+    "3x-6=2x+5",
+    "3x-2x=5+6",
+    "x=11",
+    "3(11)-6=2(11)+5"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "expected_score": 3
+  },
+  {
+   "id": "quad_roots_on_one_line",
+   "question": "quadratic",
+   "category": "alt_method_correct",
+   "lines": [
+    "(x-2)(x-3)=0",
+    "x=2, 3"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct"
+   ],
+   "expected_score": 3
   }
  ]
 }

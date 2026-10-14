@@ -34,6 +34,8 @@ async def startUp(app: FastAPI) -> AsyncIterator[None]:
 # Requests that spend money (AI photo reading, tutor replies, Sarvam voice): at most this many per person per
 # 10 minutes, so one person - or one script - cannot drain the AI quota and take the app down for everyone.
 RATE_LIMITS = {"photo": 30, "tutor": 120, "voice": 120}
+# A ceiling for everyone together: even many people (or a script using many addresses) cannot run up the AI bill.
+ALL_VISITORS_LIMITS = {"photo": 300, "tutor": 1200, "voice": 1200}
 RATE_WINDOW_SECONDS = 600
 
 
@@ -50,11 +52,24 @@ def findLimitGroup(method: str, path: str) -> str | None:
 
 
 def readClientId(request: Request) -> str:
-    """The person's address; behind a proxy, the first address in X-Forwarded-For."""
-    forwarded = request.headers.get("x-forwarded-for", "")
-    if forwarded:
-        return forwarded.split(",")[0].strip()
+    """The person's address. Behind Cloudflare (Render), CF-Connecting-IP is set by Cloudflare and cannot be faked;
+    X-Forwarded-For is never trusted: its first address is whatever the caller wrote, a free pass past the limits."""
+    cloudflare = request.headers.get("cf-connecting-ip", "").strip()
+    if cloudflare:
+        return cloudflare
     return request.client.host if request.client else "unknown"
+
+
+def isOverLimit(recentRequests: dict[tuple[str, str], deque[float]], key: tuple[str, str], limit: int) -> bool:
+    """True when this key used up its requests in the window; otherwise the request is counted."""
+    now = time.monotonic()
+    times = recentRequests[key]
+    while times and now - times[0] > RATE_WINDOW_SECONDS:
+        times.popleft()
+    if len(times) >= limit:
+        return True
+    times.append(now)
+    return False
 
 
 def createApp(setUp: bool = True) -> FastAPI:
@@ -64,16 +79,13 @@ def createApp(setUp: bool = True) -> FastAPI:
     @app.middleware("http")
     async def limitRequests(request: Request, callNext: Any) -> Response:
         group = findLimitGroup(request.method, request.url.path)
-        if group:
-            now = time.monotonic()
-            times = recentRequests[(readClientId(request), group)]
-            while times and now - times[0] > RATE_WINDOW_SECONDS:
-                times.popleft()
-            if len(times) >= RATE_LIMITS[group]:
-                return JSONResponse(
-                    {"detail": "Too many requests in a few minutes. Please wait a little and try again."}, status_code=429
-                )
-            times.append(now)
+        if group and (
+            isOverLimit(recentRequests, (readClientId(request), group), RATE_LIMITS[group])
+            or isOverLimit(recentRequests, ("everyone", group), ALL_VISITORS_LIMITS[group])
+        ):
+            return JSONResponse(
+                {"detail": "Too many requests in a few minutes. Please wait a little and try again."}, status_code=429
+            )
         response: Response = await callNext(request)
         return response
 

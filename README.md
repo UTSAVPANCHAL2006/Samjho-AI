@@ -4,6 +4,10 @@
 
 A maths mistake-checker and voice tutor for CBSE Class 6–10.
 
+**Try it live: https://samjho-ai-one.vercel.app** — no sign-up. Pick a question under **Practise** (or photograph any
+question), then photograph your working. To see the red pen, make a mistake on purpose. Runs on free tiers: if the
+server was asleep, the first load can take up to a minute.
+
 1. **Photo of the question** from any book: NCERT, RD Sharma, a worksheet.
 2. **Photo of your notebook page.** Every line is read.
 3. **Red pen.** Every line gets ✓ or ✗ and CBSE-style marks; the first mistake is circled with a one-line remark.
@@ -27,8 +31,8 @@ The AI reads photos and explains. It never decides a mark.
 
 | Check | Command | Result |
 |---|---|---|
-| Unit tests (no AI calls) | `make test` | 444 backend + 15 frontend pass |
-| Grading eval: 52 hand-labelled attempts, 118 lines | `make eval` | 0 false accusations · 0 marks for zero-mark work · line verdicts and marks agree 100% |
+| Unit tests (no AI calls) | `make test` | 455 backend + 15 frontend pass |
+| Grading eval: 54 hand-labelled attempts, 124 lines | `make eval` | 0 false accusations · 0 marks for zero-mark work · line verdicts and marks agree 100% |
 | Full student journey on the class-wise sets in `docs/test-sets-all` (live models) | `cd backend && uv run python ../evals/run_full_e2e.py` | See [`evals/full_e2e_report.md`](evals/full_e2e_report.md) |
 | Live models: curriculum, photos + voice, tutor conversations | `make eval-live` | Slow on free tiers |
 
@@ -37,7 +41,7 @@ Tried to break it on purpose: right and wrong working, blank page, "skip" on pap
 ## Known limits (honest scope)
 
 - The test photos are rendered or AI-generated pages; real student handwriting has not been evaluated at scale yet.
-- On free AI tiers, a new photo can take a minute or more under load. Set `OPENAI_API_KEY` to read photos with a paid model first.
+- On the free Render plan a notebook photo takes about 5–15 s to grade (it took 74 s until profiling showed the LaTeX parser re-reading each line up to 151 times; it is now cached). Without `OPENAI_API_KEY`, photos are read by free-tier models and can be slower under load.
 - Working for a *different* question scores 0, but the explanation describes that other question's mistake.
 - One server: rate limits and the AI cache live in its memory and disk.
 
