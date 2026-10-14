@@ -1,0 +1,44 @@
+# --- Secrets: keys live only in .env files (see the .env.example files) ---
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# --- Runtime data: student photos, AI and voice caches (never commit student work) ---
+backend/storage/
+evals/tmp_*
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Node / Next.js ---
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+.vercel/
+npm-debug.log*
+yarn-error.log*
+
+# --- Logs ---
+*.log
+
+# --- OS, editors, local tool settings ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.claude/
