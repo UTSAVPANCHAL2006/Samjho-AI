@@ -25,11 +25,11 @@ def getVoiceMode(settings: Settings = Depends(getSettings)) -> dict[str, str]:
 
 
 @router.post("/listen")
-async def listen(
+def listen(
     audio: UploadFile = File(...), language: str = Form("hinglish"), settings: Settings = Depends(getSettings)
 ) -> dict[str, str]:
     requireSarvam(settings)
-    audioBytes = await audio.read(MAX_AUDIO_BYTES + 1)
+    audioBytes = audio.file.read(MAX_AUDIO_BYTES + 1)
     if not audioBytes or len(audioBytes) > MAX_AUDIO_BYTES:
         raise HTTPException(400, "Audio must be under 5 MB.")
     text = speech.transcribe(audioBytes, language, settings)

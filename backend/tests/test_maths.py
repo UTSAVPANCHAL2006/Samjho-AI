@@ -476,3 +476,21 @@ def testUsingPiAs314InsteadOf22By7IsNotAMistake() -> None:
         assert isMatchingValue(sympy.Rational(1884, 100), sympy.Rational(132, 7))
         assert not isMatchingValue(sympy.Integer(19), sympy.Rational(132, 7))  # a different value is still wrong
     assert not isMatchingValue(sympy.Rational(1884, 100), sympy.Rational(132, 7))  # no 3.14 written: a rounding slip
+
+
+def testEachLineIsParsedOnlyOnce(monkeypatch: pytest.MonkeyPatch) -> None:
+    # Grading reads a line many times; the slow LaTeX parser must run once per text (seconds saved on a small server).
+    from app.maths import parser
+    from app.maths.parser import LatexParseError
+
+    calls: list[str] = []
+    realParse = parser.parse_latex
+    monkeypatch.setattr(parser, "parse_latex", lambda text, **options: calls.append(text) or realParse(text, **options))
+    parser.parseOnce.cache_clear()
+    first = parser.parseLatex("3x + 7 = 22")
+    assert parser.parseLatex("3x + 7 = 22") == first
+    with pytest.raises(LatexParseError):
+        parser.parseLatex("\\frac{")
+    with pytest.raises(LatexParseError):
+        parser.parseLatex("\\frac{")  # a line that cannot be read stays unreadable, from the cache too
+    assert len(calls) == 3  # '3x + 7', '22', '\\frac{' — each once

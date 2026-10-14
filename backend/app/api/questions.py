@@ -92,10 +92,10 @@ def understandTypedQuestion(
 
 
 @router.post("/photo", response_model=UnderstandOut)
-async def understandQuestionPhoto(
+def understandQuestionPhoto(
     image: UploadFile = File(...), session: Session = Depends(getDbSession), ai: AiModels = Depends(getAi)
 ) -> UnderstandOut:
-    imageBytes = await image.read(MAX_PHOTO_BYTES + 1)
+    imageBytes = image.file.read(MAX_PHOTO_BYTES + 1)
     if len(imageBytes) > MAX_PHOTO_BYTES:
         raise HTTPException(400, "The photo must be under 10 MB.")
     try:

@@ -1,6 +1,7 @@
 # Turns handwritten / typed maths into SymPy objects. Pure code, no AI.
 
 import re
+from functools import lru_cache
 from typing import Any
 
 import sympy
@@ -536,6 +537,26 @@ def parseLatex(latex: str) -> sympy.Expr | sympy.Eq:
 
 def parseExpression(text: str) -> sympy.Expr | sympy.Eq:
     """Parse LaTeX that has no '=' (or a shape we let the parser handle)."""
+    parsed, problem = parseOnce(text)
+    if problem:
+        raise LatexParseError(problem)
+    return parsed
+
+
+@lru_cache(maxsize=4096)
+def parseOnce(text: str) -> tuple[Any, str]:
+    """The slow part of reading a line, done once per text: grading reads the same line many times (the step check,
+    the final answer, the mistake finder), and the LaTeX parser takes ~40 ms a line, seconds on a small server.
+    SymPy expressions never change, so sharing one is safe. Returns (expression, "") or (None, the problem)."""
+    try:
+        return parseUncached(text), ""
+    except LatexParseError as error:
+        return None, str(error)
+    except (TypeError, ValueError, AttributeError, RecursionError, ZeroDivisionError, sympy.SympifyError):
+        return None, f"Could not read: {text}"
+
+
+def parseUncached(text: str) -> sympy.Expr | sympy.Eq:
     try:
         parsed = parse_latex(text, backend="lark")
     except Exception as error:  # the parser raises many different error types

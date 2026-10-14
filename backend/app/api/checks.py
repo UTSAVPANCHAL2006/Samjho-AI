@@ -104,7 +104,7 @@ def newCheck(session: Session, questionId: str, studentId: str | None, lines: li
 
 
 @router.post("", response_model=CheckOut, status_code=201)
-async def checkPhoto(
+def checkPhoto(
     image: UploadFile = File(...),
     question_id: str = Form(...),
     student_id: str | None = Form(None),
@@ -113,7 +113,7 @@ async def checkPhoto(
     settings: Settings = Depends(getSettings),
 ) -> CheckOut:
     """Photo of handwritten working -> red-pen result (or the lines to confirm first)."""
-    imageBytes = await image.read(MAX_PHOTO_BYTES + 1)
+    imageBytes = image.file.read(MAX_PHOTO_BYTES + 1)
     if len(imageBytes) > MAX_PHOTO_BYTES:
         raise HTTPException(400, "The photo must be under 10 MB.")
     try:

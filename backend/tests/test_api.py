@@ -256,3 +256,14 @@ def testCorsOriginsAlsoAcceptAJsonList(monkeypatch: Any) -> None:
 
     monkeypatch.setenv("CORS_ORIGINS", '["http://localhost:3000"]')  # the docker-compose style
     assert Settings(_env_file=None).cors_origins == ["http://localhost:3000"]
+
+
+def testSlowEndpointsDoNotBlockTheServer() -> None:
+    # A plain `def` runs in a worker thread; an `async def` that calls a slow AI model or SymPy would freeze
+    # every other request (even /api/health) until the photo is done.
+    import inspect
+
+    from app.api import checks, questions, voice
+
+    for endpoint in (checks.checkPhoto, questions.understandQuestionPhoto, voice.listen):
+        assert not inspect.iscoroutinefunction(endpoint), endpoint.__name__
