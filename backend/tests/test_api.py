@@ -267,3 +267,18 @@ def testSlowEndpointsDoNotBlockTheServer() -> None:
 
     for endpoint in (checks.checkPhoto, questions.understandQuestionPhoto, voice.listen):
         assert not inspect.iscoroutinefunction(endpoint), endpoint.__name__
+
+
+def testBlankQuestionPhotoIsNeverSentToTheAi(client: TestClient, ai: FakeAi) -> None:
+    # Given a blank page, a vision model once invented a whole question ("a rectangle with length 3x + 1...").
+    import io
+
+    from PIL import Image
+
+    blank = io.BytesIO()
+    Image.new("RGB", (900, 700), (250, 250, 248)).save(blank, format="PNG")
+    ai.image = {"page": "maths", "question": "The length of a rectangle is 3x + 1. Find x."}
+    response = client.post("/api/questions/photo", files={"image": ("q.png", blank.getvalue(), "image/png")})
+    assert response.json()["status"] == "parse_failed"
+    assert "retake" in response.json()["message"]
+    assert "image" not in ai.calls

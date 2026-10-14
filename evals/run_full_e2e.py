@@ -18,7 +18,9 @@ client = httpx.Client(base_url=API, timeout=300)
 def postPhoto(path: str, url: str, data: dict[str, str] | None = None) -> dict:
     with open(SETS / path, "rb") as photo:
         response = client.post(url, files={"image": (Path(path).name, photo, "image/png")}, data=data or {})
-    return response.json() if response.headers.get("content-type", "").startswith("application/json") else {"error": response.text[:200]}
+    if not response.headers.get("content-type", "").startswith("application/json"):
+        return {"error": f"HTTP {response.status_code}: {response.text[:200]}"}
+    return response.json()
 
 
 def runSet(item: dict) -> dict:
@@ -48,6 +50,9 @@ def runSet(item: dict) -> dict:
             "lines": [f"{(steps[index]['verdict'] if index < len(steps) else '-')[:5]:5} {line['latex']}" for index, line in enumerate(lines)],
         }
         result[kind] = summary
+        if not check.get("status"):
+            problems.append(f"{kind} working got no answer: {check.get('error') or check.get('detail')}")  # a crash or timeout is a failure too
+            continue
         if check.get("status") == "needs_confirmation":
             problems.append(f"{kind}: reading needs confirmation")
             continue

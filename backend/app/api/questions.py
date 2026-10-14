@@ -11,7 +11,7 @@ from sqlalchemy.orm import Session
 from app.agents.understand import understandQuestion
 from app.agents.visual import makeVisual
 from app.ai.models import AiModels
-from app.ai.photos import NotAnImageError, readMediaType
+from app.ai.photos import PHOTO_PROBLEMS, NotAnImageError, findPhotoProblem, readMediaType
 from app.ai.prompts import READ_QUESTION_PROMPT
 from app.api import getAi
 from app.api.checks import MAX_PHOTO_BYTES
@@ -102,6 +102,10 @@ def understandQuestionPhoto(
         mediaType = readMediaType(imageBytes)
     except NotAnImageError as error:
         raise HTTPException(400, "Please upload a JPEG, PNG or WEBP photo.") from error
+    problem = findPhotoProblem(imageBytes)
+    if problem:
+        # Checked before any AI sees it: given a blank page, a vision model once invented a whole question.
+        return UnderstandOut(status="parse_failed", message=PHOTO_PROBLEMS[problem])
     reading = ai.readImage(READ_QUESTION_PROMPT, imageBytes, mediaType)
     if reading is None:
         return UnderstandOut(
