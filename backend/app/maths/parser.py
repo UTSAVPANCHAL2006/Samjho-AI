@@ -281,6 +281,8 @@ def normalizeLatex(latex: str) -> str:
     text = re.sub(r"\)\s*(?=\d)", r") \\cdot ", text)  # '(n-1)5' means (n-1) × 5
     text = stripUnits(text)
     text = wrapTrigCalls(text)
+    # '(1 - cos²A) sec²A', 'cos²A sec²A': a bracket or a trig term next to a trig term multiplies it
+    text = re.sub(r"([)}])\s*(?=\{\\(?:sin|cos|tan|cot|sec|csc|cosec)\b)", r"\1 \\cdot ", text)
     text = makePowerProductsExplicit(text)
     # '2 \\cdot 5x' is not read by the parser; '2 \\cdot 5 \\cdot x' means the same.
     text = re.sub(r"\\cdot\s*(\d+(?:\.\d+)?)\s*(?=[a-zA-Z(])(?!cdot)", r"\\cdot \1 \\cdot ", text)

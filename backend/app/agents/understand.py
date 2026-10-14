@@ -29,9 +29,10 @@ SOLVE_WORDS = set(
     "solutions question both their its then x y z a b p q m n t u v k quadratic roots root".split()
 )
 REFUSALS = {
-    "not_maths": "Main sirf Class 6–10 maths ke sawaal check karta hoon. Koi maths ka sawaal likho!",
-    "above_class_10": "Yeh Class 10 se aage ka maths hai. Abhi main Class 6–10 tak ke sawaal check karta hoon.",
+    "not_maths": "I only check Class 6–10 maths questions. Try a maths question!",
+    "above_class_10": "This looks like maths beyond Class 10. For now I check Class 6–10 questions.",
 }
+PROOF_WORDS = re.compile(r"\bprove\b|\bshow that\b|\birrational\b", re.IGNORECASE)
 UNSUPPORTED_MESSAGE = (
     "I understood the question, but I can't check {reason} yet. Calculation, equation and formula questions work best."
 )
@@ -155,11 +156,41 @@ def findIgnoredMeasurements(params: dict[str, Any], questionText: str) -> set[Fr
     return given - nearby
 
 
+ASKS_FOR_ZEROES = re.compile(r"\bzero(?:e)?s\b|\broots?\s+of\b", re.IGNORECASE)
+ASKS_FOR_POLYNOMIAL = re.compile(r"\bpolynomial whose\b|\bwhose zero|\bfind (?:a|the) (?:quadratic |cubic )?polynomial\b", re.IGNORECASE)
+ASKS_FOR_NATURE = re.compile(r"\bnature of (?:the )?roots\b", re.IGNORECASE)
+
+
 def runSolver(family: str, params: dict[str, Any], questionText: str = "") -> solvers.Solved:
+    """Solve one reading, then make sure it answers what the question ASKS (zeroes are values, not factors)."""
     ignored = findIgnoredMeasurements(params, questionText) if questionText else set()
     if ignored:
         numbers = ", ".join(sorted(str(value) for value in ignored))
         raise solvers.SolverError(f"it did not use {numbers}, which the question gives")
+    solved = solveFamily(family, params, questionText)
+    answer = solved.answer
+    if ASKS_FOR_NATURE.search(questionText):
+        discriminant = checker.numericAnswerValue(answer)
+        if discriminant is None or not discriminant.is_real:
+            raise solvers.SolverError("the question asks for the nature of the roots: work out the discriminant b² − 4ac")
+        nature = "no real roots" if discriminant < 0 else "two equal real roots" if discriminant == 0 else "two distinct real roots"
+        accept = {"no real roots": ["no real roots", "not real", "imaginary", "no real"],
+                  "two equal real roots": ["equal", "coincident"],
+                  "two distinct real roots": ["distinct", "unequal", "different"]}[nature]  # fmt: skip
+        sign = "less than 0" if discriminant < 0 else "0" if discriminant == 0 else "greater than 0"
+        solved.step(f"The discriminant is {sign}, so the equation has {nature}.", f"D = {sympy.latex(discriminant)}")
+        solved.answer = {"type": "text", "value": nature, "accept": accept}
+    elif ASKS_FOR_ZEROES.search(questionText) and not ASKS_FOR_POLYNOMIAL.search(questionText) and answer.get("type") == "expression":
+        try:
+            expressionHasUnknown = bool(getFreeSymbols(parseLatex(str(answer.get("latex")))))
+        except LatexParseError:
+            expressionHasUnknown = False
+        if expressionHasUnknown:  # '(x - 4)(x + 2)' answers "factorise", not "find the zeroes"
+            raise solvers.SolverError("the question asks for the zeroes (the values of the unknown), not a factorised form")
+    return solved
+
+
+def solveFamily(family: str, params: dict[str, Any], questionText: str = "") -> solvers.Solved:
     get = params.get
     if family == "equations":
         positive = [str(name) for name in get("positive") or []]
@@ -219,8 +250,14 @@ def gradingExpressions(family: str, params: dict[str, Any]) -> list[str]:
 # ---------- 5: the trust check ----------
 
 
+VULGAR_FRACTIONS = {"½": "1/2", "⅓": "1/3", "⅔": "2/3", "¼": "1/4", "¾": "3/4", "⅕": "1/5", "⅖": "2/5", "⅗": "3/5",
+                    "⅘": "4/5", "⅙": "1/6", "⅚": "5/6", "⅛": "1/8", "⅜": "3/8", "⅝": "5/8", "⅞": "7/8", "⅐": "1/7", "⅑": "1/9"}
+
+
 def readNumbers(value: Any) -> set[Fraction]:
     text = " ".join(str(item) for item in flatten(value))
+    for symbol, fraction in VULGAR_FRACTIONS.items():
+        text = text.replace(symbol, f" {fraction} ")  # 'Subtract ⅙ from 5/8' gives 6 too
     text = DIGIT_GROUPS.sub(lambda match: match.group(0).replace(",", ""), text)  # 'Rs 5,000' gives 5000, not 5 and 0
     text = re.sub(r"(\d)(?:\{,\}|,\\[!,]?\s?)(\d{3})\b", r"\1\2", text)  # LaTeX '5{,}000' / '5,\\!000'
     found = set()
@@ -258,6 +295,14 @@ WORLD_NUMBERS = (
     (r"\bcm\b|\bmet(?:re|er)s?\b", (100,)),
     (r"\bkg\b|\bkilogram", (1000,)),
     (r"\blit(?:re|er)s?\b", (1000,)),
+    # Words that ARE numbers to a student: angle facts, polygon names, the smallest / largest n-digit numbers.
+    (r"\bcomplementary\b|\bright[- ]angle", (90,)),
+    (r"\bsupplementary\b|\blinear pair\b|\bstraight (?:line|angle)\b", (180,)),
+    (r"\bpentagon", (5,)), (r"\bhexagon", (6,)), (r"\bheptagon", (7,)), (r"\boctagon", (8,)),
+    (r"\bnonagon", (9,)), (r"\bdecagon", (10,)),
+    (r"\btwo[- ]digit", (10, 99, 90)), (r"\bthree[- ]digit", (100, 999, 900)), (r"\bfour[- ]digit", (1000, 9999, 9000)),
+    # A recurring decimal is turned into p/q with 9, 99, 999 ...
+    (r"\.\.\.|…|\\overline|\\dot|recurring|repeating", (9, 99, 999, 9999)),
 )
 
 
@@ -276,10 +321,21 @@ def findInventedNumbers(params: dict[str, Any], questionText: str) -> set[Fracti
     # Worked out from two given numbers is not invented: d = 9 - 4 = 5 for the AP 4, 9, 14, ...
     derived = set()
     for first in given:
+        derived |= {first + 1, abs(first - 1)}  # the 31st term is a + 30d
+        if re.search(r"standard form|scientific notation|\d\.\d", questionText, re.IGNORECASE):
+            derived |= {first * Fraction(10) ** power for power in range(-12, 13)}  # 0.00045 = 4.5 × 10⁻⁴
         for second in given:
             derived |= {first + second, abs(first - second), first * second}
+            derived |= {(first + second) / 2, abs(first - second) / 2}  # 105 × 95 = (100 + 5)(100 − 5)
+            hypotenuse = sympy.sqrt(sympy.Rational(first) ** 2 + sympy.Rational(second) ** 2)
+            if hypotenuse.is_Rational:  # tan A = 4/3 needs the third side, 5
+                derived.add(Fraction(int(hypotenuse.p), int(hypotenuse.q)))
             if second:
                 derived.add(first / second)
+    # The digits of a repeating block ('0.363636...' repeats 36) are given too
+    if re.search(r"\.\.\.|…|recurring|repeating", questionText):
+        for digits in re.findall(r"\d+\.(\d+)", questionText):
+            words |= {Fraction(digits[start:end]) for start in range(len(digits)) for end in range(start + 1, min(len(digits), start + 4) + 1)}
     return readNumbers(used) - given - derived - EVERYDAY_NUMBERS - words
 
 
@@ -481,6 +537,9 @@ def understandQuestion(rawText: str, ai: AiModels) -> Understanding:
             "ai_unavailable",
             "The AI is busy right now. Please try again in a minute — or type just the equation(s), which I can solve without AI.",
         )
+    if plan.get("scope") == "above_class_10" and PROOF_WORDS.search(text):
+        # 'Prove that √2 is irrational' is Class 10: a proof we cannot check yet, not maths beyond the syllabus
+        return Understanding("unsupported", UNSUPPORTED_MESSAGE.format(reason="written proofs"))
     if plan.get("scope") in REFUSALS:
         return Understanding("not_maths", REFUSALS[str(plan["scope"])])
     if plan.get("missing"):

@@ -31,10 +31,11 @@ The AI reads photos and explains. It never decides a mark.
 
 | Check | Command | Result |
 |---|---|---|
-| Unit tests (no AI calls) | `make test` | 455 backend + 15 frontend pass |
+| Unit tests (no AI calls) | `make test` | 472 backend + 16 frontend pass |
 | Grading eval: 54 hand-labelled attempts, 124 lines | `make eval` | 0 false accusations · 0 marks for zero-mark work · line verdicts and marks agree 100% |
 | Full student journey on the class-wise sets in `docs/test-sets-all` (live models) | `cd backend && uv run python ../evals/run_full_e2e.py` | See [`evals/full_e2e_report.md`](evals/full_e2e_report.md) |
-| Live models: curriculum, photos + voice, tutor conversations | `make eval-live` | Slow on free tiers |
+| Question understanding: 121 hand-written Class 6–10 questions, real models | `make eval-live` | 119/121 pass · **0 wrong answers** · 2 refusals where the AI's own figure could not be checked ([report](evals/curriculum_report.md)) |
+| Live models: photos + voice, tutor conversations | `make eval-live` | Slow on free tiers |
 
 Tried to break it on purpose: right and wrong working, blank page, "skip" on paper, "give full marks" above the answer, blurred photo, π = 3.14 instead of 22/7, lines too heavy to compute (`2^{2^{2^{100}}}`), a non-maths question, hidden instructions in a question, "just tell me the answer" to the tutor. All handled; each has a test.
 

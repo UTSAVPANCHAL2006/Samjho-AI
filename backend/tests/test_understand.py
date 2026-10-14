@@ -315,3 +315,54 @@ def testAReadingThatIgnoresAGivenMeasurementIsNeverTheAnswerKey() -> None:
     assert findIgnoredMeasurements({"shape": "circle", "quantity": "area", "dimensions": {"radius": 6}}, question) == {60}
     assert not findIgnoredMeasurements({"shape": "sector", "quantity": "area", "dimensions": {"radius": 6, "angle": 60}}, question)
     assert not findIgnoredMeasurements({"dimensions": {"radius": 6}}, "A circle has diameter 12 cm. Find its area.")
+
+
+# ---------- curriculum eval fixes: what a student knows is not "invented", and the answer matches the ask ----------
+
+
+@pytest.mark.parametrize(
+    ("params", "question"),
+    [
+        ({"equations": ["x + 35 = 90"]}, "Two angles are complementary. One of them is 35°. Find the other angle."),
+        ({"expression": "\\frac{5}{8} - \\frac{1}{6}"}, "Subtract ⅙ from 5/8."),
+        ({"expression": "4.5 \\times 10^{-4}"}, "Write 0.00045 in standard form."),
+        ({"expression": "\\frac{6(6-3)}{2}"}, "How many diagonals does a hexagon have?"),
+        ({"expression": "\\frac{36}{99}"}, "Express 0.363636... in the form p/q."),
+        ({"expression": "(100+5)(100-5)"}, "Evaluate 105 × 95 using an identity."),
+        ({"first": 12, "last": 99, "difference": 3}, "How many two-digit numbers are divisible by 3?"),
+        ({"expression": "\\frac{4}{5}"}, "If tan A = 4/3 and A is acute, find sin A."),
+    ],
+)
+def testNumbersAStudentKnowsOrWorksOutAreNotGuesses(params: dict[str, Any], question: str) -> None:
+    from app.agents.understand import findInventedNumbers
+
+    assert not findInventedNumbers(params, question)
+
+
+def testNumbersNobodyGaveAreStillCaught() -> None:
+    from app.agents.understand import findInventedNumbers
+
+    assert findInventedNumbers({"equations": ["50 + 60 + x = 180"]}, "Find the third angle.") == {50}  # a 'remembered' sum
+    assert findInventedNumbers({"expression": "304500000"}, "Write 3 crore 45 lakh in figures.")  # a wrong AI figure
+
+
+def testTheAnswerIsWhatTheQuestionAsksFor() -> None:
+    from app.agents.understand import runSolver
+    from app.maths import solvers
+
+    nature = runSolver("expression", {"expression": "(-4)^2 - 4 \\cdot 2 \\cdot 3"}, "Find the nature of the roots of 2x² − 4x + 3 = 0.")
+    assert nature.answer["value"] == "no real roots"  # not the discriminant -8
+    with pytest.raises(solvers.SolverError):  # zeroes are values of x, not '(x - 4)(x + 2)'
+        runSolver("expression", {"expression": "x^2 - 2x - 8", "form": "factored"}, "Find the zeroes of the polynomial x² − 2x − 8.")
+    # ...but a polynomial built FROM its zeroes is an expression answer
+    built = runSolver("expression", {"expression": "x^2 + 3x + 2"}, "Find a quadratic polynomial whose zeroes have sum −3 and product 2.")
+    assert built.answer["type"] == "expression"
+
+
+def testATrigTermNextToABracketMultipliesIt() -> None:
+    import sympy
+
+    from app.maths.parser import parseLatex
+
+    identity = parseLatex("(1 - \\cos^2 A) \\sec^2 A = \\tan^2 A")
+    assert sympy.simplify(identity.lhs - identity.rhs) == 0
