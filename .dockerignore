@@ -1,0 +1,13 @@
+# Only backend/ goes into the API image: keep the build context small and secrets out.
+frontend/
+docs/
+evals/
+**/node_modules/
+**/.venv/
+**/__pycache__/
+**/.env
+**/.env.*
+backend/storage/
+backend/tests/
+.git/
+.claude/

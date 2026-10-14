@@ -1,5 +1,6 @@
 # All settings in one place, read from environment variables or backend/.env.
 
+import json
 from functools import lru_cache
 from pathlib import Path
 from typing import Annotated
@@ -31,8 +32,12 @@ class Settings(BaseSettings):
     @field_validator("cors_origins", mode="before")
     @classmethod
     def splitOrigins(cls, value: object) -> object:
+        if isinstance(value, str) and value.strip().startswith("["):
+            value = json.loads(value)  # '["https://a.app"]' also works
         if isinstance(value, str):
-            return [origin.strip().rstrip("/") for origin in value.split(",") if origin.strip()]
+            value = value.split(",")
+        if isinstance(value, list):
+            return [str(origin).strip().rstrip("/") for origin in value if str(origin).strip()]
         return value
 
     # Lines the vision model is less sure about than this must be confirmed by the student.

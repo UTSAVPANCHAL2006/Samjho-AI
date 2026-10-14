@@ -14,11 +14,11 @@ services:
       retries: 10
 
   backend:
-    build: ./backend
+    build: .
     env_file: [./backend/.env]
     environment:
       DATABASE_URL: postgresql+psycopg://homi:homi@db:5432/samjho
-      CORS_ORIGINS: '["http://localhost:3000"]'
+      CORS_ORIGINS: http://localhost:3000
     ports: ["8000:8000"]
     volumes: [backend-storage:/app/storage]
     depends_on:

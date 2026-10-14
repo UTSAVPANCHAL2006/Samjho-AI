@@ -1,4 +1,4 @@
-# Render blueprint: the Samjho API (Docker) and its Postgres database.
+# Render blueprint: the Samjho API (Docker, ./Dockerfile builds backend/) and its Postgres database.
 # Render dashboard -> New -> Blueprint -> pick this repo. Then fill in the keys marked "sync: false".
 databases:
   - name: samjho-db
@@ -11,8 +11,8 @@ services:
     name: samjho-api
     runtime: docker
     plan: free
-    dockerfilePath: ./backend/Dockerfile
-    dockerContext: ./backend
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     healthCheckPath: /api/health
     envVars:
       - key: DATABASE_URL # 'postgresql://' from Render is switched to the psycopg driver by app/config.py

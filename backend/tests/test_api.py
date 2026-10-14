@@ -249,3 +249,10 @@ def testHostedDatabaseUrlsAndCorsOriginsAreReadFromTheEnvironment(monkeypatch: A
     settings = Settings(_env_file=None)
     assert settings.database_url.startswith("postgresql+psycopg://user:secret@db.render.com")
     assert settings.cors_origins == ["https://samjho.vercel.app", "http://localhost:3000"]
+
+
+def testCorsOriginsAlsoAcceptAJsonList(monkeypatch: Any) -> None:
+    from app.config import Settings
+
+    monkeypatch.setenv("CORS_ORIGINS", '["http://localhost:3000"]')  # the docker-compose style
+    assert Settings(_env_file=None).cors_origins == ["http://localhost:3000"]

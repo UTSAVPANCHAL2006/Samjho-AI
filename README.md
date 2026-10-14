@@ -54,7 +54,7 @@ make frontend                          # http://localhost:3000
 ## Deploy (Render + Vercel)
 
 1. **Backend + database on Render.** Dashboard -> **New -> Blueprint** -> pick this repo. `render.yaml` creates the API
-   (Docker, `backend/Dockerfile`) and a free Postgres database, and wires `DATABASE_URL` in. Fill in the keys it asks
+   (Docker, `Dockerfile` at the repo root) and a free Postgres database, and wires `DATABASE_URL` in. Fill in the keys it asks
    for (`OPENAI_API_KEY` recommended, `SARVAM_API_KEY` for voice). Tables and the question bank are created on start.
 2. **Frontend on Vercel.** **Add New -> Project** -> this repo -> **Root Directory: `frontend`**. Set the environment
    variable `NEXT_PUBLIC_API_URL` to the Render URL (e.g. `https://samjho-api.onrender.com`) and deploy.
