@@ -1,0 +1,22 @@
+{
+  "id": "c7_set_05_triangle_angles",
+  "class": 7,
+  "title": "Angle Sum Property of Triangle",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Sum of triangle angles confused with quadrilateral: using 360\u00b0 instead of 180\u00b0",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VII",
+    "chapter": "Chapter 6: The Triangle and Its Properties (Exercise 6.3)",
+    "num": "Q.1.",
+    "lines": [
+      "Two angles of a triangle are 50\u00b0 and 60\u00b0.",
+      "Find the measure of the third angle."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_7/c7_set_05_triangle_angles/01_question.png",
+    "wrong": "class_7/c7_set_05_triangle_angles/02_wrong_solution.png",
+    "right": "class_7/c7_set_05_triangle_angles/03_right_solution.png"
+  }
+}

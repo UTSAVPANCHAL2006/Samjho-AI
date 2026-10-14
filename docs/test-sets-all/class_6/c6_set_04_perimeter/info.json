@@ -1,0 +1,22 @@
+{
+  "id": "c6_set_04_perimeter",
+  "class": 6,
+  "title": "Perimeter of Rectangle",
+  "style": "Good (Neat Topper)",
+  "misconception": "Incomplete perimeter formula: using l + b instead of 2(l + b)",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VI",
+    "chapter": "Chapter 10: Mensuration (Exercise 10.1)",
+    "num": "Q.5.",
+    "lines": [
+      "Find the perimeter of a rectangle whose",
+      "length is 8 cm and breadth is 5 cm."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_6/c6_set_04_perimeter/01_question.png",
+    "wrong": "class_6/c6_set_04_perimeter/02_wrong_solution.png",
+    "right": "class_6/c6_set_04_perimeter/03_right_solution.png"
+  }
+}

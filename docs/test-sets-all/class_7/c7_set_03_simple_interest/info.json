@@ -1,0 +1,22 @@
+{
+  "id": "c7_set_03_simple_interest",
+  "class": 7,
+  "title": "Simple Interest Calculation",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Formula denominator slip: forgot /100 in SI = P*R*T/100",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VII",
+    "chapter": "Chapter 8: Comparing Quantities (Exercise 8.3)",
+    "num": "Q.7.",
+    "lines": [
+      "Find the simple interest on Rs 5,000",
+      "at 8% per annum for 3 years."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_7/c7_set_03_simple_interest/01_question.png",
+    "wrong": "class_7/c7_set_03_simple_interest/02_wrong_solution.png",
+    "right": "class_7/c7_set_03_simple_interest/03_right_solution.png"
+  }
+}

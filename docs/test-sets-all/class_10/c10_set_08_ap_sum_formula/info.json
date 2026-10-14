@@ -1,0 +1,22 @@
+{
+  "id": "c10_set_08_ap_sum_formula",
+  "class": 10,
+  "title": "Sum of First n Terms of an AP",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Omission of factor 2 in formula: writing Sn = n/2 [a + (n-1)d]",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class X",
+    "chapter": "Chapter 5: Arithmetic Progressions",
+    "num": "Q.8.",
+    "lines": [
+      "Find the sum of the first 20 terms of the AP:",
+      "1, 4, 7, 10, ..."
+    ],
+    "marks": "[3 Marks]"
+  },
+  "paths": {
+    "question": "class_10/c10_set_08_ap_sum_formula/01_question.png",
+    "wrong": "class_10/c10_set_08_ap_sum_formula/02_wrong_solution.png",
+    "right": "class_10/c10_set_08_ap_sum_formula/03_right_solution.png"
+  }
+}

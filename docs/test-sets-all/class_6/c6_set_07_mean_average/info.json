@@ -1,0 +1,22 @@
+{
+  "id": "c6_set_07_mean_average",
+  "class": 6,
+  "title": "Arithmetic Mean of Observations",
+  "style": "Good (Neat/Clear)",
+  "misconception": "Dividing sum by 2 instead of total count of observations N = 5",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VI",
+    "chapter": "Chapter 9: Data Handling",
+    "num": "Q.7.",
+    "lines": [
+      "Find the arithmetic mean of the following five scores:",
+      "12, 15, 18, 21, and 24."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_6/c6_set_07_mean_average/01_question.png",
+    "wrong": "class_6/c6_set_07_mean_average/02_wrong_solution.png",
+    "right": "class_6/c6_set_07_mean_average/03_right_solution.png"
+  }
+}

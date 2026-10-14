@@ -1,0 +1,22 @@
+{
+  "id": "c8_set_05_surface_area",
+  "class": 8,
+  "title": "Total Surface Area of Cuboid",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Concept confusion: calculating volume (l*b*h) instead of surface area 2(lb+bh+hl)",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VIII",
+    "chapter": "Chapter 11: Mensuration (Exercise 11.3)",
+    "num": "Q.1.",
+    "lines": [
+      "Find the total surface area of a cuboid",
+      "of length 10 cm, breadth 8 cm, and height 5 cm."
+    ],
+    "marks": "[3 Marks]"
+  },
+  "paths": {
+    "question": "class_8/c8_set_05_surface_area/01_question.png",
+    "wrong": "class_8/c8_set_05_surface_area/02_wrong_solution.png",
+    "right": "class_8/c8_set_05_surface_area/03_right_solution.png"
+  }
+}

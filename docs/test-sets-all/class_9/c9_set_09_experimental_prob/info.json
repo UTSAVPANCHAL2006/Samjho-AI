@@ -1,0 +1,22 @@
+{
+  "id": "c9_set_09_experimental_prob",
+  "class": 9,
+  "title": "Experimental Probability from Trial Data",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Writing theoretical probability 1/6 of standard die instead of experimental frequency 15/60",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class IX",
+    "chapter": "Chapter 15: Probability",
+    "num": "Q.9.",
+    "lines": [
+      "A die is thrown 60 times and the face 6 turns up 15 times.",
+      "Find the experimental probability of getting the number 6."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_9/c9_set_09_experimental_prob/01_question.png",
+    "wrong": "class_9/c9_set_09_experimental_prob/02_wrong_solution.png",
+    "right": "class_9/c9_set_09_experimental_prob/03_right_solution.png"
+  }
+}

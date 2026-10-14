@@ -1,0 +1,22 @@
+{
+  "id": "c7_set_06_linear_both_sides",
+  "class": 7,
+  "title": "Linear Equation with Variables on Both Sides",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Sign transposition error: +4 moves to RHS as +4 instead of -4",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VII",
+    "chapter": "Chapter 4: Simple Equations (Exercise 4.3)",
+    "num": "Q.6.",
+    "lines": [
+      "Solve the linear equation for x:",
+      "5x + 4 = 2x + 19"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_7/c7_set_06_linear_both_sides/01_question.png",
+    "wrong": "class_7/c7_set_06_linear_both_sides/02_wrong_solution.png",
+    "right": "class_7/c7_set_06_linear_both_sides/03_right_solution.png"
+  }
+}

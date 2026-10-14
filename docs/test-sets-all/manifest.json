@@ -1,0 +1,1189 @@
+[
+  {
+    "id": "c6_set_01_fractions",
+    "class": 6,
+    "title": "Addition of Unlike Fractions",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Adding numerators together and denominators together (Freshman's Dream on fractions)",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VI",
+      "chapter": "Chapter 7: Fractions (Exercise 7.6)",
+      "num": "Q.1.",
+      "lines": [
+        "Find the sum of the following fractions:",
+        "2/3 + 1/4"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_6/c6_set_01_fractions/01_question.png",
+      "wrong": "class_6/c6_set_01_fractions/02_wrong_solution.png",
+      "right": "class_6/c6_set_01_fractions/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c6_set_02_integers",
+    "class": 6,
+    "title": "Operations with Negative Integers",
+    "style": "Good (Neat Topper)",
+    "misconception": "Minus minus confusion: treating -(-5) as -5 instead of +5",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VI",
+      "chapter": "Chapter 6: Integers (Exercise 6.3)",
+      "num": "Q.3.",
+      "lines": [
+        "Evaluate the following expression:",
+        "(\u22127) + 12 \u2212 (\u22125)"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_6/c6_set_02_integers/01_question.png",
+      "wrong": "class_6/c6_set_02_integers/02_wrong_solution.png",
+      "right": "class_6/c6_set_02_integers/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c6_set_03_simple_equations",
+    "class": 6,
+    "title": "Simple Linear Equation Transposition",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Transposition sign slip: moving +7 to RHS without changing sign to -7",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VI",
+      "chapter": "Chapter 11: Algebra (Exercise 11.5)",
+      "num": "Q.2.",
+      "lines": [
+        "Solve the following equation for x:",
+        "x + 7 = 15"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_6/c6_set_03_simple_equations/01_question.png",
+      "wrong": "class_6/c6_set_03_simple_equations/02_wrong_solution.png",
+      "right": "class_6/c6_set_03_simple_equations/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c6_set_04_perimeter",
+    "class": 6,
+    "title": "Perimeter of Rectangle",
+    "style": "Good (Neat Topper)",
+    "misconception": "Incomplete perimeter formula: using l + b instead of 2(l + b)",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VI",
+      "chapter": "Chapter 10: Mensuration (Exercise 10.1)",
+      "num": "Q.5.",
+      "lines": [
+        "Find the perimeter of a rectangle whose",
+        "length is 8 cm and breadth is 5 cm."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_6/c6_set_04_perimeter/01_question.png",
+      "wrong": "class_6/c6_set_04_perimeter/02_wrong_solution.png",
+      "right": "class_6/c6_set_04_perimeter/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c6_set_05_unitary_method",
+    "class": 6,
+    "title": "Unitary Method (Cost Calculation)",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Skipping unit rate: multiplying total cost directly without finding cost of 1 pen",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VI",
+      "chapter": "Chapter 12: Ratio and Proportion (Exercise 12.3)",
+      "num": "Q.4.",
+      "lines": [
+        "If 5 pens cost Rs 60, find the cost of 8 pens."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_6/c6_set_05_unitary_method/01_question.png",
+      "wrong": "class_6/c6_set_05_unitary_method/02_wrong_solution.png",
+      "right": "class_6/c6_set_05_unitary_method/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c7_set_01_bracket_distrib",
+    "class": 7,
+    "title": "Linear Equation with Bracket Distribution",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Distributive failure: multiplying 3 only with x, forgetting to multiply with -2",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VII",
+      "chapter": "Chapter 4: Simple Equations (Exercise 4.3)",
+      "num": "Q.2.",
+      "lines": [
+        "Solve the following linear equation:",
+        "3(x \u2212 2) = 15"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_7/c7_set_01_bracket_distrib/01_question.png",
+      "wrong": "class_7/c7_set_01_bracket_distrib/02_wrong_solution.png",
+      "right": "class_7/c7_set_01_bracket_distrib/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c7_set_02_rational_sub",
+    "class": 7,
+    "title": "Subtraction of Rational Numbers",
+    "style": "Good (Neat Topper)",
+    "misconception": "Sign slip: missing minus on negative numerator when converting to common denominator",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VII",
+      "chapter": "Chapter 9: Rational Numbers (Exercise 9.2)",
+      "num": "Q.3.",
+      "lines": [
+        "Find the difference:",
+        "\u22123/5 \u2212 7/10"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_7/c7_set_02_rational_sub/01_question.png",
+      "wrong": "class_7/c7_set_02_rational_sub/02_wrong_solution.png",
+      "right": "class_7/c7_set_02_rational_sub/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c7_set_03_simple_interest",
+    "class": 7,
+    "title": "Simple Interest Calculation",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Formula denominator slip: forgot /100 in SI = P*R*T/100",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VII",
+      "chapter": "Chapter 8: Comparing Quantities (Exercise 8.3)",
+      "num": "Q.7.",
+      "lines": [
+        "Find the simple interest on Rs 5,000",
+        "at 8% per annum for 3 years."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_7/c7_set_03_simple_interest/01_question.png",
+      "wrong": "class_7/c7_set_03_simple_interest/02_wrong_solution.png",
+      "right": "class_7/c7_set_03_simple_interest/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c7_set_04_exponents",
+    "class": 7,
+    "title": "Product Law of Exponents",
+    "style": "Good (Neat Topper)",
+    "misconception": "Multiplying powers instead of adding them: a^m * a^n = a^(m*n) instead of a^(m+n)",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VII",
+      "chapter": "Chapter 13: Exponents and Powers (Exercise 13.2)",
+      "num": "Q.1.",
+      "lines": [
+        "Simplify the expression using laws of exponents:",
+        "x^3 \u00b7 x^4"
+      ],
+      "marks": "[1 Mark]"
+    },
+    "paths": {
+      "question": "class_7/c7_set_04_exponents/01_question.png",
+      "wrong": "class_7/c7_set_04_exponents/02_wrong_solution.png",
+      "right": "class_7/c7_set_04_exponents/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c7_set_05_triangle_angles",
+    "class": 7,
+    "title": "Angle Sum Property of Triangle",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Sum of triangle angles confused with quadrilateral: using 360\u00b0 instead of 180\u00b0",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VII",
+      "chapter": "Chapter 6: The Triangle and Its Properties (Exercise 6.3)",
+      "num": "Q.1.",
+      "lines": [
+        "Two angles of a triangle are 50\u00b0 and 60\u00b0.",
+        "Find the measure of the third angle."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_7/c7_set_05_triangle_angles/01_question.png",
+      "wrong": "class_7/c7_set_05_triangle_angles/02_wrong_solution.png",
+      "right": "class_7/c7_set_05_triangle_angles/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c8_set_01_binomial_square",
+    "class": 8,
+    "title": "Expansion of Binomial Square (Freshman's Dream)",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Dropping middle term: (a - b)^2 = a^2 - b^2 instead of a^2 - 2ab + b^2",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VIII",
+      "chapter": "Chapter 9: Algebraic Expressions and Identities (Exercise 9.5)",
+      "num": "Q.2.",
+      "lines": [
+        "Use a suitable identity to expand:",
+        "(2x \u2212 3)^2"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_8/c8_set_01_binomial_square/01_question.png",
+      "wrong": "class_8/c8_set_01_binomial_square/02_wrong_solution.png",
+      "right": "class_8/c8_set_01_binomial_square/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c8_set_02_linear_both_sides",
+    "class": 8,
+    "title": "Linear Equation with Variables on Both Sides",
+    "style": "Good (Neat Topper)",
+    "misconception": "Sign transposition slip: transposing -7 to RHS as -7 instead of +7",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VIII",
+      "chapter": "Chapter 2: Linear Equations in One Variable (Exercise 2.2)",
+      "num": "Q.3.",
+      "lines": [
+        "Solve the following linear equation:",
+        "5x \u2212 7 = 3x + 9"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_8/c8_set_02_linear_both_sides/01_question.png",
+      "wrong": "class_8/c8_set_02_linear_both_sides/02_wrong_solution.png",
+      "right": "class_8/c8_set_02_linear_both_sides/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c8_set_03_cross_mult",
+    "class": 8,
+    "title": "Cross Multiplication Linear Equation",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Distributive slip in cross-multiplying: 2(2x + 1) written as 4x + 1 (didn't multiply 1)",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VIII",
+      "chapter": "Chapter 2: Linear Equations in One Variable (Exercise 2.6)",
+      "num": "Q.6.",
+      "lines": [
+        "Solve the equation by cross-multiplication:",
+        "(2x + 1) / 3 = (x + 4) / 2"
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_8/c8_set_03_cross_mult/01_question.png",
+      "wrong": "class_8/c8_set_03_cross_mult/02_wrong_solution.png",
+      "right": "class_8/c8_set_03_cross_mult/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c8_set_04_factorisation",
+    "class": 8,
+    "title": "Factorisation by Common Monomial",
+    "style": "Good (Neat Topper)",
+    "misconception": "Factoring slip: leaving 9 instead of 3 inside bracket when factoring 3x out of 9x",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VIII",
+      "chapter": "Chapter 14: Factorisation (Exercise 14.1)",
+      "num": "Q.2.",
+      "lines": [
+        "Factorise the algebraic expression:",
+        "6x^2 + 9x"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_8/c8_set_04_factorisation/01_question.png",
+      "wrong": "class_8/c8_set_04_factorisation/02_wrong_solution.png",
+      "right": "class_8/c8_set_04_factorisation/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c8_set_05_surface_area",
+    "class": 8,
+    "title": "Total Surface Area of Cuboid",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Concept confusion: calculating volume (l*b*h) instead of surface area 2(lb+bh+hl)",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VIII",
+      "chapter": "Chapter 11: Mensuration (Exercise 11.3)",
+      "num": "Q.1.",
+      "lines": [
+        "Find the total surface area of a cuboid",
+        "of length 10 cm, breadth 8 cm, and height 5 cm."
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_8/c8_set_05_surface_area/01_question.png",
+      "wrong": "class_8/c8_set_05_surface_area/02_wrong_solution.png",
+      "right": "class_8/c8_set_05_surface_area/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c9_set_01_diff_squares",
+    "class": 9,
+    "title": "Difference of Two Squares Factorisation",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Identity confusion: factoring a^2 - b^2 as (a - b)^2 instead of (a - b)(a + b)",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class IX",
+      "chapter": "Chapter 2: Polynomials (Exercise 2.5)",
+      "num": "Q.3.",
+      "lines": [
+        "Factorise the polynomial using a suitable identity:",
+        "x^2 \u2212 49"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_9/c9_set_01_diff_squares/01_question.png",
+      "wrong": "class_9/c9_set_01_diff_squares/02_wrong_solution.png",
+      "right": "class_9/c9_set_01_diff_squares/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c9_set_02_distance_origin",
+    "class": 9,
+    "title": "Distance of Point from Origin",
+    "style": "Good (Neat Topper)",
+    "misconception": "Taxi-cab metric slip: adding coordinates directly (5 + 12 = 17) instead of Euclidean sqrt(x^2 + y^2)",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class IX",
+      "chapter": "Chapter 3: Coordinate Geometry (Exercise 3.2)",
+      "num": "Q.2.",
+      "lines": [
+        "Find the distance of the point P(5, 12)",
+        "from the origin (0, 0)."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_9/c9_set_02_distance_origin/01_question.png",
+      "wrong": "class_9/c9_set_02_distance_origin/02_wrong_solution.png",
+      "right": "class_9/c9_set_02_distance_origin/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c9_set_03_linear_eval",
+    "class": 9,
+    "title": "Evaluating Linear Equation Solution",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Basic arithmetic subtraction slip: 12 - 6 = 8 instead of 6",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class IX",
+      "chapter": "Chapter 4: Linear Equations in Two Variables (Exercise 4.2)",
+      "num": "Q.1.",
+      "lines": [
+        "Find the value of y in the equation 2x + 3y = 12",
+        "when x = 3."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_9/c9_set_03_linear_eval/01_question.png",
+      "wrong": "class_9/c9_set_03_linear_eval/02_wrong_solution.png",
+      "right": "class_9/c9_set_03_linear_eval/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c9_set_04_herons_semiperim",
+    "class": 9,
+    "title": "Heron's Formula Semi-Perimeter",
+    "style": "Good (Neat Topper)",
+    "misconception": "Semi-perimeter definition slip: using perimeter s = a + b + c directly without / 2",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class IX",
+      "chapter": "Chapter 12: Heron's Formula (Exercise 12.1)",
+      "num": "Q.1.",
+      "lines": [
+        "Find the area of a triangle with sides",
+        "6 cm, 8 cm, and 10 cm using Heron's formula."
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_9/c9_set_04_herons_semiperim/01_question.png",
+      "wrong": "class_9/c9_set_04_herons_semiperim/02_wrong_solution.png",
+      "right": "class_9/c9_set_04_herons_semiperim/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c9_set_05_circle_circumference",
+    "class": 9,
+    "title": "Circumference of a Circle",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Circumference formula slip: using pi*r instead of 2*pi*r",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class IX",
+      "chapter": "Chapter 10: Circles (Exercise 10.5)",
+      "num": "Q.4.",
+      "lines": [
+        "Find the circumference of a circle of radius 14 cm.",
+        "(Use pi = 22/7)"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_9/c9_set_05_circle_circumference/01_question.png",
+      "wrong": "class_9/c9_set_05_circle_circumference/02_wrong_solution.png",
+      "right": "class_9/c9_set_05_circle_circumference/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_01_quadratic_sign",
+    "class": 10,
+    "title": "Quadratic Formula (-b Sign Trap)",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "The classic CBSE sign slip: -b when b = -7 written as -7 instead of -(-7) = +7",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 4: Quadratic Equations (Exercise 4.3)",
+      "num": "Q.2.",
+      "lines": [
+        "Find the roots of the quadratic equation:",
+        "2x^2 \u2212 7x + 3 = 0"
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_01_quadratic_sign/01_question.png",
+      "wrong": "class_10/c10_set_01_quadratic_sign/02_wrong_solution.png",
+      "right": "class_10/c10_set_01_quadratic_sign/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_02_linear_elimination",
+    "class": 10,
+    "title": "Pair of Linear Equations (Elimination)",
+    "style": "Good (Neat Topper)",
+    "misconception": "Double negative subtraction slip: 3y - (-4y) written as -y instead of 7y",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 3: Pair of Linear Equations (Exercise 3.3)",
+      "num": "Q.1.",
+      "lines": [
+        "Solve the following pair of linear equations:",
+        "2x + 3y = 11",
+        "2x \u2212 4y = \u221224"
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_02_linear_elimination/01_question.png",
+      "wrong": "class_10/c10_set_02_linear_elimination/02_wrong_solution.png",
+      "right": "class_10/c10_set_02_linear_elimination/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_03_ap_nth_term",
+    "class": 10,
+    "title": "Arithmetic Progression nth Term (n vs n-1 Trap)",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Formula slip: using a + nd instead of a + (n - 1)d",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 5: Arithmetic Progressions (Exercise 5.2)",
+      "num": "Q.3.",
+      "lines": [
+        "Find the 15th term of the Arithmetic Progression:",
+        "4, 9, 14, 19, ..."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_03_ap_nth_term/01_question.png",
+      "wrong": "class_10/c10_set_03_ap_nth_term/02_wrong_solution.png",
+      "right": "class_10/c10_set_03_ap_nth_term/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_04_distance_formula",
+    "class": 10,
+    "title": "Distance Formula between Points",
+    "style": "Good (Neat Topper)",
+    "misconception": "Dropping the square root: forgetting to take sqrt at the final step",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 7: Coordinate Geometry (Exercise 7.1)",
+      "num": "Q.1.",
+      "lines": [
+        "Find the distance between the points",
+        "A(2, 3) and B(6, 6)."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_04_distance_formula/01_question.png",
+      "wrong": "class_10/c10_set_04_distance_formula/02_wrong_solution.png",
+      "right": "class_10/c10_set_04_distance_formula/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_05_sector_area",
+    "class": 10,
+    "title": "Area of Sector of a Circle",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Arc length vs Sector area confusion: using 2*pi*r instead of pi*r^2",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 12: Areas Related to Circles (Exercise 12.2)",
+      "num": "Q.1.",
+      "lines": [
+        "Find the area of a sector of a circle with radius 6 cm",
+        "if angle of the sector is 60\u00b0. (Use pi = 22/7)"
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_05_sector_area/01_question.png",
+      "wrong": "class_10/c10_set_05_sector_area/02_wrong_solution.png",
+      "right": "class_10/c10_set_05_sector_area/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c6_set_06_hcf_lcm",
+    "class": 6,
+    "title": "HCF and LCM Product Formula",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Adding numbers instead of using product rule HCF x LCM = a x b",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VI",
+      "chapter": "Chapter 3: Playing with Numbers",
+      "num": "Q.6.",
+      "lines": [
+        "The HCF of two numbers 84 and 120 is 12.",
+        "Find their LCM using the product relationship formula."
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_6/c6_set_06_hcf_lcm/01_question.png",
+      "wrong": "class_6/c6_set_06_hcf_lcm/02_wrong_solution.png",
+      "right": "class_6/c6_set_06_hcf_lcm/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c6_set_07_mean_average",
+    "class": 6,
+    "title": "Arithmetic Mean of Observations",
+    "style": "Good (Neat/Clear)",
+    "misconception": "Dividing sum by 2 instead of total count of observations N = 5",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VI",
+      "chapter": "Chapter 9: Data Handling",
+      "num": "Q.7.",
+      "lines": [
+        "Find the arithmetic mean of the following five scores:",
+        "12, 15, 18, 21, and 24."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_6/c6_set_07_mean_average/01_question.png",
+      "wrong": "class_6/c6_set_07_mean_average/02_wrong_solution.png",
+      "right": "class_6/c6_set_07_mean_average/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c6_set_08_fraction_of",
+    "class": 6,
+    "title": "Fraction of a Fraction (Product)",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Treating 'of' as addition of fractions instead of multiplication",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VI",
+      "chapter": "Chapter 7: Fractions",
+      "num": "Q.8.",
+      "lines": [
+        "Evaluate the following fraction expression:",
+        "Find 2/3 of 3/4."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_6/c6_set_08_fraction_of/01_question.png",
+      "wrong": "class_6/c6_set_08_fraction_of/02_wrong_solution.png",
+      "right": "class_6/c6_set_08_fraction_of/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c7_set_06_linear_both_sides",
+    "class": 7,
+    "title": "Linear Equation with Variables on Both Sides",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Sign transposition error: +4 moves to RHS as +4 instead of -4",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VII",
+      "chapter": "Chapter 4: Simple Equations (Exercise 4.3)",
+      "num": "Q.6.",
+      "lines": [
+        "Solve the linear equation for x:",
+        "5x + 4 = 2x + 19"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_7/c7_set_06_linear_both_sides/01_question.png",
+      "wrong": "class_7/c7_set_06_linear_both_sides/02_wrong_solution.png",
+      "right": "class_7/c7_set_06_linear_both_sides/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c7_set_07_integer_bodmas",
+    "class": 7,
+    "title": "Integer Operations with Division Sign Rules",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Negative divided by negative treated as negative instead of positive",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VII",
+      "chapter": "Chapter 1: Integers",
+      "num": "Q.7.",
+      "lines": [
+        "Evaluate the integer expression:",
+        "(\u221215) \u00d7 4 \u00f7 (\u22126)"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_7/c7_set_07_integer_bodmas/01_question.png",
+      "wrong": "class_7/c7_set_07_integer_bodmas/02_wrong_solution.png",
+      "right": "class_7/c7_set_07_integer_bodmas/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c7_set_08_parallelogram_area",
+    "class": 7,
+    "title": "Area of Parallelogram vs Triangle Formula",
+    "style": "Good (Neat/Clear)",
+    "misconception": "Multiplying 1/2 x base x height (confusing parallelogram with triangle)",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VII",
+      "chapter": "Chapter 11: Perimeter and Area",
+      "num": "Q.8.",
+      "lines": [
+        "Find the area of a parallelogram with:",
+        "Base = 9 cm and Height = 6 cm."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_7/c7_set_08_parallelogram_area/01_question.png",
+      "wrong": "class_7/c7_set_08_parallelogram_area/02_wrong_solution.png",
+      "right": "class_7/c7_set_08_parallelogram_area/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c8_set_06_square_root_factors",
+    "class": 8,
+    "title": "Square Root by Prime Factorisation",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Listing all prime factors but forgetting to take square root of pairs",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VIII",
+      "chapter": "Chapter 6: Squares and Square Roots",
+      "num": "Q.6.",
+      "lines": [
+        "Find the square root of 1764 using the",
+        "prime factorisation method."
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_8/c8_set_06_square_root_factors/01_question.png",
+      "wrong": "class_8/c8_set_06_square_root_factors/02_wrong_solution.png",
+      "right": "class_8/c8_set_06_square_root_factors/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c8_set_07_cube_root",
+    "class": 8,
+    "title": "Cube Root by Prime Factorisation",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Grouping prime factors in pairs of 2 instead of triplets of 3",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VIII",
+      "chapter": "Chapter 7: Cubes and Cube Roots",
+      "num": "Q.7.",
+      "lines": [
+        "Find the cube root of 2744 using prime factorisation."
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_8/c8_set_07_cube_root/01_question.png",
+      "wrong": "class_8/c8_set_07_cube_root/02_wrong_solution.png",
+      "right": "class_8/c8_set_07_cube_root/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c8_set_08_negative_exponent",
+    "class": 8,
+    "title": "Negative Exponent Evaluation",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Interpreting 2^(-3) as negative multiplication 2 x (-3) = -6 or -8",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VIII",
+      "chapter": "Chapter 12: Exponents and Powers",
+      "num": "Q.8.",
+      "lines": [
+        "Evaluate the exponent expression:",
+        "2^{-3}"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_8/c8_set_08_negative_exponent/01_question.png",
+      "wrong": "class_8/c8_set_08_negative_exponent/02_wrong_solution.png",
+      "right": "class_8/c8_set_08_negative_exponent/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c8_set_09_compound_interest",
+    "class": 8,
+    "title": "Compound Amount Calculation",
+    "style": "Good (Neat/Clear)",
+    "misconception": "Using simple interest formula instead of compound interest power formula",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VIII",
+      "chapter": "Chapter 8: Comparing Quantities",
+      "num": "Q.9.",
+      "lines": [
+        "Find the compound amount on Rs 10,000 at 10% per annum",
+        "compounded annually for 2 years."
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_8/c8_set_09_compound_interest/01_question.png",
+      "wrong": "class_8/c8_set_09_compound_interest/02_wrong_solution.png",
+      "right": "class_8/c8_set_09_compound_interest/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c8_set_10_inverse_proportion",
+    "class": 8,
+    "title": "Inverse Proportion (Workers & Days)",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Direct proportion cross-multiplication on inverse problem (less workers taking less days)",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VIII",
+      "chapter": "Chapter 13: Direct and Inverse Proportions",
+      "num": "Q.10.",
+      "lines": [
+        "If 6 workers finish a job in 10 days,",
+        "how many days will 4 workers take to finish the same job?"
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_8/c8_set_10_inverse_proportion/01_question.png",
+      "wrong": "class_8/c8_set_10_inverse_proportion/02_wrong_solution.png",
+      "right": "class_8/c8_set_10_inverse_proportion/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c8_set_11_polyhedron_euler",
+    "class": 8,
+    "title": "Euler's Formula on Polyhedron",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Transposition sign slip: F - 18 = 2 leading to F = 18 - 2 = 16",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VIII",
+      "chapter": "Chapter 10: Visualising Solid Shapes",
+      "num": "Q.11.",
+      "lines": [
+        "A polyhedron has 12 vertices and 30 edges.",
+        "Use Euler's formula F + V \u2212 E = 2 to find the number of faces (F)."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_8/c8_set_11_polyhedron_euler/01_question.png",
+      "wrong": "class_8/c8_set_11_polyhedron_euler/02_wrong_solution.png",
+      "right": "class_8/c8_set_11_polyhedron_euler/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c8_set_12_fractional_linear",
+    "class": 8,
+    "title": "Linear Equation with Fractional Term",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Multiplying only fractional part by 3 without multiplying entire equation",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class VIII",
+      "chapter": "Chapter 2: Linear Equations",
+      "num": "Q.12.",
+      "lines": [
+        "Solve the linear equation for x:",
+        "x/3 + 4 = 10"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_8/c8_set_12_fractional_linear/01_question.png",
+      "wrong": "class_8/c8_set_12_fractional_linear/02_wrong_solution.png",
+      "right": "class_8/c8_set_12_fractional_linear/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c9_set_06_polynomial_zero",
+    "class": 9,
+    "title": "Zero of a Linear Polynomial",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Evaluating p(0) instead of solving p(x) = 0 for the zero of the polynomial",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class IX",
+      "chapter": "Chapter 2: Polynomials (Exercise 2.2)",
+      "num": "Q.6.",
+      "lines": [
+        "Find the zero of the linear polynomial:",
+        "p(x) = 3x \u2212 12"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_9/c9_set_06_polynomial_zero/01_question.png",
+      "wrong": "class_9/c9_set_06_polynomial_zero/02_wrong_solution.png",
+      "right": "class_9/c9_set_06_polynomial_zero/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c9_set_07_surds_conjugate",
+    "class": 9,
+    "title": "Surds Product (Difference of Squares)",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Squaring root 2 as (sqrt(2))^2 = 4 instead of 2",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class IX",
+      "chapter": "Chapter 1: Number Systems (Exercise 1.5)",
+      "num": "Q.7.",
+      "lines": [
+        "Simplify the real number expression:",
+        "(3 + \u221a2)(3 \u2212 \u221a2)"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_9/c9_set_07_surds_conjugate/01_question.png",
+      "wrong": "class_9/c9_set_07_surds_conjugate/02_wrong_solution.png",
+      "right": "class_9/c9_set_07_surds_conjugate/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c9_set_08_cone_volume",
+    "class": 9,
+    "title": "Volume of Right Circular Cone",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Omitting 1/3 factor, calculating cylinder volume pi*r^2*h instead of cone",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class IX",
+      "chapter": "Chapter 13: Surface Areas and Volumes",
+      "num": "Q.8.",
+      "lines": [
+        "Find the volume of a cone with radius 7 cm and height 12 cm.",
+        "(Take \u03c0 = 22/7)"
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_9/c9_set_08_cone_volume/01_question.png",
+      "wrong": "class_9/c9_set_08_cone_volume/02_wrong_solution.png",
+      "right": "class_9/c9_set_08_cone_volume/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c9_set_09_experimental_prob",
+    "class": 9,
+    "title": "Experimental Probability from Trial Data",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Writing theoretical probability 1/6 of standard die instead of experimental frequency 15/60",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class IX",
+      "chapter": "Chapter 15: Probability",
+      "num": "Q.9.",
+      "lines": [
+        "A die is thrown 60 times and the face 6 turns up 15 times.",
+        "Find the experimental probability of getting the number 6."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_9/c9_set_09_experimental_prob/01_question.png",
+      "wrong": "class_9/c9_set_09_experimental_prob/02_wrong_solution.png",
+      "right": "class_9/c9_set_09_experimental_prob/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c9_set_10_quadrilateral_angles",
+    "class": 9,
+    "title": "Angle Sum Property of Quadrilateral",
+    "style": "Good (Neat/Clear)",
+    "misconception": "Taking sum of angles as 180\u00b0 (triangle) instead of 360\u00b0 (quadrilateral)",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class IX",
+      "chapter": "Chapter 8: Quadrilaterals",
+      "num": "Q.10.",
+      "lines": [
+        "Three angles of a quadrilateral are 75\u00b0, 90\u00b0, and 105\u00b0.",
+        "Find the measure of the fourth angle."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_9/c9_set_10_quadrilateral_angles/01_question.png",
+      "wrong": "class_9/c9_set_10_quadrilateral_angles/02_wrong_solution.png",
+      "right": "class_9/c9_set_10_quadrilateral_angles/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c9_set_11_ap_15th_term",
+    "class": 9,
+    "title": "Arithmetic Progression 15th Term (n vs n-1)",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Using Tn = a + nd instead of Tn = a + (n-1)d",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class IX",
+      "chapter": "Chapter 5: Arithmetic Progressions",
+      "num": "Q.11.",
+      "lines": [
+        "Find the 15th term of the Arithmetic Progression (AP):",
+        "4, 9, 14, 19, ..."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_9/c9_set_11_ap_15th_term/01_question.png",
+      "wrong": "class_9/c9_set_11_ap_15th_term/02_wrong_solution.png",
+      "right": "class_9/c9_set_11_ap_15th_term/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_06_real_numbers_lcm_hcf",
+    "class": 10,
+    "title": "Real Numbers Product Formula",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Arithmetic division slip: 306/9 written as 36 instead of 34",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 1: Real Numbers (Exercise 1.2)",
+      "num": "Q.6.",
+      "lines": [
+        "Given that HCF(306, 657) = 9,",
+        "find LCM(306, 657) using the product property."
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_06_real_numbers_lcm_hcf/01_question.png",
+      "wrong": "class_10/c10_set_06_real_numbers_lcm_hcf/02_wrong_solution.png",
+      "right": "class_10/c10_set_06_real_numbers_lcm_hcf/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_07_polynomial_middle_term",
+    "class": 10,
+    "title": "Factoring Quadratic by Middle Term Splitting",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Middle term sign error: using +3, +4 instead of -3, -4 for sum -7",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 2: Polynomials",
+      "num": "Q.7.",
+      "lines": [
+        "Factorise the quadratic polynomial by splitting the middle term:",
+        "x^2 \u2212 7x + 12"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_07_polynomial_middle_term/01_question.png",
+      "wrong": "class_10/c10_set_07_polynomial_middle_term/02_wrong_solution.png",
+      "right": "class_10/c10_set_07_polynomial_middle_term/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_08_ap_sum_formula",
+    "class": 10,
+    "title": "Sum of First n Terms of an AP",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Omission of factor 2 in formula: writing Sn = n/2 [a + (n-1)d]",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 5: Arithmetic Progressions",
+      "num": "Q.8.",
+      "lines": [
+        "Find the sum of the first 20 terms of the AP:",
+        "1, 4, 7, 10, ..."
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_08_ap_sum_formula/01_question.png",
+      "wrong": "class_10/c10_set_08_ap_sum_formula/02_wrong_solution.png",
+      "right": "class_10/c10_set_08_ap_sum_formula/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_09_trigonometric_values",
+    "class": 10,
+    "title": "Trigonometric Standard Angles Evaluation",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Omitting squares of trigonometric values, calculating 2(1) + sqrt(3)/2 - sqrt(3)/2",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 8: Introduction to Trigonometry",
+      "num": "Q.9.",
+      "lines": [
+        "Evaluate the trigonometric value expression:",
+        "2 tan\u00b245\u00b0 + cos\u00b230\u00b0 \u2212 sin\u00b260\u00b0"
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_09_trigonometric_values/01_question.png",
+      "wrong": "class_10/c10_set_09_trigonometric_values/02_wrong_solution.png",
+      "right": "class_10/c10_set_09_trigonometric_values/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_10_heights_shadow",
+    "class": 10,
+    "title": "Heights and Distances (Tower Shadow)",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Using sin 45\u00b0 instead of tan 45\u00b0 for height / base ratio",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 9: Some Applications of Trigonometry",
+      "num": "Q.10.",
+      "lines": [
+        "A vertical tower casts a 20 m shadow on the ground when",
+        "the sun's angle of elevation is 45\u00b0. Find the height of the tower."
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_10_heights_shadow/01_question.png",
+      "wrong": "class_10/c10_set_10_heights_shadow/02_wrong_solution.png",
+      "right": "class_10/c10_set_10_heights_shadow/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_11_circle_tangent_pythagoras",
+    "class": 10,
+    "title": "Circle Tangent Length via Pythagoras",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Adding squares instead of subtracting from hypotenuse: PT = sqrt(13^2 + 5^2)",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 10: Circles (Exercise 10.2)",
+      "num": "Q.11.",
+      "lines": [
+        "A point P is 13 cm from the centre O of a circle of radius 5 cm.",
+        "Find the length of the tangent PT drawn from P to the circle."
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_11_circle_tangent_pythagoras/01_question.png",
+      "wrong": "class_10/c10_set_11_circle_tangent_pythagoras/02_wrong_solution.png",
+      "right": "class_10/c10_set_11_circle_tangent_pythagoras/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_12_hemisphere_volume",
+    "class": 10,
+    "title": "Volume of Solid Hemisphere",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Using full sphere formula 4/3 pi*r^3 instead of hemisphere 2/3 pi*r^3",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 13: Surface Areas and Volumes",
+      "num": "Q.12.",
+      "lines": [
+        "Find the volume of a solid hemisphere of radius 21 cm.",
+        "(Use \u03c0 = 22/7)"
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_12_hemisphere_volume/01_question.png",
+      "wrong": "class_10/c10_set_12_hemisphere_volume/02_wrong_solution.png",
+      "right": "class_10/c10_set_12_hemisphere_volume/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_13_triangles_thales",
+    "class": 10,
+    "title": "Thales Theorem (Basic Proportionality)",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Inverting ratio in Thales theorem: AD/DB = EC/AE instead of AE/EC",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 6: Triangles (Exercise 6.2)",
+      "num": "Q.13.",
+      "lines": [
+        "In \u0394ABC, DE \u2225 BC with D on AB and E on AC.",
+        "If AD = 2 cm, DB = 3 cm, and AE = 4 cm, find EC."
+      ],
+      "marks": "[3 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_13_triangles_thales/01_question.png",
+      "wrong": "class_10/c10_set_13_triangles_thales/02_wrong_solution.png",
+      "right": "class_10/c10_set_13_triangles_thales/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_14_grouped_mean",
+    "class": 10,
+    "title": "Mean of Grouped Frequency Distribution",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Inverting division: calculating Sigma f / Sigma (f*x) instead of Sigma (f*x) / Sigma f",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 14: Statistics",
+      "num": "Q.14.",
+      "lines": [
+        "For a grouped frequency distribution, \u03a3(f \u00b7 x) = 650",
+        "and \u03a3f = 50. Find the arithmetic mean."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_14_grouped_mean/01_question.png",
+      "wrong": "class_10/c10_set_14_grouped_mean/02_wrong_solution.png",
+      "right": "class_10/c10_set_14_grouped_mean/03_right_solution.png"
+    }
+  },
+  {
+    "id": "c10_set_15_probability_cards",
+    "class": 10,
+    "title": "Probability from a Deck of 52 Cards",
+    "style": "Bad (Messy/Rushed)",
+    "misconception": "Confusing number of Kings in deck as 2 (thinking only 1 red and 1 black) instead of 4",
+    "question": {
+      "book": "NCERT Mathematics \u00b7 Class X",
+      "chapter": "Chapter 15: Probability (Exercise 15.1)",
+      "num": "Q.15.",
+      "lines": [
+        "One card is drawn at random from a well-shuffled pack of 52 playing cards.",
+        "Find the probability of drawing a King."
+      ],
+      "marks": "[2 Marks]"
+    },
+    "paths": {
+      "question": "class_10/c10_set_15_probability_cards/01_question.png",
+      "wrong": "class_10/c10_set_15_probability_cards/02_wrong_solution.png",
+      "right": "class_10/c10_set_15_probability_cards/03_right_solution.png"
+    }
+  }
+]

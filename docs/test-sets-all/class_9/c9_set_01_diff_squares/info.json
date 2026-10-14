@@ -1,0 +1,22 @@
+{
+  "id": "c9_set_01_diff_squares",
+  "class": 9,
+  "title": "Difference of Two Squares Factorisation",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Identity confusion: factoring a^2 - b^2 as (a - b)^2 instead of (a - b)(a + b)",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class IX",
+    "chapter": "Chapter 2: Polynomials (Exercise 2.5)",
+    "num": "Q.3.",
+    "lines": [
+      "Factorise the polynomial using a suitable identity:",
+      "x^2 \u2212 49"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_9/c9_set_01_diff_squares/01_question.png",
+    "wrong": "class_9/c9_set_01_diff_squares/02_wrong_solution.png",
+    "right": "class_9/c9_set_01_diff_squares/03_right_solution.png"
+  }
+}

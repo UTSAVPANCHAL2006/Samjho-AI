@@ -1,0 +1,22 @@
+{
+  "id": "c10_set_09_trigonometric_values",
+  "class": 10,
+  "title": "Trigonometric Standard Angles Evaluation",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Omitting squares of trigonometric values, calculating 2(1) + sqrt(3)/2 - sqrt(3)/2",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class X",
+    "chapter": "Chapter 8: Introduction to Trigonometry",
+    "num": "Q.9.",
+    "lines": [
+      "Evaluate the trigonometric value expression:",
+      "2 tan\u00b245\u00b0 + cos\u00b230\u00b0 \u2212 sin\u00b260\u00b0"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_10/c10_set_09_trigonometric_values/01_question.png",
+    "wrong": "class_10/c10_set_09_trigonometric_values/02_wrong_solution.png",
+    "right": "class_10/c10_set_09_trigonometric_values/03_right_solution.png"
+  }
+}

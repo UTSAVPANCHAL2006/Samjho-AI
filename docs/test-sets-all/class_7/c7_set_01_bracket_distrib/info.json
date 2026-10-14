@@ -1,0 +1,22 @@
+{
+  "id": "c7_set_01_bracket_distrib",
+  "class": 7,
+  "title": "Linear Equation with Bracket Distribution",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Distributive failure: multiplying 3 only with x, forgetting to multiply with -2",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VII",
+    "chapter": "Chapter 4: Simple Equations (Exercise 4.3)",
+    "num": "Q.2.",
+    "lines": [
+      "Solve the following linear equation:",
+      "3(x \u2212 2) = 15"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_7/c7_set_01_bracket_distrib/01_question.png",
+    "wrong": "class_7/c7_set_01_bracket_distrib/02_wrong_solution.png",
+    "right": "class_7/c7_set_01_bracket_distrib/03_right_solution.png"
+  }
+}

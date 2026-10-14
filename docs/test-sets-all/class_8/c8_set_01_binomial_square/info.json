@@ -1,0 +1,22 @@
+{
+  "id": "c8_set_01_binomial_square",
+  "class": 8,
+  "title": "Expansion of Binomial Square (Freshman's Dream)",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Dropping middle term: (a - b)^2 = a^2 - b^2 instead of a^2 - 2ab + b^2",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VIII",
+    "chapter": "Chapter 9: Algebraic Expressions and Identities (Exercise 9.5)",
+    "num": "Q.2.",
+    "lines": [
+      "Use a suitable identity to expand:",
+      "(2x \u2212 3)^2"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_8/c8_set_01_binomial_square/01_question.png",
+    "wrong": "class_8/c8_set_01_binomial_square/02_wrong_solution.png",
+    "right": "class_8/c8_set_01_binomial_square/03_right_solution.png"
+  }
+}

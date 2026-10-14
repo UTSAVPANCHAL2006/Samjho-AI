@@ -1,0 +1,22 @@
+{
+  "id": "c6_set_03_simple_equations",
+  "class": 6,
+  "title": "Simple Linear Equation Transposition",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Transposition sign slip: moving +7 to RHS without changing sign to -7",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VI",
+    "chapter": "Chapter 11: Algebra (Exercise 11.5)",
+    "num": "Q.2.",
+    "lines": [
+      "Solve the following equation for x:",
+      "x + 7 = 15"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_6/c6_set_03_simple_equations/01_question.png",
+    "wrong": "class_6/c6_set_03_simple_equations/02_wrong_solution.png",
+    "right": "class_6/c6_set_03_simple_equations/03_right_solution.png"
+  }
+}

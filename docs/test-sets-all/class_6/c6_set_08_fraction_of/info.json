@@ -1,0 +1,22 @@
+{
+  "id": "c6_set_08_fraction_of",
+  "class": 6,
+  "title": "Fraction of a Fraction (Product)",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Treating 'of' as addition of fractions instead of multiplication",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VI",
+    "chapter": "Chapter 7: Fractions",
+    "num": "Q.8.",
+    "lines": [
+      "Evaluate the following fraction expression:",
+      "Find 2/3 of 3/4."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_6/c6_set_08_fraction_of/01_question.png",
+    "wrong": "class_6/c6_set_08_fraction_of/02_wrong_solution.png",
+    "right": "class_6/c6_set_08_fraction_of/03_right_solution.png"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "c7_set_02_rational_sub",
+  "class": 7,
+  "title": "Subtraction of Rational Numbers",
+  "style": "Good (Neat Topper)",
+  "misconception": "Sign slip: missing minus on negative numerator when converting to common denominator",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VII",
+    "chapter": "Chapter 9: Rational Numbers (Exercise 9.2)",
+    "num": "Q.3.",
+    "lines": [
+      "Find the difference:",
+      "\u22123/5 \u2212 7/10"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_7/c7_set_02_rational_sub/01_question.png",
+    "wrong": "class_7/c7_set_02_rational_sub/02_wrong_solution.png",
+    "right": "class_7/c7_set_02_rational_sub/03_right_solution.png"
+  }
+}

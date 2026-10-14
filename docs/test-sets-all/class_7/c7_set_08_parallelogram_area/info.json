@@ -1,0 +1,22 @@
+{
+  "id": "c7_set_08_parallelogram_area",
+  "class": 7,
+  "title": "Area of Parallelogram vs Triangle Formula",
+  "style": "Good (Neat/Clear)",
+  "misconception": "Multiplying 1/2 x base x height (confusing parallelogram with triangle)",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VII",
+    "chapter": "Chapter 11: Perimeter and Area",
+    "num": "Q.8.",
+    "lines": [
+      "Find the area of a parallelogram with:",
+      "Base = 9 cm and Height = 6 cm."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_7/c7_set_08_parallelogram_area/01_question.png",
+    "wrong": "class_7/c7_set_08_parallelogram_area/02_wrong_solution.png",
+    "right": "class_7/c7_set_08_parallelogram_area/03_right_solution.png"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "c7_set_07_integer_bodmas",
+  "class": 7,
+  "title": "Integer Operations with Division Sign Rules",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Negative divided by negative treated as negative instead of positive",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VII",
+    "chapter": "Chapter 1: Integers",
+    "num": "Q.7.",
+    "lines": [
+      "Evaluate the integer expression:",
+      "(\u221215) \u00d7 4 \u00f7 (\u22126)"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_7/c7_set_07_integer_bodmas/01_question.png",
+    "wrong": "class_7/c7_set_07_integer_bodmas/02_wrong_solution.png",
+    "right": "class_7/c7_set_07_integer_bodmas/03_right_solution.png"
+  }
+}

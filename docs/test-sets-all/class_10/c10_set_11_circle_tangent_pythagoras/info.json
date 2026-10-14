@@ -1,0 +1,22 @@
+{
+  "id": "c10_set_11_circle_tangent_pythagoras",
+  "class": 10,
+  "title": "Circle Tangent Length via Pythagoras",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Adding squares instead of subtracting from hypotenuse: PT = sqrt(13^2 + 5^2)",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class X",
+    "chapter": "Chapter 10: Circles (Exercise 10.2)",
+    "num": "Q.11.",
+    "lines": [
+      "A point P is 13 cm from the centre O of a circle of radius 5 cm.",
+      "Find the length of the tangent PT drawn from P to the circle."
+    ],
+    "marks": "[3 Marks]"
+  },
+  "paths": {
+    "question": "class_10/c10_set_11_circle_tangent_pythagoras/01_question.png",
+    "wrong": "class_10/c10_set_11_circle_tangent_pythagoras/02_wrong_solution.png",
+    "right": "class_10/c10_set_11_circle_tangent_pythagoras/03_right_solution.png"
+  }
+}

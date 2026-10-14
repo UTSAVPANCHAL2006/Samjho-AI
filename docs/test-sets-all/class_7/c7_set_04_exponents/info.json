@@ -1,0 +1,22 @@
+{
+  "id": "c7_set_04_exponents",
+  "class": 7,
+  "title": "Product Law of Exponents",
+  "style": "Good (Neat Topper)",
+  "misconception": "Multiplying powers instead of adding them: a^m * a^n = a^(m*n) instead of a^(m+n)",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VII",
+    "chapter": "Chapter 13: Exponents and Powers (Exercise 13.2)",
+    "num": "Q.1.",
+    "lines": [
+      "Simplify the expression using laws of exponents:",
+      "x^3 \u00b7 x^4"
+    ],
+    "marks": "[1 Mark]"
+  },
+  "paths": {
+    "question": "class_7/c7_set_04_exponents/01_question.png",
+    "wrong": "class_7/c7_set_04_exponents/02_wrong_solution.png",
+    "right": "class_7/c7_set_04_exponents/03_right_solution.png"
+  }
+}

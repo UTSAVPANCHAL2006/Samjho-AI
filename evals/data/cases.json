@@ -1,0 +1,1065 @@
+{
+ "_note": "Typed-line cases with expected verdicts and marks. No AI involved: measures SymPy checking, zero guards and marks. Verdict 'carried': a line after the first mistake that only follows from it (no ✓, no ✗, no marks).",
+ "questions": {
+  "triangle_area": {
+   "text": "Find the area of a triangle with base 6 cm and height 4 cm.",
+   "class_level": 7,
+   "chapter": "c7_perimeter_area",
+   "expressions": [
+    "\\frac{1}{2}\\cdot 6 \\cdot 4"
+   ],
+   "answer": {
+    "type": "expression",
+    "latex": "12"
+   },
+   "marks": 2
+  },
+  "circle_area": {
+   "text": "Find the area of a circle of radius 7 cm (leave answer in terms of pi).",
+   "class_level": 7,
+   "chapter": "c7_perimeter_area",
+   "expressions": [
+    "\\pi \\cdot 7^2"
+   ],
+   "answer": {
+    "type": "expression",
+    "latex": "49\\pi"
+   },
+   "marks": 2
+  },
+  "simple_interest": {
+   "text": "Find the simple interest on Rs 2000 at 5% per year for 3 years.",
+   "class_level": 7,
+   "chapter": "c7_comparing_quantities",
+   "expressions": [
+    "\\frac{2000 \\cdot 5 \\cdot 3}{100}"
+   ],
+   "answer": {
+    "type": "expression",
+    "latex": "300"
+   },
+   "marks": 2
+  },
+  "fraction_add": {
+   "text": "Add 1/2 + 1/3.",
+   "class_level": 6,
+   "chapter": "c6_fractions",
+   "expressions": [
+    "\\frac{1}{2}+\\frac{1}{3}"
+   ],
+   "answer": {
+    "type": "expression",
+    "latex": "\\frac{5}{6}"
+   },
+   "marks": 2
+  },
+  "trig_value": {
+   "text": "Evaluate sin 30 + cos 60.",
+   "class_level": 10,
+   "chapter": "c10_trigonometric_ratios",
+   "expressions": [
+    "\\sin(30^\\circ)+\\cos(60^\\circ)"
+   ],
+   "answer": {
+    "type": "expression",
+    "latex": "1"
+   },
+   "marks": 2
+  },
+  "linear_eq": {
+   "text": "Solve 3(x - 2) = 2x + 5",
+   "class_level": 8,
+   "chapter": "c8_linear_equations",
+   "expressions": [
+    "3(x-2)=2x+5"
+   ],
+   "answer": {
+    "type": "solution_set",
+    "variable": "x",
+    "values": [
+     "11"
+    ]
+   },
+   "marks": 3
+  },
+  "quadratic": {
+   "text": "Solve x^2 - 5x + 6 = 0",
+   "class_level": 10,
+   "chapter": "c10_quadratic_equations",
+   "expressions": [
+    "x^2-5x+6=0"
+   ],
+   "answer": {
+    "type": "solution_set",
+    "variable": "x",
+    "values": [
+     "2",
+     "3"
+    ]
+   },
+   "marks": 3
+  },
+  "pair_eq": {
+   "text": "Solve 2x + 3y = 12 and x - y = 1",
+   "class_level": 10,
+   "chapter": "c10_pair_of_linear_equations",
+   "expressions": [
+    "2x+3y=12",
+    "x-y=1"
+   ],
+   "answer": {
+    "type": "point",
+    "values": {
+     "x": "3",
+     "y": "2"
+    }
+   },
+   "marks": 4
+  },
+  "expand_square": {
+   "text": "Expand (x + 5)^2",
+   "class_level": 8,
+   "chapter": "c8_identities",
+   "expressions": [
+    "(x+5)^2"
+   ],
+   "answer": {
+    "type": "expression",
+    "latex": "x^2+10x+25",
+    "form": "expanded"
+   },
+   "marks": 2
+  },
+  "factorise": {
+   "text": "Factorise x^2 + 5x + 6",
+   "class_level": 10,
+   "chapter": "c10_polynomials",
+   "expressions": [
+    "x^2+5x+6"
+   ],
+   "answer": {
+    "type": "expression",
+    "latex": "(x+2)(x+3)",
+    "form": "factored"
+   },
+   "marks": 3
+  },
+  "ap_term": {
+   "text": "Find the 10th term of the AP 2, 5, 8, ...",
+   "class_level": 10,
+   "chapter": "c10_arithmetic_progressions",
+   "expressions": [
+    "2+(10-1)\\cdot 3"
+   ],
+   "answer": {
+    "type": "expression",
+    "latex": "29"
+   },
+   "marks": 2
+  },
+  "distance": {
+   "text": "Find the distance between (1, 2) and (4, 6).",
+   "class_level": 10,
+   "chapter": "c10_coordinate_geometry",
+   "expressions": [
+    "\\sqrt{(4-1)^2+(6-2)^2}"
+   ],
+   "answer": {
+    "type": "expression",
+    "latex": "5"
+   },
+   "marks": 2
+  },
+  "mean": {
+   "text": "Find the mean of 4, 8, 6, 10, 12.",
+   "class_level": 7,
+   "chapter": "c7_data_handling",
+   "expressions": [
+    "\\frac{4+8+6+10+12}{5}"
+   ],
+   "answer": {
+    "type": "expression",
+    "latex": "8"
+   },
+   "marks": 2
+  },
+  "probability": {
+   "text": "A die is thrown once. Find the probability of getting an even number.",
+   "class_level": 10,
+   "chapter": "c10_probability",
+   "expressions": [
+    "\\frac{3}{6}"
+   ],
+   "answer": {
+    "type": "expression",
+    "latex": "\\frac{1}{2}"
+   },
+   "marks": 2
+  },
+  "ap_sum_20": {
+   "text": "An AP is 2, 7, 12, 17, ... Find the sum of the first 20 terms.",
+   "class_level": 10,
+   "chapter": "Arithmetic Progressions",
+   "expressions": [],
+   "answer": {
+    "type": "expression",
+    "latex": "990"
+   },
+   "marks": 3,
+   "traps": [
+    {
+     "value": "970",
+     "mistake": "used Sₙ = n/2[a + (n − 1)d] — the formula needs 2a, not a"
+    }
+   ]
+  },
+  "pair_elimination": {
+   "text": "Solve 2x + 3y = 11 and 2x - 4y = -24",
+   "class_level": 10,
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "expressions": [
+    "2x + 3y = 11",
+    "2x - 4y = -24"
+   ],
+   "answer": {
+    "type": "point",
+    "values": {
+     "x": "-2",
+     "y": "5"
+    }
+   },
+   "marks": 3
+  },
+  "sector_area_6_60": {
+   "text": "Find the area of a sector of a circle with radius 6 cm if the angle of the sector is 60° (use pi = 22/7).",
+   "class_level": 10,
+   "chapter": "c10_areas_related_to_circles",
+   "expressions": [],
+   "answer": {
+    "type": "expression",
+    "latex": "\\frac{132}{7}"
+   },
+   "marks": 3,
+   "traps": [
+    {
+     "value": "\\frac{44}{7}",
+     "mistake": "used the arc length formula instead of the area formula"
+    }
+   ]
+  },
+  "triangle_third_angle": {
+   "text": "Two angles of a triangle are 50° and 60°. Find the third angle.",
+   "class_level": 7,
+   "chapter": "c7_triangles",
+   "expressions": [
+    "x + 50 + 60 = 180"
+   ],
+   "answer": {
+    "type": "solution_set",
+    "variable": "x",
+    "values": [
+     "70"
+    ]
+   },
+   "marks": 3
+  },
+  "pair_3x_minus_y": {
+   "text": "Solve: 3x - y = 7 and x + 2y = 7",
+   "class_level": 10,
+   "chapter": "c10_pair_of_linear_equations",
+   "expressions": [
+    "3x-y=7",
+    "x+2y=7"
+   ],
+   "answer": {
+    "type": "point",
+    "values": {
+     "x": "3",
+     "y": "2"
+    }
+   },
+   "marks": 4
+  },
+  "sector_6_60": {
+   "text": "Find the area of a sector of a circle with radius 6 cm if angle of the sector is 60°. (Use pi = 22/7)",
+   "class_level": 10,
+   "chapter": "Areas Related to Circles",
+   "expressions": [],
+   "answer": {
+    "type": "expression",
+    "latex": "\\frac{132}{7}"
+   },
+   "marks": 3,
+   "traps": [
+    {
+     "value": "\\frac{44}{7}",
+     "mistake": "used the arc length formula instead of the area formula"
+    }
+   ]
+  }
+ },
+ "cases": [
+  {
+   "id": "area_correct",
+   "question": "triangle_area",
+   "category": "correct_full",
+   "lines": [
+    "A = \\frac{1}{2}\\cdot 6 \\cdot 4",
+    "= 3 \\cdot 4",
+    "= 12 \\text{ cm}^2"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "expected_score": 2
+  },
+  {
+   "id": "area_arith_slip",
+   "question": "triangle_area",
+   "category": "wrong_single_error",
+   "lines": [
+    "\\frac{1}{2}\\cdot 6 \\cdot 4 = 3 \\cdot 4",
+    "3 \\cdot 4 = 14"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "incorrect"
+   ],
+   "expected_score": 0.5
+  },
+  {
+   "id": "area_forgot_half",
+   "question": "triangle_area",
+   "category": "wrong_single_error",
+   "lines": [
+    "= 6 \\cdot 4",
+    "= 24"
+   ],
+   "expected_verdicts": [
+    "incorrect",
+    "carried"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "circle_correct",
+   "question": "circle_area",
+   "category": "correct_full",
+   "lines": [
+    "= 49\\pi"
+   ],
+   "expected_verdicts": [
+    "correct"
+   ],
+   "expected_score": 2
+  },
+  {
+   "id": "circle_used_circumference",
+   "question": "circle_area",
+   "category": "wrong_single_error",
+   "lines": [
+    "= 2\\pi \\cdot 7",
+    "= 14\\pi"
+   ],
+   "expected_verdicts": [
+    "incorrect",
+    "carried"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "si_correct",
+   "question": "simple_interest",
+   "category": "correct_full",
+   "lines": [
+    "= \\frac{30000}{100}",
+    "= 300"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct"
+   ],
+   "expected_score": 2
+  },
+  {
+   "id": "si_wrong_division",
+   "question": "simple_interest",
+   "category": "wrong_single_error",
+   "lines": [
+    "= \\frac{30000}{100}",
+    "= 3000"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "incorrect"
+   ],
+   "expected_score": 0.5
+  },
+  {
+   "id": "fraction_correct",
+   "question": "fraction_add",
+   "category": "correct_full",
+   "lines": [
+    "= \\frac{3}{6}+\\frac{2}{6}",
+    "= \\frac{5}{6}"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct"
+   ],
+   "expected_score": 2
+  },
+  {
+   "id": "fraction_add_tops_bottoms",
+   "question": "fraction_add",
+   "category": "wrong_single_error",
+   "lines": [
+    "= \\frac{1+1}{2+3}",
+    "= \\frac{2}{5}"
+   ],
+   "expected_verdicts": [
+    "incorrect",
+    "carried"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "trig_correct",
+   "question": "trig_value",
+   "category": "correct_full",
+   "lines": [
+    "= \\frac{1}{2}+\\frac{1}{2}",
+    "= 1"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct"
+   ],
+   "expected_score": 2
+  },
+  {
+   "id": "trig_wrong_value",
+   "question": "trig_value",
+   "category": "wrong_single_error",
+   "lines": [
+    "= \\frac{1}{2}+\\frac{\\sqrt{3}}{2}"
+   ],
+   "expected_verdicts": [
+    "incorrect"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "linear_correct",
+   "question": "linear_eq",
+   "category": "correct_full",
+   "lines": [
+    "3x-6=2x+5",
+    "3x-2x=5+6",
+    "x=11"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "expected_score": 3
+  },
+  {
+   "id": "linear_sign_error",
+   "question": "linear_eq",
+   "category": "wrong_single_error",
+   "lines": [
+    "3x-6=2x+5",
+    "3x-2x=5-6",
+    "x=-1"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "incorrect",
+    "carried"
+   ],
+   "expected_score": 0.5
+  },
+  {
+   "id": "linear_distribution_error",
+   "question": "linear_eq",
+   "category": "wrong_single_error",
+   "lines": [
+    "3x-2=2x+5",
+    "x=7"
+   ],
+   "expected_verdicts": [
+    "incorrect",
+    "carried"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "quad_correct",
+   "question": "quadratic",
+   "category": "correct_full",
+   "lines": [
+    "(x-2)(x-3)=0",
+    "x=2",
+    "x=3"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "expected_score": 3
+  },
+  {
+   "id": "quad_alt_method_formula",
+   "question": "quadratic",
+   "category": "alt_method_correct",
+   "lines": [
+    "x=\\frac{5 \\pm 1}{2}",
+    "x=3",
+    "x=2"
+   ],
+   "expected_verdicts": [
+    "unverifiable",
+    "correct",
+    "correct"
+   ],
+   "expected_score": 3
+  },
+  {
+   "id": "quad_completing_square",
+   "question": "quadratic",
+   "category": "alt_method_correct",
+   "lines": [
+    "x^2-5x=-6",
+    "(x-\\frac{5}{2})^2=\\frac{1}{4}",
+    "x=3",
+    "x=2"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "expected_score": 3
+  },
+  {
+   "id": "quad_wrong_signs",
+   "question": "quadratic",
+   "category": "wrong_single_error",
+   "lines": [
+    "(x+2)(x+3)=0",
+    "x=-2",
+    "x=-3"
+   ],
+   "expected_verdicts": [
+    "incorrect",
+    "carried",
+    "carried"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "quad_copied_then_wrong",
+   "question": "quadratic",
+   "category": "wrong_single_error",
+   "lines": [
+    "x^2-5x+6=0",
+    "(x+2)(x+3)=0",
+    "x=-2",
+    "x=-3"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "incorrect",
+    "carried",
+    "carried"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "pair_correct",
+   "question": "pair_eq",
+   "category": "correct_full",
+   "lines": [
+    "x=1+y",
+    "2(1+y)+3y=12",
+    "5y=10",
+    "y=2",
+    "x=3"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct",
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "expected_score": 4
+  },
+  {
+   "id": "pair_distribution_error",
+   "question": "pair_eq",
+   "category": "wrong_single_error",
+   "lines": [
+    "x=1+y",
+    "2+y+3y=12",
+    "4y=10",
+    "y=\\frac{5}{2}"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "incorrect",
+    "carried",
+    "carried"
+   ],
+   "expected_score": 0.5
+  },
+  {
+   "id": "expand_correct",
+   "question": "expand_square",
+   "category": "correct_full",
+   "lines": [
+    "x^2+2\\cdot 5x+25",
+    "x^2+10x+25"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct"
+   ],
+   "expected_score": 2
+  },
+  {
+   "id": "expand_identity_misuse",
+   "question": "expand_square",
+   "category": "wrong_single_error",
+   "lines": [
+    "x^2+25"
+   ],
+   "expected_verdicts": [
+    "incorrect"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "factor_correct",
+   "question": "factorise",
+   "category": "correct_full",
+   "lines": [
+    "x^2+2x+3x+6",
+    "x(x+2)+3(x+2)",
+    "(x+2)(x+3)"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "expected_score": 3
+  },
+  {
+   "id": "factor_wrong",
+   "question": "factorise",
+   "category": "wrong_single_error",
+   "lines": [
+    "x^2+2x+3x+6",
+    "(x+1)(x+6)"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "incorrect"
+   ],
+   "expected_score": 1
+  },
+  {
+   "id": "factor_not_factored",
+   "question": "factorise",
+   "category": "incomplete",
+   "lines": [
+    "x^2+2x+3x+6"
+   ],
+   "expected_verdicts": [
+    "correct"
+   ],
+   "expected_score": 1
+  },
+  {
+   "id": "ap_correct",
+   "question": "ap_term",
+   "category": "correct_full",
+   "lines": [
+    "= 2 + 9 \\cdot 3",
+    "= 29"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct"
+   ],
+   "expected_score": 2
+  },
+  {
+   "id": "ap_off_by_one",
+   "question": "ap_term",
+   "category": "wrong_single_error",
+   "lines": [
+    "= 2 + 10 \\cdot 3",
+    "= 32"
+   ],
+   "expected_verdicts": [
+    "incorrect",
+    "carried"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "distance_correct",
+   "question": "distance",
+   "category": "correct_full",
+   "lines": [
+    "= \\sqrt{9+16}",
+    "= \\sqrt{25}",
+    "= 5"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "expected_score": 2
+  },
+  {
+   "id": "distance_no_square",
+   "question": "distance",
+   "category": "wrong_single_error",
+   "lines": [
+    "= \\sqrt{3+4}",
+    "= \\sqrt{7}"
+   ],
+   "expected_verdicts": [
+    "incorrect",
+    "carried"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "mean_correct",
+   "question": "mean",
+   "category": "correct_full",
+   "lines": [
+    "= \\frac{40}{5}",
+    "= 8"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct"
+   ],
+   "expected_score": 2
+  },
+  {
+   "id": "mean_wrong_sum",
+   "question": "mean",
+   "category": "wrong_single_error",
+   "lines": [
+    "= \\frac{38}{5}"
+   ],
+   "expected_verdicts": [
+    "incorrect"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "prob_correct",
+   "question": "probability",
+   "category": "correct_full",
+   "lines": [
+    "= \\frac{1}{2}"
+   ],
+   "expected_verdicts": [
+    "correct"
+   ],
+   "expected_score": 1,
+   "note": "Only the final answer 1/2, no working (3/6): answer mark only (D-17)"
+  },
+  {
+   "id": "blank_page",
+   "question": "quadratic",
+   "category": "blank",
+   "lines": [],
+   "expected_status": "blank",
+   "expected_score": 0
+  },
+  {
+   "id": "blank_lines",
+   "question": "linear_eq",
+   "category": "blank",
+   "lines": [
+    "",
+    " "
+   ],
+   "expected_status": "blank",
+   "expected_score": 0
+  },
+  {
+   "id": "skipped",
+   "question": "quadratic",
+   "category": "skipped",
+   "lines": [
+    "skip"
+   ],
+   "expected_status": "skipped",
+   "expected_score": 0
+  },
+  {
+   "id": "skipped_hindi",
+   "question": "trig_value",
+   "category": "skipped",
+   "lines": [
+    "pata nahi"
+   ],
+   "expected_status": "skipped",
+   "expected_score": 0
+  },
+  {
+   "id": "only_question_copied",
+   "question": "quadratic",
+   "category": "skipped",
+   "lines": [
+    "x^2-5x+6=0"
+   ],
+   "expected_status": "only_question_copied",
+   "expected_score": 0
+  },
+  {
+   "id": "off_question",
+   "question": "quadratic",
+   "category": "off_question",
+   "lines": [
+    "3a+2b=7",
+    "a=1"
+   ],
+   "expected_status": "off_question",
+   "expected_score": 0
+  },
+  {
+   "id": "only_answer_no_working",
+   "question": "quadratic",
+   "category": "incomplete",
+   "lines": [
+    "x=2",
+    "x=3"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct"
+   ],
+   "expected_score": 1,
+   "note": "CBSE: answer with no working earns only the answer mark"
+  },
+  {
+   "id": "garbled_line_not_accused",
+   "question": "linear_eq",
+   "category": "ambiguous_handwriting",
+   "lines": [
+    "3x-6=2x+5",
+    "3x \\cdot\\cdot = ?",
+    "x=11"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "unverifiable",
+    "correct"
+   ],
+   "expected_score": 3
+  },
+  {
+   "id": "ap_correct_formula",
+   "question": "ap_sum_20",
+   "category": "correct_full",
+   "lines": [
+    "S_{20} = \\frac{20}{2}[2(2) + 19(5)]",
+    "= 10 \\times 99",
+    "= 990"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "expected_score": 3
+  },
+  {
+   "id": "ap_missing_a",
+   "question": "ap_sum_20",
+   "category": "misconception",
+   "lines": [
+    "S_{20} = \\frac{20}{2}[2 + 19 \\cdot 5]",
+    "S_{20} = 970"
+   ],
+   "expected_verdicts": [
+    "incorrect",
+    "incorrect"
+   ],
+   "expected_score": 0,
+   "note": "a teacher marks line 1 (wrong formula) and the wrong answer; the code cannot prove line 1 wrong without knowing which formula was meant, so only the answer is marked"
+  },
+  {
+   "id": "pair_correct",
+   "question": "pair_elimination",
+   "category": "correct_full",
+   "lines": [
+    "7y = 35",
+    "y = 5",
+    "2x + 15 = 11",
+    "x = -2"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "expected_score": 3
+  },
+  {
+   "id": "pair_sign_error",
+   "question": "pair_elimination",
+   "category": "sign_error",
+   "lines": [
+    "7y = -13",
+    "y = -\\frac{13}{7}"
+   ],
+   "expected_verdicts": [
+    "incorrect",
+    "carried"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "pair_only_wrong_answer",
+   "question": "pair_elimination",
+   "category": "answer_only_wrong",
+   "lines": [
+    "x = 8"
+   ],
+   "expected_verdicts": [
+    "incorrect"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "sector_arc_length_formula",
+   "question": "sector_area_6_60",
+   "category": "wrong_single_error",
+   "lines": [
+    "r = 6",
+    "\\theta = 60",
+    "\\text{Area} = (60/360) \\cdot 2 \\cdot (22/7) \\cdot 6",
+    "\\text{Area} = 44/7"
+   ],
+   "expected_verdicts": [
+    "note",
+    "note",
+    "incorrect",
+    "incorrect"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "sector_correct_rounded",
+   "question": "sector_area_6_60",
+   "category": "correct",
+   "lines": [
+    "\\text{Area} = (60/360) \\cdot (22/7) \\cdot 6^2",
+    "= (1/6) \\cdot (22/7) \\cdot 36",
+    "= 132/7",
+    "= 18.86"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "expected_score": 3
+  },
+  {
+   "id": "triangle_used_360",
+   "question": "triangle_third_angle",
+   "category": "wrong_single_error",
+   "lines": [
+    "50 + 60 + x = 360",
+    "110 + x = 360",
+    "x = 250"
+   ],
+   "expected_verdicts": [
+    "incorrect",
+    "carried",
+    "carried"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "pair_other_question",
+   "question": "pair_3x_minus_y",
+   "category": "off_question",
+   "lines": [
+    "x + y = 14",
+    "x - y = 4",
+    "2x = 18",
+    "x = 9",
+    "y = 5"
+   ],
+   "expected_verdicts": [],
+   "expected_score": 0
+  },
+  {
+   "id": "sector_arc_length_screenshot",
+   "question": "sector_6_60",
+   "category": "misconception",
+   "_note": "Student's real page: 2πr (arc length) instead of πr². Plain 'cm', plain 'theta', an '= a = b' chain and '(approx ...)'.",
+   "lines": [
+    "r = 6 cm",
+    "theta = 60°",
+    "= (60/360) * 2 * (22/7) * 6",
+    "= (1/6) * 12 * (22/7)",
+    "= 2 * 22/7 = 44/7 cm²",
+    "Ans: 44/7 cm^2 (approx 6.28 cm^2)"
+   ],
+   "expected_verdicts": [
+    "note",
+    "note",
+    "incorrect",
+    "carried",
+    "carried",
+    "carried",
+    "carried",
+    "incorrect"
+   ],
+   "expected_score": 0
+  },
+  {
+   "id": "sector_correct_with_approx",
+   "question": "sector_6_60",
+   "category": "correct_full",
+   "_note": "A rounded value in brackets is the same answer, not a new step to mark wrong.",
+   "lines": [
+    "\\text{Area} = (60/360) \\times (22/7) \\times 6^2",
+    "= (1/6) \\times (22/7) \\times 36",
+    "= 132/7",
+    "\\text{Ans: } 132/7 \\text{ cm}^2 (approx 18.86 \\text{ cm}^2)"
+   ],
+   "expected_verdicts": [
+    "correct",
+    "correct",
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "expected_score": 3
+  }
+ ]
+}

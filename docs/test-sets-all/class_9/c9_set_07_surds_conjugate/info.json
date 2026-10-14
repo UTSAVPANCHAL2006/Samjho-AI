@@ -1,0 +1,22 @@
+{
+  "id": "c9_set_07_surds_conjugate",
+  "class": 9,
+  "title": "Surds Product (Difference of Squares)",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Squaring root 2 as (sqrt(2))^2 = 4 instead of 2",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class IX",
+    "chapter": "Chapter 1: Number Systems (Exercise 1.5)",
+    "num": "Q.7.",
+    "lines": [
+      "Simplify the real number expression:",
+      "(3 + \u221a2)(3 \u2212 \u221a2)"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_9/c9_set_07_surds_conjugate/01_question.png",
+    "wrong": "class_9/c9_set_07_surds_conjugate/02_wrong_solution.png",
+    "right": "class_9/c9_set_07_surds_conjugate/03_right_solution.png"
+  }
+}

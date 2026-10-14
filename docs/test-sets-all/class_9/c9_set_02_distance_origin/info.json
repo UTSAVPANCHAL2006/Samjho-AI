@@ -1,0 +1,22 @@
+{
+  "id": "c9_set_02_distance_origin",
+  "class": 9,
+  "title": "Distance of Point from Origin",
+  "style": "Good (Neat Topper)",
+  "misconception": "Taxi-cab metric slip: adding coordinates directly (5 + 12 = 17) instead of Euclidean sqrt(x^2 + y^2)",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class IX",
+    "chapter": "Chapter 3: Coordinate Geometry (Exercise 3.2)",
+    "num": "Q.2.",
+    "lines": [
+      "Find the distance of the point P(5, 12)",
+      "from the origin (0, 0)."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_9/c9_set_02_distance_origin/01_question.png",
+    "wrong": "class_9/c9_set_02_distance_origin/02_wrong_solution.png",
+    "right": "class_9/c9_set_02_distance_origin/03_right_solution.png"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "c6_set_06_hcf_lcm",
+  "class": 6,
+  "title": "HCF and LCM Product Formula",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Adding numbers instead of using product rule HCF x LCM = a x b",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VI",
+    "chapter": "Chapter 3: Playing with Numbers",
+    "num": "Q.6.",
+    "lines": [
+      "The HCF of two numbers 84 and 120 is 12.",
+      "Find their LCM using the product relationship formula."
+    ],
+    "marks": "[3 Marks]"
+  },
+  "paths": {
+    "question": "class_6/c6_set_06_hcf_lcm/01_question.png",
+    "wrong": "class_6/c6_set_06_hcf_lcm/02_wrong_solution.png",
+    "right": "class_6/c6_set_06_hcf_lcm/03_right_solution.png"
+  }
+}

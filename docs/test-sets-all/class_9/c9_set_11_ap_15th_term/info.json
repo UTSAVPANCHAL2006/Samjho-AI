@@ -1,0 +1,22 @@
+{
+  "id": "c9_set_11_ap_15th_term",
+  "class": 9,
+  "title": "Arithmetic Progression 15th Term (n vs n-1)",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Using Tn = a + nd instead of Tn = a + (n-1)d",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class IX",
+    "chapter": "Chapter 5: Arithmetic Progressions",
+    "num": "Q.11.",
+    "lines": [
+      "Find the 15th term of the Arithmetic Progression (AP):",
+      "4, 9, 14, 19, ..."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_9/c9_set_11_ap_15th_term/01_question.png",
+    "wrong": "class_9/c9_set_11_ap_15th_term/02_wrong_solution.png",
+    "right": "class_9/c9_set_11_ap_15th_term/03_right_solution.png"
+  }
+}

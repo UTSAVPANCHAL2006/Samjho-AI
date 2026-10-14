@@ -1,0 +1,21 @@
+{
+  "id": "c6_set_05_unitary_method",
+  "class": 6,
+  "title": "Unitary Method (Cost Calculation)",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Skipping unit rate: multiplying total cost directly without finding cost of 1 pen",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VI",
+    "chapter": "Chapter 12: Ratio and Proportion (Exercise 12.3)",
+    "num": "Q.4.",
+    "lines": [
+      "If 5 pens cost Rs 60, find the cost of 8 pens."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_6/c6_set_05_unitary_method/01_question.png",
+    "wrong": "class_6/c6_set_05_unitary_method/02_wrong_solution.png",
+    "right": "class_6/c6_set_05_unitary_method/03_right_solution.png"
+  }
+}

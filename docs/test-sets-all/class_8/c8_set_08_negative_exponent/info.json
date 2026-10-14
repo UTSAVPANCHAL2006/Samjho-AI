@@ -1,0 +1,22 @@
+{
+  "id": "c8_set_08_negative_exponent",
+  "class": 8,
+  "title": "Negative Exponent Evaluation",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Interpreting 2^(-3) as negative multiplication 2 x (-3) = -6 or -8",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VIII",
+    "chapter": "Chapter 12: Exponents and Powers",
+    "num": "Q.8.",
+    "lines": [
+      "Evaluate the exponent expression:",
+      "2^{-3}"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_8/c8_set_08_negative_exponent/01_question.png",
+    "wrong": "class_8/c8_set_08_negative_exponent/02_wrong_solution.png",
+    "right": "class_8/c8_set_08_negative_exponent/03_right_solution.png"
+  }
+}

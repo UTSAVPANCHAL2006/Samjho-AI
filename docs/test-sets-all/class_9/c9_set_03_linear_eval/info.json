@@ -1,0 +1,22 @@
+{
+  "id": "c9_set_03_linear_eval",
+  "class": 9,
+  "title": "Evaluating Linear Equation Solution",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Basic arithmetic subtraction slip: 12 - 6 = 8 instead of 6",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class IX",
+    "chapter": "Chapter 4: Linear Equations in Two Variables (Exercise 4.2)",
+    "num": "Q.1.",
+    "lines": [
+      "Find the value of y in the equation 2x + 3y = 12",
+      "when x = 3."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_9/c9_set_03_linear_eval/01_question.png",
+    "wrong": "class_9/c9_set_03_linear_eval/02_wrong_solution.png",
+    "right": "class_9/c9_set_03_linear_eval/03_right_solution.png"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "c8_set_11_polyhedron_euler",
+  "class": 8,
+  "title": "Euler's Formula on Polyhedron",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Transposition sign slip: F - 18 = 2 leading to F = 18 - 2 = 16",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VIII",
+    "chapter": "Chapter 10: Visualising Solid Shapes",
+    "num": "Q.11.",
+    "lines": [
+      "A polyhedron has 12 vertices and 30 edges.",
+      "Use Euler's formula F + V \u2212 E = 2 to find the number of faces (F)."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_8/c8_set_11_polyhedron_euler/01_question.png",
+    "wrong": "class_8/c8_set_11_polyhedron_euler/02_wrong_solution.png",
+    "right": "class_8/c8_set_11_polyhedron_euler/03_right_solution.png"
+  }
+}

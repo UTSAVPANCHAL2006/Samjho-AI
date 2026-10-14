@@ -1,0 +1,21 @@
+{
+  "id": "c8_set_07_cube_root",
+  "class": 8,
+  "title": "Cube Root by Prime Factorisation",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Grouping prime factors in pairs of 2 instead of triplets of 3",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VIII",
+    "chapter": "Chapter 7: Cubes and Cube Roots",
+    "num": "Q.7.",
+    "lines": [
+      "Find the cube root of 2744 using prime factorisation."
+    ],
+    "marks": "[3 Marks]"
+  },
+  "paths": {
+    "question": "class_8/c8_set_07_cube_root/01_question.png",
+    "wrong": "class_8/c8_set_07_cube_root/02_wrong_solution.png",
+    "right": "class_8/c8_set_07_cube_root/03_right_solution.png"
+  }
+}

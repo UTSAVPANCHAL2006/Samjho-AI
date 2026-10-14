@@ -1,0 +1,22 @@
+{
+  "id": "c8_set_12_fractional_linear",
+  "class": 8,
+  "title": "Linear Equation with Fractional Term",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Multiplying only fractional part by 3 without multiplying entire equation",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VIII",
+    "chapter": "Chapter 2: Linear Equations",
+    "num": "Q.12.",
+    "lines": [
+      "Solve the linear equation for x:",
+      "x/3 + 4 = 10"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_8/c8_set_12_fractional_linear/01_question.png",
+    "wrong": "class_8/c8_set_12_fractional_linear/02_wrong_solution.png",
+    "right": "class_8/c8_set_12_fractional_linear/03_right_solution.png"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "c10_set_15_probability_cards",
+  "class": 10,
+  "title": "Probability from a Deck of 52 Cards",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Confusing number of Kings in deck as 2 (thinking only 1 red and 1 black) instead of 4",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class X",
+    "chapter": "Chapter 15: Probability (Exercise 15.1)",
+    "num": "Q.15.",
+    "lines": [
+      "One card is drawn at random from a well-shuffled pack of 52 playing cards.",
+      "Find the probability of drawing a King."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_10/c10_set_15_probability_cards/01_question.png",
+    "wrong": "class_10/c10_set_15_probability_cards/02_wrong_solution.png",
+    "right": "class_10/c10_set_15_probability_cards/03_right_solution.png"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "c9_set_05_circle_circumference",
+  "class": 9,
+  "title": "Circumference of a Circle",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Circumference formula slip: using pi*r instead of 2*pi*r",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class IX",
+    "chapter": "Chapter 10: Circles (Exercise 10.5)",
+    "num": "Q.4.",
+    "lines": [
+      "Find the circumference of a circle of radius 14 cm.",
+      "(Use pi = 22/7)"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_9/c9_set_05_circle_circumference/01_question.png",
+    "wrong": "class_9/c9_set_05_circle_circumference/02_wrong_solution.png",
+    "right": "class_9/c9_set_05_circle_circumference/03_right_solution.png"
+  }
+}

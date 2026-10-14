@@ -1,0 +1,22 @@
+{
+  "id": "c10_set_03_ap_nth_term",
+  "class": 10,
+  "title": "Arithmetic Progression nth Term (n vs n-1 Trap)",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Formula slip: using a + nd instead of a + (n - 1)d",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class X",
+    "chapter": "Chapter 5: Arithmetic Progressions (Exercise 5.2)",
+    "num": "Q.3.",
+    "lines": [
+      "Find the 15th term of the Arithmetic Progression:",
+      "4, 9, 14, 19, ..."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_10/c10_set_03_ap_nth_term/01_question.png",
+    "wrong": "class_10/c10_set_03_ap_nth_term/02_wrong_solution.png",
+    "right": "class_10/c10_set_03_ap_nth_term/03_right_solution.png"
+  }
+}

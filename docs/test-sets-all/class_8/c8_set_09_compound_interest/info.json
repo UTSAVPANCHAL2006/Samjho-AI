@@ -1,0 +1,22 @@
+{
+  "id": "c8_set_09_compound_interest",
+  "class": 8,
+  "title": "Compound Amount Calculation",
+  "style": "Good (Neat/Clear)",
+  "misconception": "Using simple interest formula instead of compound interest power formula",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VIII",
+    "chapter": "Chapter 8: Comparing Quantities",
+    "num": "Q.9.",
+    "lines": [
+      "Find the compound amount on Rs 10,000 at 10% per annum",
+      "compounded annually for 2 years."
+    ],
+    "marks": "[3 Marks]"
+  },
+  "paths": {
+    "question": "class_8/c8_set_09_compound_interest/01_question.png",
+    "wrong": "class_8/c8_set_09_compound_interest/02_wrong_solution.png",
+    "right": "class_8/c8_set_09_compound_interest/03_right_solution.png"
+  }
+}

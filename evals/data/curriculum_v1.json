@@ -1,0 +1,1237 @@
+{
+ "version": "curriculum-v1",
+ "created": "2026-10-11",
+ "note": "Questions and expected answers written by hand, independently of the tutor's prompts. 'expect' lists every acceptable outcome. Class 0 = input-handling cases.",
+ "cases": [
+  {
+   "class": 6,
+   "chapter": "Patterns in Mathematics",
+   "family": "expression",
+   "tags": "unfamiliar",
+   "text": "What is the 10th number in the pattern 1, 4, 9, 16, ...?",
+   "expect": [
+    "100"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Patterns in Mathematics",
+   "family": "expression",
+   "tags": "application",
+   "text": "Find the sum of the first 10 odd numbers.",
+   "expect": [
+    "100"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Lines and Angles",
+   "family": "equations",
+   "tags": "basic",
+   "text": "Two angles are complementary. One of them is 35°. Find the other angle.",
+   "expect": [
+    "55",
+    "x = 55"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Lines and Angles",
+   "family": "equations",
+   "tags": "multi-step",
+   "text": "An angle is 4 times its supplement. Find the angle.",
+   "expect": [
+    "144",
+    "x = 144"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Number Play",
+   "family": "expression",
+   "tags": "conceptual",
+   "text": "What is the smallest 5-digit palindrome?",
+   "expect": [
+    "10001"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Data Handling and Presentation",
+   "family": "statistics",
+   "tags": "basic",
+   "text": "The marks of 6 students are 4, 7, 9, 7, 3, 6. Find the mode.",
+   "expect": [
+    "7"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Prime Time",
+   "family": "hcf_lcm",
+   "tags": "basic",
+   "text": "Find the HCF of 36 and 48.",
+   "expect": [
+    "12"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Prime Time",
+   "family": "hcf_lcm",
+   "tags": "basic",
+   "text": "Find the LCM of 4, 6 and 10.",
+   "expect": [
+    "60"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Prime Time",
+   "family": "conceptual",
+   "tags": "conceptual",
+   "text": "Is 91 a prime number?",
+   "expect": [
+    "text:no",
+    "status:unsupported"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Perimeter and Area",
+   "family": "mensuration",
+   "tags": "basic",
+   "text": "Find the perimeter of a rectangle of length 12 cm and breadth 8 cm.",
+   "expect": [
+    "40"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Perimeter and Area",
+   "family": "equations",
+   "tags": "domain",
+   "text": "The area of a square field is 81 m². Find the length of its side.",
+   "expect": [
+    "9",
+    "s = 9",
+    "x = 9",
+    "a = 9"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Fractions",
+   "family": "expression",
+   "tags": "basic",
+   "text": "Add 2/3 and 3/4.",
+   "expect": [
+    "17/12"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Fractions",
+   "family": "expression",
+   "tags": "notation",
+   "text": "Subtract ⅙ from 5/8.",
+   "expect": [
+    "11/24"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "The Other Side of Zero",
+   "family": "expression",
+   "tags": "negative",
+   "text": "Find (−12) + 7 − (−5).",
+   "expect": [
+    "0"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "The Other Side of Zero",
+   "family": "expression",
+   "tags": "application",
+   "text": "The temperature was −3°C in the morning and rose by 8°C. What is the new temperature?",
+   "expect": [
+    "5"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Symmetry",
+   "family": "conceptual",
+   "tags": "conceptual",
+   "text": "How many lines of symmetry does a regular hexagon have?",
+   "expect": [
+    "6",
+    "status:unsupported"
+   ]
+  },
+  {
+   "class": 6,
+   "chapter": "Playing with Constructions",
+   "family": "unsupported",
+   "tags": "construction",
+   "text": "Construct a circle of radius 4 cm using a compass.",
+   "expect": [
+    "status:unsupported"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Large Numbers Around Us",
+   "family": "expression",
+   "tags": "basic",
+   "text": "Write 3 crore 45 lakh in figures.",
+   "expect": [
+    "34500000"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Arithmetic Expressions",
+   "family": "expression",
+   "tags": "notation",
+   "text": "Evaluate 48 ÷ 6 × 2 + 3² − 4.",
+   "expect": [
+    "21"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "A Peek Beyond the Point",
+   "family": "expression",
+   "tags": "decimals",
+   "text": "Find 3.75 + 12.6 − 4.08.",
+   "expect": [
+    "12.27"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Another Peek Beyond the Point",
+   "family": "expression",
+   "tags": "decimals",
+   "text": "Multiply 2.5 by 0.4.",
+   "expect": [
+    "1"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Expressions using Letter-Numbers",
+   "family": "expression",
+   "tags": "substitution",
+   "text": "Find the value of 3a − 2b when a = 4 and b = −1.",
+   "expect": [
+    "14"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Expressions using Letter-Numbers",
+   "family": "expression",
+   "tags": "simplify",
+   "text": "Simplify 5x + 3y − 2x + y.",
+   "expect": [
+    "3x + 4y"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Parallel and Intersecting Lines",
+   "family": "expression",
+   "tags": "conceptual",
+   "text": "Two parallel lines are cut by a transversal. One corresponding angle is 65°. What is the other corresponding angle?",
+   "expect": [
+    "65"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "A Tale of Three Intersecting Lines",
+   "family": "expression",
+   "tags": "basic",
+   "text": "Two angles of a triangle are 50° and 60°. Find the third angle.",
+   "expect": [
+    "70"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "A Tale of Three Intersecting Lines",
+   "family": "equations",
+   "tags": "ratio",
+   "text": "The angles of a triangle are in the ratio 2 : 3 : 4. Find the largest angle.",
+   "expect": [
+    "80"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Working with Fractions",
+   "family": "expression",
+   "tags": "basic",
+   "text": "Find 2/3 of 45.",
+   "expect": [
+    "30"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Working with Fractions",
+   "family": "expression",
+   "tags": "basic",
+   "text": "Divide 3/4 by 1/8.",
+   "expect": [
+    "6"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Geometric Twins",
+   "family": "unsupported",
+   "tags": "proof",
+   "text": "In triangles ABC and PQR, AB = PQ, BC = QR and CA = RP. Which congruence rule shows they are congruent?",
+   "expect": [
+    "text:sss",
+    "status:unsupported"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Operations with Integers",
+   "family": "expression",
+   "tags": "negative",
+   "text": "Find (−8) × (−7) ÷ (−4).",
+   "expect": [
+    "-14"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Finding Common Ground",
+   "family": "hcf_lcm",
+   "tags": "basic",
+   "text": "Find the HCF of 84 and 120.",
+   "expect": [
+    "12"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Connecting the Dots",
+   "family": "equations",
+   "tags": "multi-step",
+   "text": "The average of 5 numbers is 18. If one number is removed, the average of the rest is 16. Find the removed number.",
+   "expect": [
+    "26",
+    "x = 26"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Finding the Unknown",
+   "family": "equations",
+   "tags": "brackets",
+   "text": "Solve 3(x − 2) = 2x + 5.",
+   "expect": [
+    "x = 11"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Finding the Unknown",
+   "family": "equations",
+   "tags": "word",
+   "text": "A number increased by 12 is equal to 3 times the number. Find the number.",
+   "expect": [
+    "x = 6",
+    "6"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Constructions and Tilings",
+   "family": "unsupported",
+   "tags": "construction",
+   "text": "Construct a triangle with sides 5 cm, 6 cm and 7 cm.",
+   "expect": [
+    "status:unsupported"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "A Square and A Cube",
+   "family": "expression",
+   "tags": "roots",
+   "text": "Find the square root of 1764.",
+   "expect": [
+    "42"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "A Square and A Cube",
+   "family": "expression",
+   "tags": "roots",
+   "text": "Find the cube root of 2744.",
+   "expect": [
+    "14"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "A Square and A Cube",
+   "family": "expression",
+   "tags": "multi-step",
+   "text": "Find the smallest number by which 1080 must be multiplied to make it a perfect cube.",
+   "expect": [
+    "25"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Power Play",
+   "family": "expression",
+   "tags": "exponents",
+   "text": "Simplify (2⁵ × 2⁻³) ÷ 2².",
+   "expect": [
+    "1"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Power Play",
+   "family": "expression",
+   "tags": "standard form",
+   "text": "Write 0.00045 in standard form.",
+   "expect": [
+    "0.00045"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "A Story of Numbers",
+   "family": "expression",
+   "tags": "decimals",
+   "text": "Express 3/8 as a decimal.",
+   "expect": [
+    "0.375"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Quadrilaterals",
+   "family": "expression",
+   "tags": "basic",
+   "text": "Three angles of a quadrilateral are 75°, 90° and 75°. Find the fourth angle.",
+   "expect": [
+    "120"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Quadrilaterals",
+   "family": "expression",
+   "tags": "polygon",
+   "text": "Find the measure of each exterior angle of a regular polygon with 9 sides.",
+   "expect": [
+    "40"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Number Play",
+   "family": "conceptual",
+   "tags": "divisibility",
+   "text": "Is 123456 divisible by 8?",
+   "expect": [
+    "text:yes",
+    "status:unsupported"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "We Distribute, Yet Things Multiply",
+   "family": "expression",
+   "tags": "expand",
+   "text": "Expand (2x + 3)(x − 5).",
+   "expect": [
+    "2x^2 - 7x - 15"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "We Distribute, Yet Things Multiply",
+   "family": "expression",
+   "tags": "identity use",
+   "text": "Using a suitable identity, find 103 × 97.",
+   "expect": [
+    "9991"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Proportional Reasoning",
+   "family": "expression",
+   "tags": "unitary",
+   "text": "If 12 pens cost ₹180, what is the cost of 7 pens?",
+   "expect": [
+    "105"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Proportional Reasoning-2",
+   "family": "expression",
+   "tags": "ratio",
+   "text": "₹1200 is divided between A and B in the ratio 3 : 5. What is B's share?",
+   "expect": [
+    "750"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Fractions in Disguise",
+   "family": "expression",
+   "tags": "percentage",
+   "text": "What is 18% of 250?",
+   "expect": [
+    "45"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Fractions in Disguise",
+   "family": "expression",
+   "tags": "discount",
+   "text": "A shirt marked ₹800 is sold at a discount of 15%. Find the selling price.",
+   "expect": [
+    "680"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Fractions in Disguise",
+   "family": "interest",
+   "tags": "compound interest",
+   "text": "Find the compound interest on ₹10000 at 10% per annum for 2 years, compounded annually.",
+   "expect": [
+    "2100"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Fractions in Disguise",
+   "family": "expression",
+   "tags": "percentage change",
+   "text": "The price of a bag increases from ₹400 to ₹500. Find the percentage increase.",
+   "expect": [
+    "25"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "The Baudhayana-Pythagoras Theorem",
+   "family": "expression",
+   "tags": "basic",
+   "text": "The legs of a right triangle are 9 cm and 12 cm. Find the hypotenuse.",
+   "expect": [
+    "15"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "The Baudhayana-Pythagoras Theorem",
+   "family": "expression",
+   "tags": "application",
+   "text": "A 13 m long ladder reaches a window 12 m high. How far is the foot of the ladder from the wall?",
+   "expect": [
+    "5"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Exploring Some Geometric Themes",
+   "family": "expression",
+   "tags": "formula",
+   "text": "How many diagonals does a hexagon have?",
+   "expect": [
+    "9"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Tales by Dots and Lines",
+   "family": "statistics",
+   "tags": "basic",
+   "text": "Find the mean of 12, 15, 18, 21, 24.",
+   "expect": [
+    "18"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Tales by Dots and Lines",
+   "family": "statistics",
+   "tags": "even count",
+   "text": "Find the median of 3, 8, 5, 12, 9, 6.",
+   "expect": [
+    "7"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Algebra Play",
+   "family": "equations",
+   "tags": "basic",
+   "text": "Solve 5x − 7 = 3x + 9.",
+   "expect": [
+    "x = 8"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Algebra Play",
+   "family": "equations",
+   "tags": "fractions",
+   "text": "Solve (x − 1)/3 = (x + 2)/4.",
+   "expect": [
+    "x = 10"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Area",
+   "family": "mensuration",
+   "tags": "basic",
+   "text": "Find the area of a trapezium whose parallel sides are 10 cm and 6 cm and height is 4 cm.",
+   "expect": [
+    "32"
+   ]
+  },
+  {
+   "class": 8,
+   "chapter": "Area",
+   "family": "mensuration",
+   "tags": "basic",
+   "text": "Find the area of a rhombus whose diagonals are 16 cm and 12 cm.",
+   "expect": [
+    "96"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Orienting Yourself: The Use of Coordinates",
+   "family": "coordinates",
+   "tags": "negative",
+   "text": "Find the distance between the points (−3, 4) and (3, −4).",
+   "expect": [
+    "10"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Orienting Yourself: The Use of Coordinates",
+   "family": "conceptual",
+   "tags": "conceptual",
+   "text": "In which quadrant does the point (−3, 5) lie?",
+   "expect": [
+    "text:second",
+    "text:ii",
+    "status:unsupported"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Introduction to Linear Polynomials",
+   "family": "equations",
+   "tags": "basic",
+   "text": "Find the zero of the polynomial p(x) = 3x − 6.",
+   "expect": [
+    "x = 2"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Introduction to Linear Polynomials",
+   "family": "expression",
+   "tags": "substitution",
+   "text": "If p(x) = 2x + 5, find p(−3).",
+   "expect": [
+    "-1"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "The World of Numbers",
+   "family": "expression",
+   "tags": "surds",
+   "text": "Rationalise the denominator of 1/(√5 − √3).",
+   "expect": [
+    "(\\sqrt{5} + \\sqrt{3})/2"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "The World of Numbers",
+   "family": "expression",
+   "tags": "recurring",
+   "text": "Express 0.363636... in the form p/q.",
+   "expect": [
+    "4/11"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "The World of Numbers",
+   "family": "expression",
+   "tags": "surds",
+   "text": "Simplify (3 + √2)(3 − √2).",
+   "expect": [
+    "7"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Exploring Algebraic Identities",
+   "family": "expression",
+   "tags": "factorise",
+   "text": "Factorise 9x² − 16y².",
+   "expect": [
+    "(3x - 4y)(3x + 4y)"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Exploring Algebraic Identities",
+   "family": "expression",
+   "tags": "identity use",
+   "text": "Evaluate 105 × 95 using an identity.",
+   "expect": [
+    "9975"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Exploring Algebraic Identities",
+   "family": "expression",
+   "tags": "factorise",
+   "text": "Factorise x³ + 27.",
+   "expect": [
+    "(x + 3)(x^2 - 3x + 9)"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "I'm Up and Down, and Round and Round",
+   "family": "expression",
+   "tags": "application",
+   "text": "A chord is 5 cm from the centre of a circle of radius 13 cm. Find the length of the chord.",
+   "expect": [
+    "24"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Measuring Space: Perimeter and Area",
+   "family": "mensuration",
+   "tags": "heron",
+   "text": "Find the area of a triangle whose sides are 13 cm, 14 cm and 15 cm.",
+   "expect": [
+    "84"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "The Mathematics of Maybe: Introduction to Probability",
+   "family": "expression",
+   "tags": "basic",
+   "text": "A die is thrown once. What is the probability of getting a number greater than 4?",
+   "expect": [
+    "1/3"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Predicting What Comes Next: Exploring Sequences and Progressions",
+   "family": "progression",
+   "tags": "negative d",
+   "text": "Find the 15th term of the AP 7, 4, 1, ...",
+   "expect": [
+    "-35"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Quadrilaterals",
+   "family": "expression",
+   "tags": "basic",
+   "text": "One angle of a parallelogram is 70°. Find the angle adjacent to it.",
+   "expect": [
+    "110"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Two Variables (linear equations in two variables)",
+   "family": "equations",
+   "tags": "unfamiliar",
+   "text": "Find the value of k if x = 2, y = 1 is a solution of 2x + 3y = k.",
+   "expect": [
+    "k = 7",
+    "7"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Math of Space: Surface Area and Volume",
+   "family": "mensuration",
+   "tags": "pi 22/7",
+   "text": "Find the volume of a sphere of radius 3.5 cm. (Take π = 22/7)",
+   "expect": [
+    "539/3"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Math of Space: Surface Area and Volume",
+   "family": "mensuration",
+   "tags": "slant height",
+   "text": "Find the curved surface area of a cone with base radius 7 cm and slant height 10 cm. (π = 22/7)",
+   "expect": [
+    "220"
+   ]
+  },
+  {
+   "class": 9,
+   "chapter": "Statistics",
+   "family": "statistics",
+   "tags": "frequency",
+   "text": "Find the mean: values 10, 20, 30 with frequencies 3, 5, 2.",
+   "expect": [
+    "19"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Real Numbers",
+   "family": "hcf_lcm",
+   "tags": "basic",
+   "text": "Find the HCF of 96 and 404 by prime factorisation.",
+   "expect": [
+    "4"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Real Numbers",
+   "family": "hcf_lcm",
+   "tags": "three numbers",
+   "text": "Find the LCM of 6, 72 and 120.",
+   "expect": [
+    "360"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Real Numbers",
+   "family": "unsupported",
+   "tags": "proof",
+   "text": "Prove that √2 is irrational.",
+   "expect": [
+    "status:unsupported"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Polynomials",
+   "family": "equations",
+   "tags": "zeroes",
+   "text": "Find the zeroes of the polynomial x² − 2x − 8.",
+   "expect": [
+    "x = -2 or x = 4"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Polynomials",
+   "family": "expression",
+   "tags": "construct",
+   "text": "Find a quadratic polynomial whose zeroes have sum −3 and product 2.",
+   "expect": [
+    "x^2 + 3x + 2"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "family": "equations",
+   "tags": "reported failure A",
+   "text": "Solve the following pair of linear equations for x and y:\n2x + 3y = 11\n2x - 4y = -24",
+   "expect": [
+    "x = -2, y = 5"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "family": "equations",
+   "tags": "basic",
+   "text": "Solve x + y = 14 and x − y = 4.",
+   "expect": [
+    "x = 9, y = 5"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "family": "equations",
+   "tags": "word",
+   "text": "5 pencils and 7 pens together cost ₹50, whereas 7 pencils and 5 pens together cost ₹46. Find the cost of one pencil and one pen.",
+   "expect": [
+    "x = 3, y = 5"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "family": "equations",
+   "tags": "infinite solutions",
+   "text": "For what value of k will 2x + 3y = 5 and 4x + ky = 10 have infinitely many solutions?",
+   "expect": [
+    "k = 6",
+    "6"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "family": "equations",
+   "tags": "no solution",
+   "text": "Solve x + 2y = 4 and 2x + 4y = 12.",
+   "expect": [
+    "text:no solution"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Quadratic Equations",
+   "family": "equations",
+   "tags": "basic",
+   "text": "Solve x² − 5x + 6 = 0.",
+   "expect": [
+    "x = 2 or x = 3"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Quadratic Equations",
+   "family": "equations",
+   "tags": "fraction roots",
+   "text": "Solve 2x² − 7x + 3 = 0.",
+   "expect": [
+    "x = 1/2 or x = 3"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Quadratic Equations",
+   "family": "equations",
+   "tags": "nature of roots",
+   "text": "Find the nature of the roots of 2x² − 4x + 3 = 0.",
+   "expect": [
+    "text:no real roots"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Quadratic Equations",
+   "family": "equations",
+   "tags": "domain",
+   "text": "The product of two consecutive positive integers is 306. Find the integers.",
+   "expect": [
+    "x = 17",
+    "17"
+   ],
+   "note": "asks for both integers (17 and 18); the smaller one alone is accepted as the reported unknown"
+  },
+  {
+   "class": 10,
+   "chapter": "Arithmetic Progressions",
+   "family": "progression",
+   "tags": "reported failure B",
+   "text": "An AP is 2, 7, 12, 17, ... Find the sum of the first 20 terms.",
+   "expect": [
+    "990"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Arithmetic Progressions",
+   "family": "progression",
+   "tags": "term number",
+   "text": "Which term of the AP 3, 8, 13, 18, ... is 78?",
+   "expect": [
+    "16"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Arithmetic Progressions",
+   "family": "progression",
+   "tags": "multi-step",
+   "text": "The 11th term of an AP is 38 and the 16th term is 73. Find the 31st term.",
+   "expect": [
+    "178"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Arithmetic Progressions",
+   "family": "progression",
+   "tags": "unfamiliar",
+   "text": "How many two-digit numbers are divisible by 3?",
+   "expect": [
+    "30"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Triangles",
+   "family": "expression",
+   "tags": "BPT",
+   "text": "In ΔABC, DE ∥ BC with D on AB and E on AC. AD = 1.5 cm, DB = 3 cm and AE = 1 cm. Find EC.",
+   "expect": [
+    "2"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Coordinate Geometry",
+   "family": "coordinates",
+   "tags": "surd answer",
+   "text": "Find the distance between the points (2, 3) and (4, 1).",
+   "expect": [
+    "2\\sqrt{2}"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Coordinate Geometry",
+   "family": "coordinates",
+   "tags": "section",
+   "text": "Find the coordinates of the point which divides the join of (−1, 7) and (4, −3) in the ratio 2 : 3.",
+   "expect": [
+    "x = 1, y = 3"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Introduction to Trigonometry",
+   "family": "expression",
+   "tags": "standard values",
+   "text": "Evaluate sin 60° cos 30° + sin 30° cos 60°.",
+   "expect": [
+    "1"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Introduction to Trigonometry",
+   "family": "expression",
+   "tags": "ratios",
+   "text": "If tan A = 4/3 and A is acute, find sin A.",
+   "expect": [
+    "4/5"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Introduction to Trigonometry",
+   "family": "identity",
+   "tags": "proof",
+   "text": "Prove that (1 − cos²A) sec²A = tan²A.",
+   "expect": [
+    "identity"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Some Applications of Trigonometry",
+   "family": "expression",
+   "tags": "heights",
+   "text": "From a point 30 m away from the foot of a tower, the angle of elevation of its top is 30°. Find the height of the tower.",
+   "expect": [
+    "10\\sqrt{3}"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Circles",
+   "family": "expression",
+   "tags": "tangent",
+   "text": "The length of the tangent from a point A at a distance of 5 cm from the centre of a circle is 4 cm. Find the radius of the circle.",
+   "expect": [
+    "3"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Areas Related to Circles",
+   "family": "mensuration",
+   "tags": "sector",
+   "text": "Find the area of a sector of a circle of radius 6 cm with angle 60°. (Use π = 3.14)",
+   "expect": [
+    "18.84"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Surface Areas and Volumes",
+   "family": "mensuration",
+   "tags": "basic",
+   "text": "Find the volume of a cylinder of radius 7 cm and height 10 cm. (π = 22/7)",
+   "expect": [
+    "1540"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Surface Areas and Volumes",
+   "family": "mensuration",
+   "tags": "hemisphere",
+   "text": "Find the total surface area of a solid hemisphere of radius 21 cm. (π = 22/7)",
+   "expect": [
+    "4158"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Statistics",
+   "family": "statistics",
+   "tags": "grouped mean",
+   "text": "Find the mean of the data. Class intervals: 0-10, 10-20, 20-30, 30-40, 40-50. Frequencies: 5, 8, 15, 16, 6.",
+   "expect": [
+    "27"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Statistics",
+   "family": "statistics",
+   "tags": "grouped median",
+   "text": "Find the median of the data. Class intervals: 0-10, 10-20, 20-30, 30-40, 40-50. Frequencies: 5, 8, 15, 16, 6.",
+   "expect": [
+    "28"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Probability",
+   "family": "expression",
+   "tags": "basic",
+   "text": "A bag contains 3 red and 5 black balls. One ball is drawn at random. Find the probability that it is red.",
+   "expect": [
+    "3/8"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Probability",
+   "family": "expression",
+   "tags": "sample space",
+   "text": "Two coins are tossed together. Find the probability of getting at least one head.",
+   "expect": [
+    "3/4"
+   ]
+  },
+  {
+   "class": 7,
+   "chapter": "Finding the Unknown",
+   "family": "equations",
+   "tags": "hinglish",
+   "text": "Ek number ka 3 guna karke usme 5 jodne par 20 milta hai. Number kya hai?",
+   "expect": [
+    "x = 5",
+    "5"
+   ]
+  },
+  {
+   "class": 10,
+   "chapter": "Arithmetic Progressions",
+   "family": "progression",
+   "tags": "multi-part",
+   "text": "For the AP 3, 7, 11, ...: (a) find the 10th term, (b) find the sum of the first 10 terms.",
+   "expect": [
+    "parts:39|210"
+   ]
+  },
+  {
+   "class": 0,
+   "chapter": "invalid",
+   "family": "invalid",
+   "tags": "incomplete",
+   "text": "Solve 2x + 3 =",
+   "expect": [
+    "status:needs_clarification",
+    "status:parse_failed"
+   ]
+  },
+  {
+   "class": 0,
+   "chapter": "invalid",
+   "family": "invalid",
+   "tags": "missing data",
+   "text": "Find the area of the circle.",
+   "expect": [
+    "status:needs_clarification"
+   ]
+  },
+  {
+   "class": 0,
+   "chapter": "invalid",
+   "family": "invalid",
+   "tags": "underdetermined",
+   "text": "Solve x + y = 10",
+   "expect": [
+    "status:needs_clarification"
+   ]
+  },
+  {
+   "class": 0,
+   "chapter": "invalid",
+   "family": "invalid",
+   "tags": "ambiguous",
+   "text": "Solve 3/4x = 6",
+   "expect": [
+    "x = 8",
+    "status:needs_clarification"
+   ]
+  },
+  {
+   "class": 0,
+   "chapter": "out of scope",
+   "family": "invalid",
+   "tags": "not maths",
+   "text": "What is the capital of France?",
+   "expect": [
+    "status:not_maths"
+   ]
+  },
+  {
+   "class": 0,
+   "chapter": "out of scope",
+   "family": "invalid",
+   "tags": "above class 10",
+   "text": "Find the derivative of x³ + 2x.",
+   "expect": [
+    "status:not_maths"
+   ]
+  }
+ ]
+}

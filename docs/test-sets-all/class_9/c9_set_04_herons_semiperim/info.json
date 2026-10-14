@@ -1,0 +1,22 @@
+{
+  "id": "c9_set_04_herons_semiperim",
+  "class": 9,
+  "title": "Heron's Formula Semi-Perimeter",
+  "style": "Good (Neat Topper)",
+  "misconception": "Semi-perimeter definition slip: using perimeter s = a + b + c directly without / 2",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class IX",
+    "chapter": "Chapter 12: Heron's Formula (Exercise 12.1)",
+    "num": "Q.1.",
+    "lines": [
+      "Find the area of a triangle with sides",
+      "6 cm, 8 cm, and 10 cm using Heron's formula."
+    ],
+    "marks": "[3 Marks]"
+  },
+  "paths": {
+    "question": "class_9/c9_set_04_herons_semiperim/01_question.png",
+    "wrong": "class_9/c9_set_04_herons_semiperim/02_wrong_solution.png",
+    "right": "class_9/c9_set_04_herons_semiperim/03_right_solution.png"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "c10_set_01_quadratic_sign",
+  "class": 10,
+  "title": "Quadratic Formula (-b Sign Trap)",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "The classic CBSE sign slip: -b when b = -7 written as -7 instead of -(-7) = +7",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class X",
+    "chapter": "Chapter 4: Quadratic Equations (Exercise 4.3)",
+    "num": "Q.2.",
+    "lines": [
+      "Find the roots of the quadratic equation:",
+      "2x^2 \u2212 7x + 3 = 0"
+    ],
+    "marks": "[3 Marks]"
+  },
+  "paths": {
+    "question": "class_10/c10_set_01_quadratic_sign/01_question.png",
+    "wrong": "class_10/c10_set_01_quadratic_sign/02_wrong_solution.png",
+    "right": "class_10/c10_set_01_quadratic_sign/03_right_solution.png"
+  }
+}

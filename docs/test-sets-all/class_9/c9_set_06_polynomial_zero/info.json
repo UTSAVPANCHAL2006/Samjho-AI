@@ -1,0 +1,22 @@
+{
+  "id": "c9_set_06_polynomial_zero",
+  "class": 9,
+  "title": "Zero of a Linear Polynomial",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Evaluating p(0) instead of solving p(x) = 0 for the zero of the polynomial",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class IX",
+    "chapter": "Chapter 2: Polynomials (Exercise 2.2)",
+    "num": "Q.6.",
+    "lines": [
+      "Find the zero of the linear polynomial:",
+      "p(x) = 3x \u2212 12"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_9/c9_set_06_polynomial_zero/01_question.png",
+    "wrong": "class_9/c9_set_06_polynomial_zero/02_wrong_solution.png",
+    "right": "class_9/c9_set_06_polynomial_zero/03_right_solution.png"
+  }
+}

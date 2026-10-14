@@ -1,0 +1,22 @@
+{
+  "id": "c10_set_06_real_numbers_lcm_hcf",
+  "class": 10,
+  "title": "Real Numbers Product Formula",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Arithmetic division slip: 306/9 written as 36 instead of 34",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class X",
+    "chapter": "Chapter 1: Real Numbers (Exercise 1.2)",
+    "num": "Q.6.",
+    "lines": [
+      "Given that HCF(306, 657) = 9,",
+      "find LCM(306, 657) using the product property."
+    ],
+    "marks": "[3 Marks]"
+  },
+  "paths": {
+    "question": "class_10/c10_set_06_real_numbers_lcm_hcf/01_question.png",
+    "wrong": "class_10/c10_set_06_real_numbers_lcm_hcf/02_wrong_solution.png",
+    "right": "class_10/c10_set_06_real_numbers_lcm_hcf/03_right_solution.png"
+  }
+}

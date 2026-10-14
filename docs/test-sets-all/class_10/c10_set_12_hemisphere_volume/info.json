@@ -1,0 +1,22 @@
+{
+  "id": "c10_set_12_hemisphere_volume",
+  "class": 10,
+  "title": "Volume of Solid Hemisphere",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Using full sphere formula 4/3 pi*r^3 instead of hemisphere 2/3 pi*r^3",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class X",
+    "chapter": "Chapter 13: Surface Areas and Volumes",
+    "num": "Q.12.",
+    "lines": [
+      "Find the volume of a solid hemisphere of radius 21 cm.",
+      "(Use \u03c0 = 22/7)"
+    ],
+    "marks": "[3 Marks]"
+  },
+  "paths": {
+    "question": "class_10/c10_set_12_hemisphere_volume/01_question.png",
+    "wrong": "class_10/c10_set_12_hemisphere_volume/02_wrong_solution.png",
+    "right": "class_10/c10_set_12_hemisphere_volume/03_right_solution.png"
+  }
+}

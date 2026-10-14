@@ -1,0 +1,22 @@
+{
+  "id": "c6_set_01_fractions",
+  "class": 6,
+  "title": "Addition of Unlike Fractions",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Adding numerators together and denominators together (Freshman's Dream on fractions)",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VI",
+    "chapter": "Chapter 7: Fractions (Exercise 7.6)",
+    "num": "Q.1.",
+    "lines": [
+      "Find the sum of the following fractions:",
+      "2/3 + 1/4"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_6/c6_set_01_fractions/01_question.png",
+    "wrong": "class_6/c6_set_01_fractions/02_wrong_solution.png",
+    "right": "class_6/c6_set_01_fractions/03_right_solution.png"
+  }
+}

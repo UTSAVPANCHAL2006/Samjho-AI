@@ -1,0 +1,22 @@
+{
+  "id": "c6_set_02_integers",
+  "class": 6,
+  "title": "Operations with Negative Integers",
+  "style": "Good (Neat Topper)",
+  "misconception": "Minus minus confusion: treating -(-5) as -5 instead of +5",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VI",
+    "chapter": "Chapter 6: Integers (Exercise 6.3)",
+    "num": "Q.3.",
+    "lines": [
+      "Evaluate the following expression:",
+      "(\u22127) + 12 \u2212 (\u22125)"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_6/c6_set_02_integers/01_question.png",
+    "wrong": "class_6/c6_set_02_integers/02_wrong_solution.png",
+    "right": "class_6/c6_set_02_integers/03_right_solution.png"
+  }
+}

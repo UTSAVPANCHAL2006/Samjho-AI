@@ -1,0 +1,22 @@
+{
+  "id": "c8_set_06_square_root_factors",
+  "class": 8,
+  "title": "Square Root by Prime Factorisation",
+  "style": "Bad (Messy/Rushed)",
+  "misconception": "Listing all prime factors but forgetting to take square root of pairs",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VIII",
+    "chapter": "Chapter 6: Squares and Square Roots",
+    "num": "Q.6.",
+    "lines": [
+      "Find the square root of 1764 using the",
+      "prime factorisation method."
+    ],
+    "marks": "[3 Marks]"
+  },
+  "paths": {
+    "question": "class_8/c8_set_06_square_root_factors/01_question.png",
+    "wrong": "class_8/c8_set_06_square_root_factors/02_wrong_solution.png",
+    "right": "class_8/c8_set_06_square_root_factors/03_right_solution.png"
+  }
+}

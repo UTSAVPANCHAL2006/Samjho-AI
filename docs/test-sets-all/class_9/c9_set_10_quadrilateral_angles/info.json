@@ -1,0 +1,22 @@
+{
+  "id": "c9_set_10_quadrilateral_angles",
+  "class": 9,
+  "title": "Angle Sum Property of Quadrilateral",
+  "style": "Good (Neat/Clear)",
+  "misconception": "Taking sum of angles as 180\u00b0 (triangle) instead of 360\u00b0 (quadrilateral)",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class IX",
+    "chapter": "Chapter 8: Quadrilaterals",
+    "num": "Q.10.",
+    "lines": [
+      "Three angles of a quadrilateral are 75\u00b0, 90\u00b0, and 105\u00b0.",
+      "Find the measure of the fourth angle."
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_9/c9_set_10_quadrilateral_angles/01_question.png",
+    "wrong": "class_9/c9_set_10_quadrilateral_angles/02_wrong_solution.png",
+    "right": "class_9/c9_set_10_quadrilateral_angles/03_right_solution.png"
+  }
+}

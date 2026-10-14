@@ -1,0 +1,22 @@
+{
+  "id": "c8_set_02_linear_both_sides",
+  "class": 8,
+  "title": "Linear Equation with Variables on Both Sides",
+  "style": "Good (Neat Topper)",
+  "misconception": "Sign transposition slip: transposing -7 to RHS as -7 instead of +7",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VIII",
+    "chapter": "Chapter 2: Linear Equations in One Variable (Exercise 2.2)",
+    "num": "Q.3.",
+    "lines": [
+      "Solve the following linear equation:",
+      "5x \u2212 7 = 3x + 9"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_8/c8_set_02_linear_both_sides/01_question.png",
+    "wrong": "class_8/c8_set_02_linear_both_sides/02_wrong_solution.png",
+    "right": "class_8/c8_set_02_linear_both_sides/03_right_solution.png"
+  }
+}

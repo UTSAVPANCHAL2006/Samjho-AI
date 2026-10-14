@@ -1,0 +1,22 @@
+{
+  "id": "c8_set_04_factorisation",
+  "class": 8,
+  "title": "Factorisation by Common Monomial",
+  "style": "Good (Neat Topper)",
+  "misconception": "Factoring slip: leaving 9 instead of 3 inside bracket when factoring 3x out of 9x",
+  "question": {
+    "book": "NCERT Mathematics \u00b7 Class VIII",
+    "chapter": "Chapter 14: Factorisation (Exercise 14.1)",
+    "num": "Q.2.",
+    "lines": [
+      "Factorise the algebraic expression:",
+      "6x^2 + 9x"
+    ],
+    "marks": "[2 Marks]"
+  },
+  "paths": {
+    "question": "class_8/c8_set_04_factorisation/01_question.png",
+    "wrong": "class_8/c8_set_04_factorisation/02_wrong_solution.png",
+    "right": "class_8/c8_set_04_factorisation/03_right_solution.png"
+  }
+}

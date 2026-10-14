@@ -1,0 +1,2261 @@
+[
+ {
+  "id": "c6_set_01_fractions",
+  "class": 6,
+  "misconception": "Adding numerators together and denominators together (Freshman's Dream on fractions)",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Find the sum of the following fractions: $\\frac{2}{3} + \\frac{1}{4}$",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 3,
+   "mistake": "adding fractions (tops and bottoms added separately)",
+   "explanation": "You added the tops and also added the bottoms: $ 2/3 + 1/4$ became $(2 + 1) / (3 + 4)$. Fractions can be added only when the bottoms (denominators) are the same — first make them equal with the LCM, then add only the tops. Check with numbers: $\\frac{1}{2} + \\frac{1}{3} = \\frac{5}{6}$, but adding tops and bottoms gives $\\frac{2}{5}$, which is even smaller than $\\frac{1}{2}$ alone.",
+   "wrongLatex": "= (2 + 1) / (3 + 4)",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "corre \\text{Given: } 2/3 + 1/4",
+    "unrea \\text{Adding top and bottom numbers:}",
+    "incor = (2 + 1) / (3 + 4)",
+    "carri = 3 / 7",
+    "carri \\text{Ans: } 3/7"
+   ]
+  },
+  "insight": "Fractions ko add karte waqt denominators ko directly add nahi karte. Pehle LCM lekar denominators ko same banao, phir sirf numerators ko add karo.",
+  "board": [
+   "Line 3 dekho. Tumne yahan $= (2 + 1) / (3 + 4)$ likha — galti yahin se shuru hoti hai.",
+   "Ab socho, yeh galat kyun hai. Tumne upar ke numbers ko bhi joda aur neeche ke numbers ko bhi joda: $2/3 + 1/4$ ban gaya $(2 + 1) / (3 + 4)$. Fractions tabhi add hote hain jab denominators same hon — pehle LCM se unhe barabar karo, phir sirf numerators ko add karo. Jaise $\\frac{1}{2} + \\frac{1}{3} = \\frac{5}{6}$ hota hai, par aise jodne par $\\frac{2}{5}$ milta hai, jo $\\frac{1}{2}$ se bhi chhota hai.",
+   "Pichli line se aage badhte hue dekho. Fractions ko add karte waqt denominators ko directly add nahi karte. Pehle LCM lekar denominators ko same banao, phir sirf numerators ko add karo.",
+   "Ab is picture ko dekho. Ye hai $\\frac{1}{2}$ aur $\\frac{1}{3}$ — yahan dono ke tukde alag size ke hain.",
+   "Isliye upar-upar aur neeche-neeche jodne se $\\frac{2}{5}$ aata hai… par socho, ye toh akele $\\frac{1}{2}$ se bhi chhota hai! Jodne par number chhota kaise ho sakta hai?",
+   "Is galti ko sudharne ke liye, pehle tukde barabar karo. Yahan $2$ aur $3$ ka LCM $6$ hai, toh dono ko $6$ hisson mein kaato.",
+   "Ab rule ke hisaab se sirf upar wale jodo. $3 + 2 = 5$ hua, aur iska answer $\\frac{5}{6}$ aata hai.",
+   "Ab apne original question par aate hain. Ye hai $\\frac{2}{3}$ aur $\\frac{1}{4}$ — yahan bhi dono ke tukde alag size ke hain.",
+   "Wahi tarika yahan lagao. Pehle tukde barabar karo: $3$ aur $4$ ka LCM $12$ hai, toh dono ko $12$ hisson mein kaato.",
+   "Ab aakhiri step mein, sirf upar wale jodo. $8 + 3 = 11$ hota hai, toh iska sahi answer $\\frac{11}{12}$ hai.",
+   "Yaad rakho: Fractions ko add karte waqt denominators ko directly add nahi karte."
+  ],
+  "drawing": [
+   "bar"
+  ],
+  "boardTitle": "Fractions ko jodna",
+  "tutor": "Sawaal hai ki $\\frac{2}{3}$ aur $\\frac{1}{4}$ ko jodkar unka sum nikalna hai. Tumne fractions sahi se likhe hain aur problem ko samajh liya hai, bas line 3 mein ek choti galti ho gayi. Line 3 mein tumne numerator aur denominator dono ko alag-alag jod diya, lekin jab denominators alag hote hain toh hum direct jod nahi sakte. Tum batao, fractions ko jodne se pehle humein denominators ko kya karna padta hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 10,
+   "answer": "\\frac{11}{12}",
+   "first": [
+    "Dekho, question mein humein do fractions diya hai, $\\frac{2}{3}$ aur $\\frac{1}{4}$. Aur humein inka sum yaani ki jod pata karna hai. | \\frac{2}{3} + \\frac{1}{4}",
+    "Jab bhi humein fractions ko add karna hota hai, sabse pehle hum denominators ko dekhte hain. Yahan denominators 3 aur 4 hain, jo ki alag-alag hain. Isliye hume LCM nikalna padega. | \\text{Denominator 3 and 4}",
+    "Ab 3 aur 4 ka LCM nikalte hain. 3 aur 4 dono prime factors mein tod kar ya simple multiplication se dekho, unka common multiple 12 aata hai. | \\text{LCM}(3, 4) = 12"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Find 3/4 − 2/5.",
+   "chapter": "Fractions",
+   "reason": "Same chapter: Fractions"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unrea \\text{Sol:}",
+    "corre \\text{To find: } 2/3 + 1/4",
+    "unver \\text{Denominators are } 3 \\text{ and } 4 \\text{ (unlike)}",
+    "unver \\text{LCM}(3, 4) = 12",
+    "unver \\text{Making denominators equal to } 12:",
+    "corre 2/3 = (2 * 4) / (3 * 4)",
+    "corre 2/3 = 8/12",
+    "corre 1/4 = (1 * 3) / (4 * 3)",
+    "corre 1/4 = 3/12",
+    "corre \\text{Sum} = 8/12 + 3/12",
+    "corre \\text{Sum} = (8 + 3)/12",
+    "corre = 11/12",
+    "corre \\text{Ans: } 11/12"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 10,
+   "answer": "\\frac{11}{12}",
+   "first": [
+    "Dekho, question mein humein do fractions diya hai, $\\frac{2}{3}$ aur $\\frac{1}{4}$. Aur humein inka sum yaani ki jod pata karna hai. | \\frac{2}{3} + \\frac{1}{4}",
+    "Jab bhi humein fractions ko add karna hota hai, sabse pehle hum denominators ko dekhte hain. Yahan denominators 3 aur 4 hain, jo ki alag-alag hain. Isliye hume LCM nikalna padega. | \\text{Denominator 3 and 4}",
+    "Ab 3 aur 4 ka LCM nikalte hain. 3 aur 4 dono prime factors mein tod kar ya simple multiplication se dekho, unka common multiple 12 aata hai. | \\text{LCM}(3, 4) = 12"
+   ]
+  },
+  "right_practice": {
+   "text": "Find 3/4 − 2/5.",
+   "chapter": "Fractions",
+   "reason": "Same chapter: Fractions"
+  },
+  "seconds": 7
+ },
+ {
+  "id": "c7_set_05_triangle_angles",
+  "class": 7,
+  "misconception": "Sum of triangle angles confused with quadrilateral: using 360° instead of 180°",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Two angles of a triangle are $50^{\\circ}$ and $60^{\\circ}$. Find the measure of the third angle.",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 3,
+   "wrongLine": 2,
+   "mistake": "wrong formula or values",
+   "explanation": "Your answer goes wrong here: this line gives $250$, which is not what this question needs. The lines after it are calculated correctly — they just carry this value forward. Check two things in this line: is the formula right, and did each number go in the right place?",
+   "wrongLatex": "50 + 60 + x = 360 \\text{ (used } 360 \\text{ instead of } 180)",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "note  \\text{Let third angle} = x",
+    "incor 50 + 60 + x = 360 \\text{ (used } 360 \\text{ instead of } 180)",
+    "carri 110 + x = 360",
+    "carri x = 360 - 110",
+    "carri x = 250^\\circ",
+    "unver \\text{Ans: } 250^\\circ"
+   ]
+  },
+  "insight": "Triangle ke teeno angles ka sum $180^{\\circ}$ hota hai, $360^{\\circ}$ nahi. Isliye next time angles ki property dhyan se use karna.",
+  "board": [
+   "Line 2 dekho. Tumne yahan $50 + 60 + x = 360 \\text{ (used } 360 \\text{ instead of } 180)$ likha — galti yahin se shuru hoti hai.",
+   "Kyun galat hai? Your answer goes wrong here: this line gives $250$, which is not what this question needs. The lines after it are calculated correctly — they just carry this value forward. Check two things in this line: is the formula right, and did each number go in the right place?",
+   "Triangle ke teeno angles ka sum $180^{\\circ}$ hota hai, $360^{\\circ}$ nahi. Isliye next time angles ki property dhyan se use karna.",
+   "Is sawaal ka sahi rule yeh hai: $x + 110 = 180$. Har letter ki jagah sawaal ka number aata hai.",
+   "Equation ek taraazu jaisi hai — dono taraf barabar. Jo ek taraf karoge, wahi doosri taraf bhi.",
+   "Ab dono taraf se $110$ hatao.",
+   "Bas, x akela reh gaya.",
+   "Yaad rakho: Triangle ke teeno angles ka sum $180^{\\circ}$ hota hai, $360^{\\circ}$ nahi."
+  ],
+  "drawing": [
+   "balance"
+  ],
+  "boardTitle": "Equation ek taraazu hai",
+  "tutor": "Sawaal yeh hai ki triangle ke do angles $50^{\\circ}$ aur $60^{\\circ}$ hain, toh teesra angle kya hoga? Tumne pehle line mein sahi se $x$ ko third angle maan liya, yeh step bilkul theek tha. Ab line 2 dekho, tumne likha $50 + 60 + x = 360$. Batao, triangle ke teeno angles ka sum hamesha kitna hota hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 9,
+   "answer": "x = 70",
+   "first": [
+    "Dekho, question mein kya diya hai? Ek triangle ke do angles hain $50^{\\circ}$ aur $60^{\\circ}$, aur teesra angle humein nikalna hai. | None",
+    "Toh maan lete hain ki teesra angle $x$ hai, aur isko find karne ke liye hum Triangle Sum Property use karenge. | x",
+    "Yaad hai na? Triangle ke teeno angles ka sum hamesha $180^{\\circ}$ hota hai, isiliye sabko add karke equal to $180^{\\circ}$ likhenge. | 50^{\\circ} + 60^{\\circ} + x = 180^{\\circ}"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Two angles of a triangle are 50° and 60°. Find the third angle.",
+   "chapter": "A Tale of Three Intersecting Lines (triangles)",
+   "reason": "Same chapter: A Tale of Three Intersecting Lines (triangles)"
+  },
+  "right": {
+   "status": "graded",
+   "score": 3.0,
+   "max": 3,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "note  \\text{Given angles: } A = 50^\\circ",
+    "unver \\text{Given angles: } \\ B = 60^\\circ",
+    "unver \\text{Let third angle be } C.",
+    "unrea \\text{By Angle Sum Property of Triangle:}",
+    "unver \\text{Angle } A + \\text{Angle } B + \\text{Angle } C = 180^\\circ",
+    "corre 50^\\circ + 60^\\circ + C = 180^\\circ",
+    "corre 110^\\circ + C = 180^\\circ",
+    "corre C = 180^\\circ - 110^\\circ",
+    "corre C = 70^\\circ",
+    "corre \\text{Ans: Third angle is } 70^\\circ"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 9,
+   "answer": "x = 70",
+   "first": [
+    "Dekho, question mein kya diya hai? Ek triangle ke do angles hain $50^{\\circ}$ aur $60^{\\circ}$, aur teesra angle humein nikalna hai. | None",
+    "Toh maan lete hain ki teesra angle $x$ hai, aur isko find karne ke liye hum Triangle Sum Property use karenge. | x",
+    "Yaad hai na? Triangle ke teeno angles ka sum hamesha $180^{\\circ}$ hota hai, isiliye sabko add karke equal to $180^{\\circ}$ likhenge. | 50^{\\circ} + 60^{\\circ} + x = 180^{\\circ}"
+   ]
+  },
+  "right_practice": {
+   "text": "Two angles of a triangle are 50° and 60°. Find the third angle.",
+   "chapter": "A Tale of Three Intersecting Lines (triangles)",
+   "reason": "Same chapter: A Tale of Three Intersecting Lines (triangles)"
+  },
+  "seconds": 18
+ },
+ {
+  "id": "c8_set_05_surface_area",
+  "class": 8,
+  "misconception": "Concept confusion: calculating volume (l*b*h) instead of surface area 2(lb+bh+hl)",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Find the total surface area of a cuboid of length $10\\text{ cm}$, breadth $8\\text{ cm}$, and height $5\\text{ cm}$.",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 5,
+   "mistake": "used the volume formula instead of the total surface area formula",
+   "explanation": "This line works out to $400$ — that is exactly what you get if you used the volume formula instead of the total surface area formula. Fix this one idea and the rest of your working will follow.",
+   "wrongLatex": "\\text{TSA} = l * b * h \\text{ (used volume formula)}",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "note  l = 10",
+    "note  b = 8",
+    "note  h = 5",
+    "unrea \\text{Sol:}",
+    "incor \\text{TSA} = l * b * h \\text{ (used volume formula)}",
+    "carri = 10 * 8 * 5",
+    "carri = 400 \\text{ cm}^2",
+    "incor \\text{Ans: } 400 \\text{ cm}^2"
+   ]
+  },
+  "insight": "Tumne yahan total surface area ki jagah volume ka formula $l \\times b \\times h$ laga diya. Next time yaad rakho ki surface area mein saari faces ka area nikalte hain, isliye formula $2(lb + bh + hl)$ use hoga.",
+  "board": [
+   "Line 5 dekho. Tumne yahan $\\text{TSA} = l * b * h \\text{ (used volume formula)}$ likha — galti yahin se shuru hoti hai.",
+   "Ab socho, yeh galat kyun hai. Yeh line $400$ ban jaati hai — aur yeh wahi hai jo volume ke formula se aati hai, total surface area se nahi. Ek baar yeh idea theek kar lo, toh baaki sab apne aap sahi ho jayega.",
+   "Tumne yahan total surface area ki jagah volume ka formula $l \\times b \\times h$ laga diya. Ab dekho, surface area ke liye formula $2(lb + bh + hl)$ use karna chahiye tha.",
+   "Isliye jab tum cuboid ko kholte ho, toh tumhe 6 alag faces dikhte hain jo teen jodon mein aate hain.",
+   "Aur har jode ka area do baar aata hai, isliye hum formula ke bahar 2 lagate hain.",
+   "Yaad rakho: Tumne yahan total surface area ki jagah volume ka formula $l \\times b \\times h$ laga diya."
+  ],
+  "drawing": [
+   "rect"
+  ],
+  "boardTitle": "Cuboid ko khol ke dekho",
+  "tutor": "Sawaal mein ek cuboid ki length, breadth aur height di hain, aur humein uska total surface area nikalna hai. Tumne values sahi pakdi hain: $l=10$, $b=8$, aur $h=5$. Line 5 mein tumne likha hai $\\text{TSA} = l \\times b \\times h$, lekin yeh volume ka formula hai, surface area ka nahi. Cuboid ke total surface area ka formula kya hota hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 10,
+   "answer": "340",
+   "first": [
+    "Dekho, question mein hamein ek cuboid ki dimensions di hui hain aur total surface area nikalne ko bola hai. Length $10\\text{ cm}$, breadth $8\\text{ cm}$ aur height $5\\text{ cm}$ hai, dhyan do — yahan total surface area nikalna hai, volume ya lateral surface area ka formula mat use karna, kyunki kuch bachche volume ya 4 walls ka formula laga dete hain. | \\text{length } l = 10, \\text{ breadth } b = 8, \\text{ height } h = 5",
+    "Ab cuboid ke total surface area ka formula likhte hain board par. Yeh formula hota hai $2(lb + bh + hl)$, jahan $l$ length hai, $b$ breadth hai, aur $h$ height hai. Yeh formula kyun lagta hai? Kyunki cuboid mein total $6$ faces hote hain, aur har opposite face ka area same hota hai. | \\text{Total Surface Area} = 2(lb + bh + hl)",
+    "Chalo ab values ko formula ke andar daalte hain, matlab $l$ ki jagah $10$, $b$ ki jagah $8$ aur $h$ ki jagah $5$ likh do. | = 2((10 \\times 8) + (8 \\times 5) + (5 \\text{ aur } 10 \\text{ ka product}))"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Find the volume of a cuboid 10 cm × 8 cm × 5 cm.",
+   "chapter": "Math of Space: Surface Area and Volume",
+   "reason": "Same chapter: Math of Space: Surface Area and Volume"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unrea \\text{Given dimensions of cuboid:}",
+    "note  l = 10 \\text{ cm}",
+    "unver \\enspace b = 8 \\text{ cm}",
+    "unver \\enspace h = 5 \\text{ cm}",
+    "unver \\text{Total Surface Area (TSA)} = 2(lb + bh + hl)",
+    "corre = 2 * (10*8 + 8*5 + 5*10)",
+    "corre = 2 * (80 + 40 + 50)",
+    "corre = 2 * (170)",
+    "corre = 340 \\text{ cm}^2",
+    "corre \\text{Ans: Total Surface Area} = 340 \\text{ cm}^2"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 10,
+   "answer": "340",
+   "first": [
+    "Dekho, question mein hamein ek cuboid ki dimensions di hui hain aur total surface area nikalne ko bola hai. Length $10\\text{ cm}$, breadth $8\\text{ cm}$ aur height $5\\text{ cm}$ hai, dhyan do — yahan total surface area nikalna hai, volume ya lateral surface area ka formula mat use karna, kyunki kuch bachche volume ya 4 walls ka formula laga dete hain. | \\text{length } l = 10, \\text{ breadth } b = 8, \\text{ height } h = 5",
+    "Ab cuboid ke total surface area ka formula likhte hain board par. Yeh formula hota hai $2(lb + bh + hl)$, jahan $l$ length hai, $b$ breadth hai, aur $h$ height hai. Yeh formula kyun lagta hai? Kyunki cuboid mein total $6$ faces hote hain, aur har opposite face ka area same hota hai. | \\text{Total Surface Area} = 2(lb + bh + hl)",
+    "Chalo ab values ko formula ke andar daalte hain, matlab $l$ ki jagah $10$, $b$ ki jagah $8$ aur $h$ ki jagah $5$ likh do. | = 2((10 \\times 8) + (8 \\times 5) + (5 \\text{ aur } 10 \\text{ ka product}))"
+   ]
+  },
+  "right_practice": {
+   "text": "Find the volume of a cone with radius 7 cm and height 12 cm (π = 22/7).",
+   "chapter": "Math of Space: Surface Area and Volume",
+   "reason": "Same chapter: Math of Space: Surface Area and Volume"
+  },
+  "seconds": 9
+ },
+ {
+  "id": "c9_set_04_herons_semiperim",
+  "class": 9,
+  "misconception": "Semi-perimeter definition slip: using perimeter s = a + b + c directly without / 2",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Find the area of a triangle with sides $6\\text{ cm}$, $8\\text{ cm}$, and $10\\text{ cm}$ using Heron's formula.",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.5,
+   "max": 3,
+   "wrongLine": 9,
+   "mistake": "used the perimeter a + b + c as s — Heron's s is the SEMI-perimeter (a + b + c)/2",
+   "explanation": "This line works out to $48 \\sqrt{42}$ — that is exactly what you get if you used the perimeter a + b + c as s — Heron's s is the SEMI-perimeter (a + b + c)/2. Fix this one idea and the rest of your working will follow.",
+   "wrongLatex": "= \\text{sqrt}(24 \\times 18 \\times 16 \\times 14)",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unrea \\text{Sol:}",
+    "note  \\text{Sides: } a = 6",
+    "unver \\text{Sides: } \\ b = 8",
+    "unver \\text{Sides: } \\ c = 10",
+    "note  s = a + b + c \\text{ (forgot / 2)}",
+    "corre s = 6 + 8 + 10",
+    "corre s = 24",
+    "unver \\text{Area} = \\text{sqrt}(s(s-a)(s-b)(s-c))",
+    "incor = \\text{sqrt}(24 \\times 18 \\times 16 \\times 14)",
+    "carri = \\text{sqrt}(96768) \\text{ cm}^2",
+    "incor \\text{Ans: } \\text{sqrt}(96768) \\text{ cm}^2"
+   ]
+  },
+  "insight": "Tumne line 5 mein semi-perimeter nikalte waqt $2$ se divide karna bhool diya, isliye line 8 mein $s$ ki jagah galat value use ho gayi. Heron's formula mein $s$ semi-perimeter hota hai, yaani teeno sides ka sum divide by $2$.",
+  "board": [
+   "Line 8 dekho. Tumne yahan $\\text{Area} = \\text{sqrt}(s(s-a)(s-b)(s-c))$ likha — galti yahin se shuru hoti hai.",
+   "Ab socho, yeh galat kyun hai. Iski value $48 \\sqrt{42}$ aati hai — aur yeh wahi hai jab tumne perimeter a + b + c ko s maan liya, jabki Heron ka s toh SEMI-perimeter (a + b + c)/2 hota hai. Bas yeh ek baat theek kar lo, toh baaki working khud sahi ho jayegi.",
+   "Tumne line 5 mein semi-perimeter nikalte waqt $2$ se divide karna bhool diya, isliye line 8 mein $s$ ki jagah galat value use ho gayi. Heron's formula mein $s$ semi-perimeter hota hai, yaani teeno sides ka sum divide by $2$.",
+   "Is sawaal ka sahi rule yeh hai: $\\sqrt{s(s-a)(s-b)(s-c)}$. Har letter ki jagah sawaal ka number aata hai.",
+   "Ab dekho, teen sides hain $6, 8, 10$. Inka poora chakkar yaani perimeter $24$ banta hai.",
+   "Iske baad Heron ka $s$ SEMI-perimeter hota hai — matlab sirf aadha chakkar, jo ki $12$ hai.",
+   "Ab iske baad har side ko $s$ se ghatao aur formula lagao.",
+   "Phir se dekho, teen sides hain $6, 8, 10$. Poora chakkar yaani perimeter $24$ hai.",
+   "Aur Heron ka $s$ SEMI-perimeter hota hai — isliye sirf aadha chakkar, yaani $12$ aayega.",
+   "Ab iske baad har side ko $s$ se ghatao aur formula lagao."
+  ],
+  "drawing": [
+   "polygon"
+  ],
+  "boardTitle": "Heron: aadha chakkar",
+  "tutor": "Sawaal hai ki 6, 8, aur 10 cm sides wale triangle ka area Heron's formula se nikalna hai. Tumne sides sahi pakde hain: $a=6, b=8, c=10$. Line 8 mein tumne formula likha hai, par line 5 mein $s$ nikalte waqt ek cheez chhoot gayi thi. Batao, Heron's formula mein $s$ kya hota hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 14,
+   "answer": "24",
+   "first": [
+    "Dekho, question mein hamein ek triangle ki teeno sides di gayi hain — $6\\text{ cm}$, $8\\text{ cm}$, aur $10\\text{ cm}$. Hamein Heron's formula ka use karke is triangle ka area nikalna hai. | a = 6, b = 8, c = 10",
+    "Dekho, triangle ki sides ke area ka formula kya hota hai? $\\sqrt{s(s-a)(s-b)(s-c)}$. Yahan $a$, $b$, $c$ triangle ki sides hain aur $s$ semi-perimeter hai. | \\text{Area} = \\sqrt{s(s-a)(s-b)(s-c)}",
+    "Pehle semi-perimeter $s$ nikalte hain, iska formula hai $s$ barabar ($a$ plus $b$ plus $c$) divide by $2$. Yahan bahut bachche poori perimeter $a+b+c$ ko hi $s$ maan lete hain — yaad rakho, $s$ hamesha SEMI-perimeter yaani half perimeter hota hai. | s = \\frac{a + b + c}{2}"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Find the area of a triangle with sides 13 cm, 14 cm and 15 cm using Heron's formula.",
+   "chapter": "Measuring Space: Perimeter and Area (Heron's formula)",
+   "reason": "Same chapter: Measuring Space: Perimeter and Area (Heron's formula)"
+  },
+  "right": {
+   "status": "graded",
+   "score": 3.0,
+   "max": 3,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "note  \\text{Given triangle sides: } a = 6 \\text{ cm}",
+    "note  \\text{Given triangle sides: } b = 8 \\text{ cm}",
+    "note  \\text{Given triangle sides: } c = 10 \\text{ cm}",
+    "unver \\text{Semi-perimeter } s = (a + b + c) / 2",
+    "corre s = (6 + 8 + 10) / 2",
+    "note  s = 24 / 2",
+    "corre s = 12 \\text{ cm}",
+    "corre \\text{Now, } (s-a) = 12-6",
+    "corre \\text{Now, } (s-a) = 6",
+    "corre (s-b) = 12-8",
+    "corre (s-b) = 4",
+    "corre (s-c) = 12-10",
+    "corre (s-c) = 2",
+    "corre \\text{Area} = \\text{sqrt}(s * (s-a) * (s-b) * (s-c))",
+    "corre = \\text{sqrt}(12 * 6 * 4 * 2)",
+    "corre = \\text{sqrt}(576)",
+    "corre = 24 \\text{ cm}^2",
+    "corre \\text{Ans: Area of triangle} = 24 \\text{ cm}^2"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 14,
+   "answer": "24",
+   "first": [
+    "Dekho, question mein hamein ek triangle ki teeno sides di gayi hain — $6\\text{ cm}$, $8\\text{ cm}$, aur $10\\text{ cm}$. Hamein Heron's formula ka use karke is triangle ka area nikalna hai. | a = 6, b = 8, c = 10",
+    "Dekho, triangle ki sides ke area ka formula kya hota hai? $\\sqrt{s(s-a)(s-b)(s-c)}$. Yahan $a$, $b$, $c$ triangle ki sides hain aur $s$ semi-perimeter hai. | \\text{Area} = \\sqrt{s(s-a)(s-b)(s-c)}",
+    "Pehle semi-perimeter $s$ nikalte hain, iska formula hai $s$ barabar ($a$ plus $b$ plus $c$) divide by $2$. Yahan bahut bachche poori perimeter $a+b+c$ ko hi $s$ maan lete hain — yaad rakho, $s$ hamesha SEMI-perimeter yaani half perimeter hota hai. | s = \\frac{a + b + c}{2}"
+   ]
+  },
+  "right_practice": {
+   "text": "Find the area of a triangle with sides 13 cm, 14 cm and 15 cm using Heron's formula.",
+   "chapter": "Measuring Space: Perimeter and Area (Heron's formula)",
+   "reason": "Same chapter: Measuring Space: Perimeter and Area (Heron's formula)"
+  },
+  "seconds": 15
+ },
+ {
+  "id": "c10_set_02_linear_elimination",
+  "class": 10,
+  "misconception": "Double negative subtraction slip: 3y - (-4y) written as -y instead of 7y",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Solve the following pair of linear equations: $2x + 3y = 11$, $2x - 4y = -24$",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 4,
+   "wrongLine": 4,
+   "mistake": "wrong step",
+   "explanation": "This line does not follow from the line before it — something changed that should not have. Do just this one step again, slowly, and compare it with the line above.",
+   "wrongLatex": "-y = -13",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "corre 2x + 3y = 11 --- (1)",
+    "corre 2x - 4y = -24 --- (2)",
+    "unver \\text{Subtracting (2) from (1):}",
+    "incor -y = -13",
+    "carri y = 13",
+    "unver \\text{Put in (1): } 2x + 3(13) = 11",
+    "incor 2x = -28",
+    "carri x = -14",
+    "carri x = -14",
+    "carri y = 13",
+    "carri \\text{Ans: } x = -14",
+    "carri \\text{Ans: } y = 13"
+   ]
+  },
+  "insight": "Dekho, equation (3) mein subtract karte waqt signs change karne the: $3y - (-4y)$ karne se $7y$ aana chahiye tha, tumne sirf $3y - 4y$ kar diya. Next time subtraction mein niche wale equation ke saare signs dhyan se badla karo.",
+  "board": [
+   "Line 4 dekho. Tumne yahan $-y = -13$ likha — galti yahin se shuru hoti hai.",
+   "Ab socho, yeh galat kyun hai. Yeh line upar wali line se nahi aati — kuch badal gaya jo nahi badalna chahiye tha. Is step ko phir se dheere karo aur upar wali line se compare karo.",
+   "Dekho, equation (3) mein subtract karte waqt signs change karne the: $3y - (-4y)$ karne se $7y$ aana chahiye tha, tumne sirf $3y - 4y$ kar diya. Next time subtraction mein niche wale equation ke saare signs dhyan se badla karo.",
+   "Pehle taraazu ko dekho, yeh pehli equation hai jahan dono taraf barabar hai.",
+   "Ab doosre taraazu ko dekho, yeh doosri equation ko dikhata hai.",
+   "$y$ ke coefficient barabar karne ke liye (1) ko $4$ se aur (2) ko $3$ se guna karo.",
+   "Ab dono ko jodo, jisse $y$ gayab ho jaata hai.",
+   "Toh $x = -2$ milta hai. Ise (1) mein daalo toh $y = 5$ milta hai.",
+   "Yaad rakho: Dekho, equation (3) mein subtract karte waqt signs change karne the: $3y - (-4y)$ karne se $7y$ aana chahiye tha, tumne sirf $3y - 4y$ kar diya."
+  ],
+  "drawing": [
+   "balance"
+  ],
+  "boardTitle": "Do equations, ek variable gayab",
+  "tutor": "Yeh sawaal do linear equations ka hai, jismein $x$ aur $y$ ki values nikalni hain. Tumne equations ko sahi se likha aur number diya, yeh step bilkul theek tha. Ab line 4 dekho, jahan tumne (1) se (2) subtract kiya. Jab tum do brackets ko subtract karte ho, toh neeche wale bracket ke saare signs kya hote hain?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 18,
+   "answer": "x = -2, y = 5",
+   "first": [
+    "Dekho, hamare paas do linear equations hain. Humein $x$ aur $y$ ki aisi value nikaalni hai jo dono equations ko ek saath satisfy kare. | None",
+    "Pehle dono equations ko dhyan se dekho aur naam do. Pehli equation hai $2 x + 3 y = 11$, isko hum equation one maan lete hain. | 2 x + 3 y = 11 \\quad (1)",
+    "Aur dusri equation hai $2 x - 4 y = -24$, isko equation two bolte hain. | 2 x - 4 y = -24 \\quad (2)"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Solve: x + y = 10 and x - y = 2",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "reason": "Same chapter: Pair of Linear Equations in Two Variables"
+  },
+  "right": {
+   "status": "graded",
+   "score": 4.0,
+   "max": 4,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "corre 2x + 3y = 11 ---(1)",
+    "corre 2x - 4y = -24 ---(2)",
+    "unver \\text{Subtract equation (2) from (1):}",
+    "corre (2x - 2x) + [3y - (-4y)] = 11 - (-24)",
+    "corre 0 + (3y + 4y) = 11 + 24",
+    "corre 7y = 35",
+    "corre y = 35 / 7",
+    "corre y = 5",
+    "unver \\text{Substitute } y = 5 \\text{ into (1):}",
+    "corre 2x + 3(5) = 11",
+    "corre 2x + 15 = 11",
+    "corre 2x = 11 - 15",
+    "corre 2x = -4",
+    "corre x = -2",
+    "corre x = -2",
+    "corre y = 5",
+    "corre \\text{Ans: } x = -2",
+    "corre \\text{Ans: } y = 5"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 18,
+   "answer": "x = -2, y = 5",
+   "first": [
+    "Dekho, hamare paas do linear equations hain. Humein $x$ aur $y$ ki aisi value nikaalni hai jo dono equations ko ek saath satisfy kare. | None",
+    "Pehle dono equations ko dhyan se dekho aur naam do. Pehli equation hai $2 x + 3 y = 11$, isko hum equation one maan lete hain. | 2 x + 3 y = 11 \\quad (1)",
+    "Aur dusri equation hai $2 x - 4 y = -24$, isko equation two bolte hain. | 2 x - 4 y = -24 \\quad (2)"
+   ]
+  },
+  "right_practice": {
+   "text": "Solve: 2x + 3y = 12 and x - y = 1",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "reason": "Same chapter: Pair of Linear Equations in Two Variables"
+  },
+  "seconds": 15
+ },
+ {
+  "id": "c10_set_03_ap_nth_term",
+  "class": 10,
+  "misconception": "Formula slip: using a + nd instead of a + (n - 1)d",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Find the $15^{\\text{th}}$ term of the Arithmetic Progression: $4, 9, 14, 19, \\dots$",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 5,
+   "mistake": "used aₙ = a + n·d instead of a + (n − 1)d",
+   "explanation": "This line works out to $79$ — that is exactly what you get if you used aₙ = a + n·d instead of a + (n − 1)d. Fix this one idea and the rest of your working will follow.",
+   "wrongLatex": "a_{15} = 4 + 15 * 5",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{AP: } 4, 9, 14, ...",
+    "note  a = 4",
+    "unver d = 9 - 4",
+    "note  d = 5",
+    "incor a_{15} = 4 + 15 * 5",
+    "carri a_{15} = 4 + 75",
+    "note  a_{15} = 79",
+    "incor \\text{Ans: } 79"
+   ]
+  },
+  "insight": "Line 5 mein tumne n ki jagah seedha 15 likh diya, jabki formula $a + (n - 1)d$ hota hai jisme $n - 1$ yaani $(15 - 1)$ likhna tha. Agli baar dhyan rakhna ki $n^{\\text{th}}$ term ke liye hamesha $(n - 1)$ use karte hain.",
+  "board": [
+   "Line 5 dekho. Tumne yahan $a_{15} = 4 + 15 * 5$ likha — galti yahin se shuru hoti hai.",
+   "Ab socho, yeh galat kyun hai. Tumhari line ki value $79$ aati hai — aur yeh wahi hai jab tumne $a_n = a + n \\cdot d$ use kiya $a + (n - 1)d$ ki jagah. Bas is ek baat ko theek karo, phir baaki sab apne aap sahi ho jayega.",
+   "Line 5 mein tumne n ki jagah seedha 15 likh diya, jabki formula $a + (n - 1)d$ hota hai jisme $n - 1$ yaani $(15 - 1)$ likhna tha. Agli baar dhyan rakhna ki $n^{\\text{th}}$ term ke liye hamesha $(n - 1)$ use karte hain.",
+   "Is sawaal ka sahi rule yeh hai: $a = 4$. Har letter ki jagah sawaal ka number aata hai.",
+   "Socho $15$ khambe ek line mein — pehla khamba $a = 4$.",
+   "Do khambon ke beech ek jump ($d = 5$). $15$ khambon mein jumps sirf $14$!",
+   "AP ek seedhi jaisi hai: pehli seedhi $4$, aur har baar $5$ upar.",
+   "$15$-vi seedhi tak $14$ baar $5$ judta hai."
+  ],
+  "drawing": [
+   "arrow",
+   "line",
+   "rect"
+  ],
+  "boardTitle": "AP ek seedhi hai",
+  "tutor": "Sawaal yeh hai ki is AP mein 15th term kya hai. Tumne pehli term $a=4$ aur common difference $d=5$ sahi se nikal liya hai. Ab line 5 dekho, jahan tumne likha hai $a_{15} = 4 + 15 \\times 5$. Batao, AP ki nth term nikalne ke liye humein formula mein $n$ ki jagah kya likhna chahiye? Kya hum $n$ use karte hain ya $(n-1)$?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 9,
+   "answer": "74",
+   "first": [
+    "Dekho, question mein ek Arithmetic Progression di hai: $4, 9, 14, 19, \\dots$ Aur humein iska $15^{\\text{th}}$ term nikalna hai. Sabse pehle dekho ki pehla term, yani $a$, kya hai. | a = 4",
+    "Ab common difference $d$ nikalte hain. Yaad hai na, doosre term mein se pehla term minus karte hain? Toh $9 - 4$ karo. | d = 9 - 4 = 5",
+    "Humein $15^{\\text{th}}$ term nikalna hai, toh $n$ ki value $15$ ho gayi. Kaunsa formula use karenge? $a_n = a + (n - 1)d$. Yahan dhyan do — bahut bachche $a_n = a + n \\cdot d$ likh dete hain, jo ki galat hai. $(n-1)$ likhna zaroori hai kyunki pehle term mein $d$ add nahi hota. | a_n = a + (n - 1)d"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Find the sum of the first 20 terms of the AP 1, 4, 7, ...",
+   "chapter": "Arithmetic Progressions",
+   "reason": "Same chapter: Arithmetic Progressions"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Given AP: } 4, 9, 14, 19, \\dots",
+    "note  \\text{First term } (a) = 4",
+    "unver \\text{Common difference } (d) = 9 - 4",
+    "note  \\text{Common difference } (d) = 5",
+    "unver \\text{We need } 15\\text{th term } (n = 15).",
+    "note  \\text{Formula: } a_n = a + (n - 1)d",
+    "corre a_{15} = 4 + (15 - 1) * 5",
+    "corre = 4 + 14 * 5",
+    "corre = 4 + 70",
+    "corre = 74",
+    "unver \\text{Ans: } 15\\text{th term of the AP is } 74"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 9,
+   "answer": "74",
+   "first": [
+    "Dekho, question mein ek Arithmetic Progression di hai: $4, 9, 14, 19, \\dots$ Aur humein iska $15^{\\text{th}}$ term nikalna hai. Sabse pehle dekho ki pehla term, yani $a$, kya hai. | a = 4",
+    "Ab common difference $d$ nikalte hain. Yaad hai na, doosre term mein se pehla term minus karte hain? Toh $9 - 4$ karo. | d = 9 - 4 = 5",
+    "Humein $15^{\\text{th}}$ term nikalna hai, toh $n$ ki value $15$ ho gayi. Kaunsa formula use karenge? $a_n = a + (n - 1)d$. Yahan dhyan do — bahut bachche $a_n = a + n \\cdot d$ likh dete hain, jo ki galat hai. $(n-1)$ likhna zaroori hai kyunki pehle term mein $d$ add nahi hota. | a_n = a + (n - 1)d"
+   ]
+  },
+  "right_practice": {
+   "text": "Find the sum of the first 20 terms of the AP 1, 4, 7, ...",
+   "chapter": "Arithmetic Progressions",
+   "reason": "Same chapter: Arithmetic Progressions"
+  },
+  "seconds": 14
+ },
+ {
+  "id": "c10_set_05_sector_area",
+  "class": 10,
+  "misconception": "Arc length vs Sector area confusion: using 2*pi*r instead of pi*r^2",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Find the area of a sector of a circle with radius $6\\text{ cm}$ if angle of the sector is $60^\\circ$. (Use $\\pi = 22/7$)",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 4,
+   "mistake": "used the arc length formula instead of the area formula",
+   "explanation": "This line works out to $\\frac{44}{7}$ — that is exactly what you get if you used the arc length formula instead of the area formula. Fix this one idea and the rest of your working will follow.",
+   "wrongLatex": "= (60/360) * 2 * (22/7) * 6",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "note  r = 6\\text{ cm}",
+    "note  \\theta = 60^\\circ",
+    "unrea \\text{Sol:}",
+    "incor = (60/360) * 2 * (22/7) * 6",
+    "carri = (1/6) * 12 * (22/7)",
+    "carri = 2 * 22/7",
+    "carri = 44/7\\text{ cm}^2",
+    "carri \\text{Ans: } 44/7\\text{ cm}^2",
+    "incor = 6.28\\text{ cm}^2"
+   ]
+  },
+  "insight": "Area of sector ke liye formula $\\frac{\\theta}{360} \\times \\pi r^2$ hota hai, circumference wala nahi. Agli baar dhyan rakhna ki area mein radius ka square karte hain.",
+  "board": [
+   "Line 4 dekho. Tumne yahan $= (60/360) * 2 * (22/7) * 6$ likha — galti yahin se shuru hoti hai.",
+   "Ab socho, yeh galat kyun hai. Tumhari line ki value $\\frac{44}{7}$ aati hai — aur yeh wahi hai jo arc length ke formula se milta hai area ki jagah.",
+   "Area of sector ke liye formula $\\frac{\\theta}{360} \\times \\pi r^2$ hota hai, circumference wala nahi. Isliye radius ka square karna zaroori hai.",
+   "Is sawaal ka sahi rule yeh hai: $\\frac{\\theta}{360} \\pi r^2$. Yahan har letter ki jagah tumko sahi value daalni thi.",
+   "Tumhare formula mein $2\\pi r$ hai — woh sirf kinaare ki lambai naapta hai, jaise yeh line dikha rahi hai.",
+   "Area ka matlab hai andar ki poori jagah — yeh hare tukde ko poora bharne ka hisaab hai.",
+   "Hamesha yaad rakho: lambai ke liye sirf $r$ hota hai aur jagah ke liye $r^2$. Isliye area hamesha square units mein aata hai.",
+   "Agar poore circle ka area nikalte, toh formula $\\pi r^2 = \\frac{792}{7}$ banta.",
+   "Kyunki $60^\\circ$ poore $360^\\circ$ ka $\\frac{1}{6}$ hissa hai, toh hamara area bhi poore circle ka utna hi hissa hoga."
+  ],
+  "drawing": [
+   "circle"
+  ],
+  "boardTitle": "Sector: circle ka ek tukda",
+  "tutor": "Dekho, humein ek circle ke sector ka area nikalna hai jiska radius $6\\text{ cm}$ hai aur angle $60^\\circ$ hai. Tumne radius aur angle sahi se note kiye hain, yeh bilkul theek hai. Ab line 4 dekho, tumne formula mein $2$ aur $r$ lagaya hai, lekin area nikalne ke liye humein $r^2$ chahiye hota hai. Bolo, sector ke area ka formula kya hota hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 9,
+   "answer": "\\frac{132}{7}",
+   "first": [
+    "Dekho, sabse pehle ye samajhte hain ki question mein kya diya hai aur kya nikalna hai. Hamein ek circle ka radius diya hai $6\\text{ cm}$ aur angle diya hai $60^\\circ$. | radius = 6 \\text{ cm}, \\quad \\theta = 60^\\circ",
+    "Hamein iska area of sector nikalna hai. Yaad hai na formula? Dekho yahan bahut bachche $2\\pi r$ likh dete hain — woh circumference ya arc ki length hai, area nahi. Area ka formula hota hai $\\frac{\\theta}{360} \\pi r^2$. | Area = \\frac{\\theta}{360^\\circ} \\times \\pi \\times r^2",
+    "Ab values ko seedhe formula mein daal do. $\\theta$ ki jagah $60$, $\\pi$ ki jagah $\\frac{22}{7}$ aur $r$ ki jagah $6$ likhenge. | \\text{Area} = \\frac{60}{360} \\times \\frac{22}{7} \\times 6^2"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Find the area of a sector of radius 14 cm and angle 90° (π = 22/7).",
+   "chapter": "Areas Related to Circles",
+   "reason": "Same chapter: Areas Related to Circles"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "note  \\text{Given: Radius } (r) = 6 \\text{ cm}",
+    "note  \\text{ Sector Angle } (\\theta) = 60^\\circ",
+    "unrea \\text{Formula for Area of Sector:}",
+    "corre \\text{Area} = (\\theta / 360^\\circ) * \\pi * r^2",
+    "corre = (60^\\circ / 360^\\circ) * (22 / 7) * (6)^2",
+    "corre = (1 / 6) * (22 / 7) * 36",
+    "corre = 6 * (22 / 7)",
+    "corre = 132 / 7 \\text{ cm}^2",
+    "corre = 18.86 \\text{ cm}^2",
+    "corre \\text{Ans: Area of sector } = 132 / 7 \\text{ cm}^2"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 9,
+   "answer": "\\frac{132}{7}",
+   "first": [
+    "Dekho, sabse pehle ye samajhte hain ki question mein kya diya hai aur kya nikalna hai. Hamein ek circle ka radius diya hai $6\\text{ cm}$ aur angle diya hai $60^\\circ$. | radius = 6 \\text{ cm}, \\quad \\theta = 60^\\circ",
+    "Hamein iska area of sector nikalna hai. Yaad hai na formula? Dekho yahan bahut bachche $2\\pi r$ likh dete hain — woh circumference ya arc ki length hai, area nahi. Area ka formula hota hai $\\frac{\\theta}{360} \\pi r^2$. | Area = \\frac{\\theta}{360^\\circ} \\times \\pi \\times r^2",
+    "Ab values ko seedhe formula mein daal do. $\\theta$ ki jagah $60$, $\\pi$ ki jagah $\\frac{22}{7}$ aur $r$ ki jagah $6$ likhenge. | \\text{Area} = \\frac{60}{360} \\times \\frac{22}{7} \\times 6^2"
+   ]
+  },
+  "right_practice": {
+   "text": "Find the area of a sector of radius 14 cm and angle 90° (π = 22/7).",
+   "chapter": "Areas Related to Circles",
+   "reason": "Same chapter: Areas Related to Circles"
+  },
+  "seconds": 14
+ },
+ {
+  "id": "c8_set_08_negative_exponent",
+  "class": 8,
+  "misconception": "Interpreting 2^(-3) as negative multiplication 2 x (-3) = -6 or -8",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Evaluate the exponent expression:\n$2^{-3}$",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 4,
+   "mistake": "wrong formula or values",
+   "explanation": "Your answer goes wrong here: this line gives $-8$, which is not what this question needs. The lines after it are calculated correctly — they just carry this value forward. Check two things in this line: is the formula right, and did each number go in the right place?",
+   "wrongLatex": "= -(2^3)",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "corre \\text{Given: } 2^{(-3)}",
+    "unrea \\text{Sol: }",
+    "unrea \\text{Minus power means minus number:}",
+    "incor = -(2^3)",
+    "carri = -(2 \\times 2 \\times 2)",
+    "carri = -8",
+    "carri \\text{Ans: } -8"
+   ]
+  },
+  "insight": "Negative power ka matlab negative number nahi hota hai, iska formula reciprocal ke liye hota hai: $a^{-m} = \\frac{1}{a^m}$. Next time yaad rakhna ki minus sign power mein ho toh base ko denominator mein le jaate hain.",
+  "board": [
+   "Line 4 dekho. Tumne yahan $= -(2^3)$ likha — galti yahin se shuru hoti hai.",
+   "Kyun galat hai? Your answer goes wrong here: this line gives $-8$, which is not what this question needs. The lines after it are calculated correctly — they just carry this value forward. Check two things in this line: is the formula right, and did each number go in the right place?",
+   "Negative power ka matlab negative number nahi hota hai, iska formula reciprocal ke liye hota hai: $a^{-m} = \\frac{1}{a^m}$. Next time yaad rakhna ki minus sign power mein ho toh base ko denominator mein le jaate hain.",
+   "Agar $2^{-3}$ ko $-8$ samjho, toh value zero se neeche chali jaati — negative.",
+   "Par minus power ka matlab hai 'ulta karo': $\\frac{1}{2^{3}}$ — zero se thoda sa upar, chhota sa positive tukda.",
+   "Upar se shuru karo: $2^{3} = 8$. Har seedhi neeche jaate hi power 1 kam hoti hai — aur value $2$ se bhaag ho jaati hai.",
+   "Zero ke baad bhi wahi rule: $1 \\div 2$, phir phir se $\\div 2$. Value chhoti hoti jaati hai, par kabhi negative nahi."
+  ],
+  "drawing": [
+   "line",
+   "rect"
+  ],
+  "boardTitle": "Power kam = base se bhaag",
+  "tutor": "Tumhe $2^{-3}$ ka value nikalna hai. Tumne base 2 aur power 3 sahi pakde hain, bas sign ka matlab thoda alag hai. Line 4 mein tumne likha hai $-(2^3)$, lekin jab power minus mein hoti hai toh formula kya hota hai? Formula $a^{-n}$ ke liye likho, part by part.",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 8,
+   "answer": "\\frac{1}{8}",
+   "first": [
+    "Dekho, sawaal mein humein $2^{-3}$ ki value nikaalni hai. Yad hai na negative exponent ka rule? | 2^{-3}",
+    "Rule yaad karte hain. Agar kisi bhi number ki power negative ho, toh woh reciprocal ho jata hai. Formula hai $a^{-m} = \\frac{1}{a^m}$ | a^{-m} = \\frac{1}{a^m}",
+    "Ab values ko formula mein daalte hain. Yahan $a = 2$ hai aur $m = 3$ hai. | 2^{-3} = \\frac{1}{2^3}"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Simplify x^3 · x^4.",
+   "chapter": "Power Play (exponents)",
+   "reason": "Same chapter: Power Play (exponents)"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "corre \\text{To evaluate: } 2^{(-3)}",
+    "unrea \\text{Sol:}",
+    "unrea \\text{By law of exponents for negative powers:}",
+    "unver a^{-m} = 1 / (a^m) \\text{ for any non-zero } a",
+    "corre 2^{(-3)} = 1 / (2^3)",
+    "corre = 1 / (2 \\times 2 \\times 2)",
+    "corre = 1 / 8",
+    "corre \\text{Ans: } 2^{(-3)} = 1/8"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 8,
+   "answer": "\\frac{1}{8}",
+   "first": [
+    "Dekho, sawaal mein humein $2^{-3}$ ki value nikaalni hai. Yad hai na negative exponent ka rule? | 2^{-3}",
+    "Rule yaad karte hain. Agar kisi bhi number ki power negative ho, toh woh reciprocal ho jata hai. Formula hai $a^{-m} = \\frac{1}{a^m}$ | a^{-m} = \\frac{1}{a^m}",
+    "Ab values ko formula mein daalte hain. Yahan $a = 2$ hai aur $m = 3$ hai. | 2^{-3} = \\frac{1}{2^3}"
+   ]
+  },
+  "right_practice": {
+   "text": "Simplify x^3 · x^4.",
+   "chapter": "Power Play (exponents)",
+   "reason": "Same chapter: Power Play (exponents)"
+  },
+  "seconds": 10
+ },
+ {
+  "id": "c9_set_07_surds_conjugate",
+  "class": 9,
+  "misconception": "Squaring root 2 as (sqrt(2))^2 = 4 instead of 2",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Simplify the real number expression: $(3 + \\sqrt{2})(3 - \\sqrt{2})$",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 6,
+   "mistake": "wrong formula or values",
+   "explanation": "This line works out to $5$ — the first place your wrong value appears — but this question needs a different value. Every line after it only simplifies this value. Check the formula here and every number you put into it.",
+   "wrongLatex": "= 9 - 4",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "corre \\text{Given: } (3 + \\text{sqrt}(2)) (3 - \\text{sqrt}(2))",
+    "unrea \\text{Sol: }",
+    "unver \\text{using } (a+b) (a-b) = a^2 - b^2:",
+    "unver = 3^2 - (",
+    "unver \\text{sqrt}(2))^2",
+    "incor = 9 - 4",
+    "carri = 5",
+    "carri \\text{Ans: } 5"
+   ]
+  },
+  "insight": "Dekho, $\\text{sqrt}(2)$ ka square 2 hota hai, 4 nahi. Next time, root wale number ka square karte waqt number wahi rehta hai.",
+  "board": [
+   "Line 6 dekho. Tumne yahan $= 9 - 4$ likha — galti yahin se shuru hoti hai.",
+   "Ab socho, yeh galat kyun hai. Yeh line simplify hokar $5$ banti hai — jo tumhari pehli galti hai — par is sawal ka jawab kuch aur aana chahiye tha. Iske baad ki har line sirf isi galat value ko aage badhati hai, toh formula aur usme dale gaye numbers ko dobara check karo.",
+   "Dekho, $\\text{sqrt}(2)$ ka square 2 hota hai, 4 nahi. Agli baar dhyan rakhna, root wale number ka square karne par number wahi rehta hai.",
+   "Ab is $\\left(3 - \\sqrt{2}\\right) \\left(\\sqrt{2} + 3\\right)$ ko ek rectangle ki tarah socho — jahan lambai $3 - \\sqrt{2}$ hai aur chaudai $\\sqrt{2} + 3$ hai.",
+   "Ab is rectangle ke har dabbe ka area nikaalne ke liye, side ko side se guna karna padta hai.",
+   "In chaaron dabbe ko aapas mein jodo — aur dekho, beech ke do dabbe $- 3 \\sqrt{2}$ aur $3 \\sqrt{2}$ ko bilkul mat bhoolna!",
+   "Yaad rakho: Dekho, $\\text{sqrt}(2)$ ka square 2 hota hai, 4 nahi."
+  ],
+  "drawing": [
+   "arrow",
+   "rect"
+  ],
+  "boardTitle": "Brackets ko dabbon mein kholo",
+  "tutor": "Dekho, yahan humein do brackets ka product nikalna hai jisme plus aur minus hai. Tumne formula $(a+b)(a-b) = a^2 - b^2$ sahi se apply kiya aur $3^2 - (\\sqrt{2})^2$ likha, yeh bilkul theek hai. Ab line 6 dekho, tumne likha hai $9 - 4$. Batao, $\\sqrt{2}$ ka square kya hota hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 10,
+   "answer": "7",
+   "first": [
+    "Dekho, tumhare paas hai $(3 + \\sqrt{2})(3 - \\sqrt{2})$. Humko isko simplify karna hai, matlab ek single number nikalna hai. | (3 + \\sqrt{2})(3 - \\sqrt{2})",
+    "Yeh do brackets mein multiply ho rahi hain. Dekho, dono brackets mein same number 3 hai, aur ek mein plus sign hai $\\sqrt{2}$ ka, dusre mein minus sign. Yeh pattern $(a+b)(a-b)$ ki tarah hai. | (a+b)(a-b)",
+    "Humko yaad hai na, $(a+b)(a-b) = a^2 - b^2$. Yeh ek identity hai, har a aur b ke liye chalta hai. Isliye hum is formula ko use kar sakte hain. | (a+b)(a-b) = a^2 - b^2"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Simplify the expression: $(5 + \\sqrt{3})(5 - \\sqrt{3})$",
+   "chapter": "The World of Numbers (real numbers, irrationals, surds)",
+   "reason": "Same chapter: The World of Numbers (real numbers, irrationals, surds) (a new question for you)"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Sol: Using identity } (a + b)(a - b) = a^2 - b^2:",
+    "note  \\text{Here } a = 3",
+    "note  b = \\sqrt{2}",
+    "corre = (3)^2 - (\\sqrt{2})^2",
+    "corre = 9 - 2",
+    "corre = 7",
+    "corre \\text{Ans: } 7"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 10,
+   "answer": "7",
+   "first": [
+    "Dekho, tumhare paas hai $(3 + \\sqrt{2})(3 - \\sqrt{2})$. Humko isko simplify karna hai, matlab ek single number nikalna hai. | (3 + \\sqrt{2})(3 - \\sqrt{2})",
+    "Yeh do brackets mein multiply ho rahi hain. Dekho, dono brackets mein same number 3 hai, aur ek mein plus sign hai $\\sqrt{2}$ ka, dusre mein minus sign. Yeh pattern $(a+b)(a-b)$ ki tarah hai. | (a+b)(a-b)",
+    "Humko yaad hai na, $(a+b)(a-b) = a^2 - b^2$. Yeh ek identity hai, har a aur b ke liye chalta hai. Isliye hum is formula ko use kar sakte hain. | (a+b)(a-b) = a^2 - b^2"
+   ]
+  },
+  "right_practice": {
+   "text": "Simplify the expression: $(5 + 2\\sqrt{3})(5 - 2\\sqrt{3})$",
+   "chapter": "The World of Numbers (real numbers, irrationals, surds)",
+   "reason": "Same chapter: The World of Numbers (real numbers, irrationals, surds) (a new question for you)"
+  },
+  "seconds": 12
+ },
+ {
+  "id": "c9_set_09_experimental_prob",
+  "class": 9,
+  "misconception": "Writing theoretical probability 1/6 of standard die instead of experimental frequency 15/60",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "A die is thrown $60$ times and the face $6$ turns up $15$ times. Find the experimental probability of getting the number $6$.",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 3,
+   "mistake": "wrong formula or values",
+   "explanation": "This line works out to $\\frac{1}{6}$ — the first place your wrong value appears — but this question needs a different value. Every line after it only simplifies this value. Check the formula here and every number you put into it.",
+   "wrongLatex": "P(6) = 1 / 6",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unrea \\text{Sol:}",
+    "unver \\text{Probability of getting 6:}",
+    "incor P(6) = 1 / 6",
+    "incor \\text{Ans: 1/6}"
+   ]
+  },
+  "insight": "Experimental probability ke liye theoretical formula $1 / 6$ seedha use nahi karte, balki total trials aur favourable outcomes ka ratio nikalte hain. Agli baar dhyan rakhna ki question mein diye gaye numbers $15$ aur $60$ ko use karke probability calculate karni hai, standard dice rule nahi lagana.",
+  "board": [
+   "Line 3 dekho. Tumne yahan $P(6) = 1 / 6$ likha — galti yahin se shuru hoti hai.",
+   "Kyun galat hai? This line works out to $\\frac{1}{6}$ — the first place your wrong value appears — but this question needs a different value. Every line after it only simplifies this value. Check the formula here and every number you put into it.",
+   "Experimental probability ke liye theoretical formula $1 / 6$ seedha use nahi karte, balki total trials aur favourable outcomes ka ratio nikalte hain. Agli baar dhyan rakhna ki question mein diye gaye numbers $15$ aur $60$ ko use karke probability calculate karni hai, standard dice rule nahi lagana.",
+   "Kul $60$ possible outcomes — har ek ek dabba.",
+   "Inme se $15$ hamare kaam ke hain.",
+   "Probability $= \\frac{15}{60} = \\frac{1}{4}$.",
+   "Yaad rakho: Experimental probability ke liye theoretical formula $1 / 6$ seedha use nahi karte, balki total trials aur favourable outcomes ka ratio nikalte hain."
+  ],
+  "drawing": [
+   "grid"
+  ],
+  "boardTitle": "Kitne mein se kitne",
+  "tutor": "Dekho, sawaal mein die ko $60$ baar phenka gaya hai aur $6$ aaya hai $15$ baar, humein iski experimental probability chahiye. Tumne pehle line mein likha ki $P(6)$ nikalna hai, yeh sahi direction hai. Ab line 3 par dekho, tumne likha $P(6) = 1/6$. Batao, experimental probability ka formula kya hota hai, jismein numerator aur denominator mein kya aata hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 7,
+   "answer": "\\frac{1}{4}",
+   "first": [
+    "Dekho, sawaal ko dhyaan se padho. Ek die ko $60$ baar phenka gaya hai, yaani total number of trials hamare paas $60$ hain. Aur face $6$ kitni baar aata hai? Woh $15$ baar aata hai. | Total \\text{ trials} = 60, \\quad \\text{Number of times } 6 \\text{ turns up} = 15",
+    "Ab hume experimental probability nikalni hai number $6$ ki. Iska formula kya hota hai? Yaad hai na? Jo event hume chahiye, uske favorable trials upar aate hain, aur total trials niche aate hain. | P(E) = \\frac{\\text{Number of trials in which the event happened}}{\\text{Total number of trials}}",
+    "Ab formula mein values ko rakh dete hain. Favorable trials matlab face $6$ aane ki frequency, jo hai $15$, aur total trials hain $60$. Toh yeh ban gaya $15$ upar aur $60$ niche. | P(6) = \\frac{15}{60}"
+   ]
+  },
+  "wrong_practice": {
+   "text": "A bag has 3 red and 5 blue balls. Find the probability of drawing a red ball.",
+   "chapter": "The Mathematics of Maybe: Introduction to Probability",
+   "reason": "Same chapter: The Mathematics of Maybe: Introduction to Probability"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Total number of trials (throws)} = 60",
+    "unver \\text{Frequency of outcome } 6 \\text{ appearing} = 15",
+    "unver \\text{Formula for Empirical / Experimental Probability:}",
+    "unver P(E) = (\\text{Number of trials in which } 6 \\text{ occurred}) / (\\text{Total trials})",
+    "corre P(6) = 15 / 60",
+    "unver \\text{Simplifying by dividing numerator \\& denominator by } 15:",
+    "unver P(6) = 1 / 4 \\ \\",
+    "unver (= 0.25)",
+    "corre \\text{Ans: Experimental probability} = 1/4"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 7,
+   "answer": "\\frac{1}{4}",
+   "first": [
+    "Dekho, sawaal ko dhyaan se padho. Ek die ko $60$ baar phenka gaya hai, yaani total number of trials hamare paas $60$ hain. Aur face $6$ kitni baar aata hai? Woh $15$ baar aata hai. | Total \\text{ trials} = 60, \\quad \\text{Number of times } 6 \\text{ turns up} = 15",
+    "Ab hume experimental probability nikalni hai number $6$ ki. Iska formula kya hota hai? Yaad hai na? Jo event hume chahiye, uske favorable trials upar aate hain, aur total trials niche aate hain. | P(E) = \\frac{\\text{Number of trials in which the event happened}}{\\text{Total number of trials}}",
+    "Ab formula mein values ko rakh dete hain. Favorable trials matlab face $6$ aane ki frequency, jo hai $15$, aur total trials hain $60$. Toh yeh ban gaya $15$ upar aur $60$ niche. | P(6) = \\frac{15}{60}"
+   ]
+  },
+  "right_practice": {
+   "text": "A bag has 3 red and 5 blue balls. Find the probability of drawing a red ball.",
+   "chapter": "The Mathematics of Maybe: Introduction to Probability",
+   "reason": "Same chapter: The Mathematics of Maybe: Introduction to Probability"
+  },
+  "seconds": 18
+ },
+ {
+  "id": "c9_set_10_quadrilateral_angles",
+  "class": 9,
+  "misconception": "Taking sum of angles as 180° (triangle) instead of 360° (quadrilateral)",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Three angles of a quadrilateral are $75^\\circ$, $90^\\circ$, and $105^\\circ$. Find the measure of the fourth angle.",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 3,
+   "wrongLine": 4,
+   "mistake": "moving terms across the = sign",
+   "explanation": "This line does not match the question (it leads to $-90$). Read the question again and check the rule or total you used to write it.",
+   "wrongLatex": "75^\\circ + 90^\\circ + 105^\\circ + x = 180^\\circ",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unrea \\text{Sol:}",
+    "unver \\text{Given angles: } 75^\\circ, 90^\\circ, 105^\\circ",
+    "unver \\text{Let fourth angle be } x",
+    "incor 75^\\circ + 90^\\circ + 105^\\circ + x = 180^\\circ",
+    "carri 270^\\circ + x = 180^\\circ",
+    "carri x = 180^\\circ - 270^\\circ",
+    "carri x = -90^\\circ",
+    "unver \\text{Ans: Angle is } -90^\\circ"
+   ]
+  },
+  "insight": "Quadrilateral ke charon angles ka sum $360^\\circ$ hota hai, $180^\\circ$ nahi kyunki $180^\\circ$ toh triangle ka sum hota hai. Next time yaad rakhna ki polygon ki sides ke hisaab se angle sum property lagani hai.",
+  "board": [
+   "Line 4 dekho. Tumne yahan $75^\\circ + 90^\\circ + 105^\\circ + x = 180^\\circ$ likha — galti yahin se shuru hoti hai.",
+   "Kyun galat hai? This line does not match the question (it leads to $-90$). Read the question again and check the rule or total you used to write it.",
+   "Quadrilateral ke charon angles ka sum $360^\\circ$ hota hai, $180^\\circ$ nahi kyunki $180^\\circ$ toh triangle ka sum hota hai. Next time yaad rakhna ki polygon ki sides ke hisaab se angle sum property lagani hai.",
+   "Equation ek taraazu jaisi hai — dono taraf barabar. Jo ek taraf karoge, wahi doosri taraf bhi.",
+   "Ab dono taraf se $270$ hatao.",
+   "Bas, x akela reh gaya.",
+   "Yaad rakho: Quadrilateral ke charon angles ka sum $360^\\circ$ hota hai, $180^\\circ$ nahi kyunki $180^\\circ$ toh triangle ka sum hota hai."
+  ],
+  "drawing": [
+   "balance"
+  ],
+  "boardTitle": "Equation ek taraazu hai",
+  "tutor": "Dekho, yahan quadrilateral ke teen angles diye hain, aur humein chauthe angle ki value nikalni hai. Tumne $x$ ko fourth angle maana aur pehle teen angles ko sahi se joda, yeh step bilkul theek tha. Ab line 4 dekho, jahan tumne total ko $180^\\circ$ likha hai. Batao, kisi bhi quadrilateral ke chaaron interior angles ka sum kitna hota hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 12,
+   "answer": "x = 90",
+   "first": [
+    "Dekho, sawaal mein humein ek quadrilateral ke teen angles diye hain aur chautha angle nikalna hai. Maan lete hain ki fourth angle $x$ hai. | Let \\text{the fourth angle be } x",
+    "Yaad hai na tumhe Angle Sum Property of a quadrilateral? Ek quadrilateral ke sabhi chaaron angles ka sum hamesha $360^\\circ$ hota hai. | \\text{Sum of angles of a quadrilateral } = 360^\\circ",
+    "Ab jo values humein pata hain aur jo variable $x$ hai, un sabko is property ke andar rakh dete hain. Dekho kaise likhenge. | 75^\\circ + 90^\\circ + 105^\\circ + x = 360^\\circ"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Find the sum of the interior angles of a pentagon.",
+   "chapter": "Quadrilaterals",
+   "reason": "Same chapter: Quadrilaterals"
+  },
+  "right": {
+   "status": "graded",
+   "score": 3.0,
+   "max": 3,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Let the fourth angle of the quadrilateral be } x",
+    "unrea \\text{By Angle Sum Property of a Quadrilateral:}",
+    "unver \\text{Sum of all four interior angles} = 360^\\circ",
+    "unver 75^\\circ + 90^\\circ + 105^\\circ + x = 360^\\circ",
+    "corre 270^\\circ + x = 360^\\circ",
+    "corre x = 360^\\circ - 270^\\circ",
+    "corre x = 90^\\circ",
+    "corre \\text{Ans: Fourth angle is } 90^\\circ"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 12,
+   "answer": "x = 90",
+   "first": [
+    "Dekho, sawaal mein humein ek quadrilateral ke teen angles diye hain aur chautha angle nikalna hai. Maan lete hain ki fourth angle $x$ hai. | Let \\text{the fourth angle be } x",
+    "Yaad hai na tumhe Angle Sum Property of a quadrilateral? Ek quadrilateral ke sabhi chaaron angles ka sum hamesha $360^\\circ$ hota hai. | \\text{Sum of angles of a quadrilateral } = 360^\\circ",
+    "Ab jo values humein pata hain aur jo variable $x$ hai, un sabko is property ke andar rakh dete hain. Dekho kaise likhenge. | 75^\\circ + 90^\\circ + 105^\\circ + x = 360^\\circ"
+   ]
+  },
+  "right_practice": {
+   "text": "Find the sum of the interior angles of a pentagon.",
+   "chapter": "Quadrilaterals",
+   "reason": "Same chapter: Quadrilaterals"
+  },
+  "seconds": 31
+ },
+ {
+  "id": "c9_set_11_ap_15th_term",
+  "class": 9,
+  "misconception": "Using Tn = a + nd instead of Tn = a + (n-1)d",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Find the 15th term of the Arithmetic Progression (AP): $4, 9, 14, 19, \\dots$",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 6,
+   "mistake": "used aₙ = a + n·d instead of a + (n − 1)d",
+   "explanation": "This line works out to $79$ — that is exactly what you get if you used aₙ = a + n·d instead of a + (n − 1)d.",
+   "wrongLatex": "= 4 + 15(5)",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{AP: } 4, 9, 14, \\dots",
+    "note  \\text{Sol: } a = 4",
+    "unver \\text{Sol: } d = 9 - 4",
+    "note  \\text{Sol: } d = 5",
+    "unver T15 = a + 15d",
+    "incor = 4 + 15(5)",
+    "carri = 4 + 75",
+    "carri = 79",
+    "carri \\text{Ans: } 79"
+   ]
+  },
+  "insight": "$n$-th term ke liye formula $a_n = a + (n - 1)d$ hota hai, jisme $n$ me se $1$ minus karna zaroori hai. Agli baar dhyan rakhna ki $15$th term ke liye $14d$ lena hai, seedha $15d$ nahi.",
+  "board": [
+   "Line 5 dekho. Tumne yahan $T15 = a + 15d$ likha — galti yahin se shuru hoti hai.",
+   "Ab socho, yeh galat kyun hai. Is line se $79$ aata hai — aur yeh tab milta hai jab tum $a_n = a + n\\cdot d$ use karte ho, na ki $a + (n - 1)d$.",
+   "$n$-th term ke liye formula $a_n = a + (n - 1)d$ hota hai, jisme $n$ me se $1$ minus karna zaroori hai. Agli baar dhyan rakhna ki $15$th term ke liye $14d$ lena hai, seedha $15d$ nahi.",
+   "Is sawaal ka sahi rule yeh hai: $a = 4$. Har letter ki jagah sawaal ka number aata hai.",
+   "Tumne likha T15 = a + 15d. Socho, a + 15d mein kitne jumps hue?",
+   "Pehle term se 15th term tak jaane ke liye 14 jumps chahiye, 15 nahi!",
+   "Number line par dekho: pehle term 4 se shuru karke 14 jumps of 5.",
+   "Formula lagao: a_15 = a + (15 - 1)d.",
+   "Values daal kar solve karte hain: 4 + 14 * 5 = 74.",
+   "Yaad rakho: $n$-th term ke liye formula $a_n = a + (n - 1)d$ hota hai, jisme $n$ me se $1$ minus karna zaroori hai."
+  ],
+  "drawing": [
+   "numberline"
+  ],
+  "boardTitle": "AP 15th Term Jumps",
+  "tutor": "Dekho, humein di gayi AP $4, 9, 14, \\dots$ ka 15th term nikalna hai. Tumne pehle term $a=4$ aur common difference $d=5$ sahi nikal liya, bas formula mein ek choti si galti hai. Line 5 mein tumne likha hai $T_{15} = a + 15d$, par batao, AP ke nth term ka sahi formula kya hota hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 7,
+   "answer": "74",
+   "first": [
+    "Dekho, pehle hum jo cheezein jaante hain unhe board pe likh lete hain. Yahan pe first term $a$ diya hai, aur common difference $d$ bhi nikal sakte hain. Humko 15th term $a_{15}$ chahiye. | a = 4, \\quad d = 9 - 4 = 5",
+    "Ab formula yaad karo. AP ka $n$-th term nikalne ka formula $a_n = a + (n - 1)d$ hota hai. Dhyan do — yahan $(n - 1)$ aata hai, $n$ nahi. Bahut se students galti se $a + nd$ likh dete hain, jo galat hai. Kyunki pehla term $a$ hai, uske baad $d$ ek baar joda jata hai, isliye $n$-th term tak $d$ total $(n-1)$ baar joda jata hai. | a_n = a + (n - 1)d",
+    "Ab hum values ko formula mein daalte hain. $a$ ki jagah $4$, $n$ ki jagah $15$, aur $d$ ki jagah $5$ daalo. Bracket mein $15 - 1$ aayega. | a_{15} = 4 + (15 - 1) \\times 5"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Find the sum of the first 20 terms of the AP 1, 4, 7, ...",
+   "chapter": "Arithmetic Progressions",
+   "reason": "Same chapter: Arithmetic Progressions"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Sol: First term (a)} = 4",
+    "unver \\text{Common difference (d)} = 9 - 4",
+    "unver \\text{Common difference (d)} = 5",
+    "note  \\text{Formula for nth term of an AP: } a_n = a + (n - 1)d",
+    "unver \\text{For } n = 15:",
+    "corre a_{15} = 4 + (15 - 1) \\times 5",
+    "corre = 4 + 14 \\times 5",
+    "corre = 4 + 70",
+    "corre = 74",
+    "unver \\text{Ans: The 15th term of the AP is 74}"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 7,
+   "answer": "74",
+   "first": [
+    "Dekho, pehle hum jo cheezein jaante hain unhe board pe likh lete hain. Yahan pe first term $a$ diya hai, aur common difference $d$ bhi nikal sakte hain. Humko 15th term $a_{15}$ chahiye. | a = 4, \\quad d = 9 - 4 = 5",
+    "Ab formula yaad karo. AP ka $n$-th term nikalne ka formula $a_n = a + (n - 1)d$ hota hai. Dhyan do — yahan $(n - 1)$ aata hai, $n$ nahi. Bahut se students galti se $a + nd$ likh dete hain, jo galat hai. Kyunki pehla term $a$ hai, uske baad $d$ ek baar joda jata hai, isliye $n$-th term tak $d$ total $(n-1)$ baar joda jata hai. | a_n = a + (n - 1)d",
+    "Ab hum values ko formula mein daalte hain. $a$ ki jagah $4$, $n$ ki jagah $15$, aur $d$ ki jagah $5$ daalo. Bracket mein $15 - 1$ aayega. | a_{15} = 4 + (15 - 1) \\times 5"
+   ]
+  },
+  "right_practice": {
+   "text": "Find the sum of the first 20 terms of the AP 1, 4, 7, ...",
+   "chapter": "Arithmetic Progressions",
+   "reason": "Same chapter: Arithmetic Progressions"
+  },
+  "seconds": 143
+ },
+ {
+  "id": "c10_set_06_real_numbers_lcm_hcf",
+  "class": 10,
+  "misconception": "Arithmetic division slip: 306/9 written as 36 instead of 34",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Given that $\\text{HCF}(306, 657) = 9$, find $\\text{LCM}(306, 657)$ using the product property.",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 4,
+   "mistake": "moving terms across the = sign",
+   "explanation": "Moving the numbers to one side, the line before gives $\\text{LCM} = 22338$, but this line gives $\\text{LCM} = 23652$.",
+   "wrongLatex": "\\text{LCM} = 36 \\times 657",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Sol: } HCF \\times \\text{LCM} = 306 \\times 657",
+    "unver 9 \\times \\text{LCM} = 306 \\times 657",
+    "corre \\text{LCM} = (306 \\times 657) / 9",
+    "incor \\text{LCM} = 36 \\times 657",
+    "carri \\text{LCM} = 23,652",
+    "incor \\text{Ans: } \\text{LCM} = 23652"
+   ]
+  },
+  "insight": "Dekho, 306 ko 9 se divide karte waqt calculation mistake ho gayi, division dhyan se karo. Next time multiplication aur division step-by-step check karo taaki aisi silly mistake na ho.",
+  "board": [
+   "Line 4 dekho. Tumne yahan $\\text{LCM} = 36 \\times 657$ likha — galti yahin se shuru hoti hai.",
+   "Ab socho, yeh galat kyun hai. Jab tum numbers ko ek taraf shift karoge, toh pehli line se $\\text{LCM} = 22338$ milta hai, lekin is line se $\\text{LCM} = 23652$ aa raha hai.",
+   "Dekho, $306$ ko $9$ se divide karte waqt calculation mistake ho gayi, division dhyan se karo. Next time multiplication aur division step-by-step check karo taaki aisi silly mistake na ho.",
+   "Dekho, tumne $\\text{LCM}$ nikalte waqt $306$ ki jagah $36$ likh diya tha, isliye calculation galat ho gayi.",
+   "Chalo dekhte hain product property kaise kaam karti hai do numbers aur unke $\\text{HCF}$ ke sath.",
+   "Product of two numbers barabar hota hai $\\text{HCF} \\times \\text{LCM}$ ke.",
+   "Ab yahan numbers $306$ aur $657$ hain, aur $\\text{HCF}$ $9$ hai.",
+   "Ab $9$ ko doosri taraf le jakar divide kar denge toh sahi $\\text{LCM}$ mil jayega.",
+   "Toh dekho, $34 \\times 657$ karke hamara final $\\text{LCM}$ $22338$ aa gaya!",
+   "Yaad rakho: Dekho, 306 ko 9 se divide karte waqt calculation mistake ho gayi, division dhyan se karo."
+  ],
+  "drawing": [
+   "balance",
+   "rect"
+  ],
+  "boardTitle": "HCF and LCM Product Property",
+  "tutor": "Dekho, humein 306 aur 657 ka LCM nikalna hai, jismein HCF 9 diya hai. Tumne line 3 tak sab sahi kiya hai, formula lagaya aur 9 ko divide karne ki taiyari ki. Ab line 4 dekho, tumne likha $\\text{LCM} = 36 \\times 657$. Batao, $\\frac{306}{9}$ ka sahi answer kya aata hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 7,
+   "answer": "22338",
+   "first": [
+    "Dekho, question mein hamein do numbers diye gaye hain, $306$ aur $657$. Aur inka HCF diya hai $9$, toh ab humein LCM nikalna hai, yaad hai na? | text{HCF}(306, 657) = 9",
+    "Ab formula yaad karo jo humne class mein kiya tha — do numbers ka product unke HCF aur LCM ke product ke barabar hota hai. | \\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b",
+    "Yahan $a$ aur $b$ ki jagah hamare paas $306$ aur $657$ hain, toh values formula mein put karte hain. | 9 \\times \\text{LCM}(306, 657) = 306 \\times 657"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Given that $\\text{HCF}(12, 18) = 6$, find $\\text{LCM}(12, 18)$ using the product property.",
+   "chapter": "Real Numbers",
+   "reason": "Same chapter: Real Numbers (a new question for you)"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Given: } a = 306, \\",
+    "unver b = 657, \\",
+    "unver \\text{HCF}(306, \\",
+    "unver 657) = 9",
+    "unver \\text{Formula: } \\text{HCF}(a, \\",
+    "unver b) \\times \\text{LCM}(a, \\",
+    "unver b) = a \\times b",
+    "unver 9 \\times \\text{LCM} = 306 \\times 657",
+    "corre \\text{LCM} = (306 \\times 657) / 9",
+    "unver \\text{Dividing } 306 \\text{ by } 9 = 34:",
+    "corre \\text{LCM} = 34 \\times 657",
+    "corre = 22,338",
+    "unver \\text{Ans: } \\text{LCM}(306, \\",
+    "unver 657) = 22,338"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 7,
+   "answer": "22338",
+   "first": [
+    "Dekho, question mein hamein do numbers diye gaye hain, $306$ aur $657$. Aur inka HCF diya hai $9$, toh ab humein LCM nikalna hai, yaad hai na? | text{HCF}(306, 657) = 9",
+    "Ab formula yaad karo jo humne class mein kiya tha — do numbers ka product unke HCF aur LCM ke product ke barabar hota hai. | \\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b",
+    "Yahan $a$ aur $b$ ki jagah hamare paas $306$ aur $657$ hain, toh values formula mein put karte hain. | 9 \\times \\text{LCM}(306, 657) = 306 \\times 657"
+   ]
+  },
+  "right_practice": {
+   "text": "Given that $\\text{HCF}(342, 570) = 57$, find $\\text{LCM}(342, 570)$ using the property that the product of two numbers is equal to the product of their HCF and LCM.",
+   "chapter": "Real Numbers",
+   "reason": "Same chapter: Real Numbers (a new question for you)"
+  },
+  "seconds": 30
+ },
+ {
+  "id": "c10_set_07_polynomial_middle_term",
+  "class": 10,
+  "misconception": "Middle term sign error: using +3, +4 instead of -3, -4 for sum -7",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Factorise the quadratic polynomial by splitting the middle term: $x^2 - 7x + 12$",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 3,
+   "mistake": "factorising or expanding",
+   "explanation": "Multiply this line back out: it gives $x^{2} + 7 x + 12$, but the line before is $x^{2} - 7 x + 12$ — so the factors are not right.",
+   "wrongLatex": "= (x + 3)(x + 4)",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "corre \\text{Given: } x^2 - 7x + 12",
+    "unver \\text{Factors of } 12 \\text{ are } 3 \\text{ and } 4",
+    "incor = (x + 3)(x + 4)",
+    "carri \\text{Ans: } (x + 3)(x + 4)"
+   ]
+  },
+  "insight": "Dekho, line 3 mein middle term $-7x$ lane ke liye dono numbers minus chahiye the, kyunki $(-3) + (-4) = -7$ hota hai aur $(-3) \\times (-4) = +12$ hota hai. Next time signs ka dhyan rakho ki multiply karne par positive aur add karne par negative aaye.",
+  "board": [
+   "Line 3 dekho. Tumne yahan $= (x + 3)(x + 4)$ likha — galti yahin se shuru hoti hai.",
+   "Kyun galat hai? Multiply this line back out: it gives $x^{2} + 7 x + 12$, but the line before is $x^{2} - 7 x + 12$ — so the factors are not right.",
+   "Dekho, line 3 mein middle term $-7x$ lane ke liye dono numbers minus chahiye the, kyunki $(-3) + (-4) = -7$ hota hai aur $(-3) \\times (-4) = +12$ hota hai. Next time signs ka dhyan rakho ki multiply karne par positive aur add karne par negative aaye.",
+   "$x^{2}$ aur $12$ kone ke dabbe hain. Beech ka term $- 7 x$ do dabbon mein tootega.",
+   "Aise do numbers chahiye jinka guna $12$ aur jod $-7$ ho: $-3$ aur $-4$.",
+   "Rectangle ki sides hi factors hain: $(x - 4)(x - 3)$.",
+   "Yaad rakho: Dekho, line 3 mein middle term $-7x$ lane ke liye dono numbers minus chahiye the, kyunki $(-3) + (-4) = -7$ hota hai aur $(-3) \\times (-4) = +12$ hota hai."
+  ],
+  "drawing": [
+   "arrow",
+   "rect"
+  ],
+  "boardTitle": "Middle term ko dabbon se todo",
+  "tutor": "Dekho, hume $x^2 - 7x + 12$ ko do brackets me todna hai. Tumne 12 ke factors 3 aur 4 sahi se nikale hain. Ab line 3 me tumne $(x + 3)(x + 4)$ likha hai. Agar hum isko wapas multiply karein, toh beech wali term $+7x$ ban jati hai, lekin hamare paas $-7x$ hai. Toh batao, jab do negative numbers ka product positive ho, toh unka sum kaisa hota hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 8,
+   "answer": "(x - 4) (x - 3)",
+   "first": [
+    "Dekho, isko factorise karna hai. Hamein ek quadratic polynomial diya hai $x^2 - 7x + 12$ aur ise splitting the middle term se factorise karna hai. | x^2 - 7x + 12",
+    "Rule yaad hai na? Middle term splitting mein hume do aise numbers chahiye jinka sum middle term yaani $-7$ ho, aur product last term aur $x^2$ ke coefficient ka product yaani $12 \\times 1 = 12$ ho. | \\text{Sum} = -7, \\quad \\text{Product} = 12",
+    "Ab $12$ ke factors socho jo add karke $-7$ dein. Agar hum $-4$ aur $-3$ lein, toh $(-4) + (-3) = -7$ hota hai aur $(-4) \\times (-3) = 12$ hota hai. | -4 \\text{ and } -3"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Factorise 6x^2 + 9x.",
+   "chapter": "Exploring Algebraic Identities (factorisation)",
+   "reason": "Same chapter: Exploring Algebraic Identities (factorisation)"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "corre \\text{Given: } x^2 - 7x + 12",
+    "unver \\text{Product} = +12",
+    "unver \\text{Sum} = -7",
+    "unver \\text{Two numbers whose product is 12 and sum is -7 are}",
+    "unver = x^2 - 3x - 4x + 12",
+    "corre = x(x - 3) - 4(x - 3)",
+    "unver \\text{Taking common binomial factor } (x - 3)\\text{:}",
+    "corre = (x - 3)(x - 4)",
+    "corre \\text{Ans: Factors are } (x - 3)(x - 4)"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 8,
+   "answer": "(x - 4) (x - 3)",
+   "first": [
+    "Dekho, isko factorise karna hai. Hamein ek quadratic polynomial diya hai $x^2 - 7x + 12$ aur ise splitting the middle term se factorise karna hai. | x^2 - 7x + 12",
+    "Rule yaad hai na? Middle term splitting mein hume do aise numbers chahiye jinka sum middle term yaani $-7$ ho, aur product last term aur $x^2$ ke coefficient ka product yaani $12 \\times 1 = 12$ ho. | \\text{Sum} = -7, \\quad \\text{Product} = 12",
+    "Ab $12$ ke factors socho jo add karke $-7$ dein. Agar hum $-4$ aur $-3$ lein, toh $(-4) + (-3) = -7$ hota hai aur $(-4) \\times (-3) = 12$ hota hai. | -4 \\text{ and } -3"
+   ]
+  },
+  "right_practice": {
+   "text": "Factorise 6x^2 + 9x.",
+   "chapter": "Exploring Algebraic Identities (factorisation)",
+   "reason": "Same chapter: Exploring Algebraic Identities (factorisation)"
+  },
+  "seconds": 21
+ },
+ {
+  "id": "c10_set_08_ap_sum_formula",
+  "class": 10,
+  "misconception": "Omission of factor 2 in formula: writing Sn = n/2 [a + (n-1)d]",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Find the sum of the first $20$ terms of the AP: $1, 4, 7, 10, \\dots$",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 8,
+   "mistake": "used Sₙ = n/2[a + (n − 1)d] — the formula needs 2a, not a",
+   "explanation": "This line works out to $580$ — that is exactly what you get if you used Sₙ = n/2[a + (n − 1)d] — the formula needs 2a, not a.",
+   "wrongLatex": "= 10[1 + 57]",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Q } 8.",
+    "unver \\text{AP: } 1, 4, 7, ..., a = 1, d",
+    "unver \\text{AP: } 1, 4, 7, ..., a = 3, n",
+    "unver \\text{AP: } 1, 4, 7, ..., a = 20",
+    "unrea \\text{Sol: }",
+    "note  S_n = (n / 2)[a + (n - 1)d]",
+    "unver S20 = (20 / 2)[1 + 19 \\times 3]",
+    "incor = 10[1 + 57]",
+    "carri = 10 \\times 58",
+    "carri = 580",
+    "incor \\text{Ans: Sum } = 580"
+   ]
+  },
+  "insight": "AP ke sum ka formula $S_n = \\frac{n}{2}[2a + (n - 1)d]$ hota hai, jisme $2a$ likhte hain sirf $a$ nahi. Agli baar formula yaad rakhte waqt dhyan do ki pehle term $a$ ko $2$ se multiply karte hain.",
+  "board": [
+   "Line 6 dekho. Tumne yahan $S_n = (n / 2)[a + (n - 1)d]$ likha — galti yahin se shuru hoti hai. Ab dekho yeh kyun galat hai.",
+   "Ab socho, yeh galat kyun hai. Tumhara yeh line $580$ deta hai — aur yeh wahi hai jo Sₙ = n/2[a + (n − 1)d] use karne par milta hai — jabki formula ko $2a$ chahiye, sirf $a$ nahi.",
+   "AP ke sum ka sahi formula $S_n = \\frac{n}{2}[2a + (n - 1)d]$ hota hai, jisme $2a$ hota hai, sirf $a$ nahi. Isliye formula lagate waqt $2a$ likhna mat bhoolo.",
+   "Ab is AP ko samjho. AP ek seedhi jaisi hai jiska pehla term $1$ hai, aur common difference $3$ hai.",
+   "Jab tum $20$-vi term tak jaate ho, toh $19$ baar $3$ add hota hai. Isliye $n - 1$ yani $19$ use hota hai.",
+   "Aakhir mein, sum nikaalne ke liye pehli aur aakhri term ko jodkar $20/2$ se multiply karte hain.",
+   "Yaad rakho: AP ke sum ka formula $S_n = \\frac{n}{2}[2a + (n - 1)d]$ hota hai, jisme $2a$ likhte hain sirf $a$ nahi."
+  ],
+  "drawing": [
+   "rect"
+  ],
+  "boardTitle": "AP ek seedhi hai",
+  "tutor": "Dekho, humein is AP ke pehle 20 terms ka sum nikalna hai. Tumne $a=1$, $d=3$ aur $n=20$ sahi se identify kiya hai. Ab line 6 mein tumne formula likha hai, toh batao, bracket ke andar pehla term kya hota hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 11,
+   "answer": "590",
+   "first": [
+    "Dekho, hume diya hai AP: 1, 4, 7, 10, ... aur hume first 20 terms ka sum nikalna hai. | None",
+    "Pehle hum AP ke first term aur common difference identify karte hain. First term a = 1, common difference d = 4 - 1 = 3, aur n = 20. | a = 1,\\ d = 3,\\ n = 20",
+    "Sum of first n terms ka formula hota hai S_n = n/2 [2a + (n-1)d]. Isme n number of terms, a first term, d common difference hota hai. | S_n = \\frac{n}{2} \\left[ 2a + (n-1)d \\right]"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Find the sum of the first $10$ terms of the AP: $2, 5, 8, 11, \\dots$",
+   "chapter": "Arithmetic Progressions",
+   "reason": "Same chapter: Arithmetic Progressions (a new question for you)"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Given AP: } 1, 4, 7, 10, \\dots",
+    "note  \\text{First term } a = 1",
+    "unver \\text{ Common difference } d = 4 - 1",
+    "note  \\text{ Common difference } d = 3",
+    "note  n = 20",
+    "unver \\text{Formula for sum of first } n \\text{ terms:}",
+    "corre S_n = (n / 2) [2a + (n - 1)d]",
+    "corre S_{20} = (20 / 2) [2(1) + (20 - 1) \\times 3]",
+    "corre = 10 [2 + 19 \\times 3]",
+    "corre = 10 [2 + 57]",
+    "corre = 10 \\times 59",
+    "corre = 590",
+    "unver \\text{Ans: Sum of first } 20 \\text{ terms is } 590"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 11,
+   "answer": "590",
+   "first": [
+    "Dekho, hume diya hai AP: 1, 4, 7, 10, ... aur hume first 20 terms ka sum nikalna hai. | None",
+    "Pehle hum AP ke first term aur common difference identify karte hain. First term a = 1, common difference d = 4 - 1 = 3, aur n = 20. | a = 1,\\ d = 3,\\ n = 20",
+    "Sum of first n terms ka formula hota hai S_n = n/2 [2a + (n-1)d]. Isme n number of terms, a first term, d common difference hota hai. | S_n = \\frac{n}{2} \\left[ 2a + (n-1)d \\right]"
+   ]
+  },
+  "right_practice": {
+   "text": "Find the sum of the first $15$ terms of the Arithmetic Progression: $5, 9, 13, 17, \\dots$",
+   "chapter": "Arithmetic Progressions",
+   "reason": "Same chapter: Arithmetic Progressions (a new question for you)"
+  },
+  "seconds": 34
+ },
+ {
+  "id": "c10_set_09_trigonometric_values",
+  "class": 10,
+  "misconception": "Omitting squares of trigonometric values, calculating 2(1) + sqrt(3)/2 - sqrt(3)/2",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Evaluate the trigonometric value expression: $2\\tan^2 45^\\circ + \\cos^2 30^\\circ - \\sin^2 60^\\circ$",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 5,
+   "mistake": "missed a power while substituting",
+   "explanation": "The question has squares (like $\\tan^2 45^\\circ$): each value must be squared before it is added, but this line uses the values without their squares. The answer only came out right because two terms cancel — the working is not right.",
+   "wrongLatex": "= 2(1) + \\sqrt{3}/2 - \\sqrt{3}/2",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unrea \\text{Sol: }",
+    "corre \\tan 45^\\circ = 1",
+    "corre \\cos 30^\\circ = \\sqrt{3}/2",
+    "corre \\sin 60^\\circ = \\sqrt{3}/2",
+    "incor = 2(1) + \\sqrt{3}/2 - \\sqrt{3}/2",
+    "carri = 2 + 0",
+    "carri = 2",
+    "carri \\text{Ans: } 2"
+   ]
+  },
+  "insight": "Yahan square karna bhool gaye ho: $\\tan^2 45^\\circ$, $\\cos^2 30^\\circ$ aur $\\sin^2 60^\\circ$ mein values ka square likhna zaroori hai. Agli baar table ki values put karte waqt powers ka dhyan rakho.",
+  "board": [
+   "Line 5 dekho. Tumne yahan $= 2(1) + \\sqrt{3}/2 - \\sqrt{3}/2$ likha — galti yahin se shuru hoti hai.",
+   "Ab socho, yeh galat kyun hai. Question mein squares hain jaise $\\tan^2 45^\\circ$, toh har value ka square hona chahiye tha, lekin tumne bina square ke values rakh di.",
+   "Yahan square karna bhool gaye ho: $\\tan^2 45^\\circ$, $\\cos^2 30^\\circ$ aur $\\sin^2 60^\\circ$ mein values ka square likhna zaroori hai. Agli baar table ki values put karte waqt powers ka dhyan rakho.",
+   "Isliye is line mein tumne square ko chhod diya aur value seedhi rakh di.",
+   "Ab dekho, $\\tan^2 45^\\circ$ ka matlab hai $(1)^2$, yaani poore square ko solve karna hai.",
+   "Aao values ko sahi tarike se square karke dekhte hain.",
+   "Isliye ab values put karte hain: $2(1)^2 + (\\frac{\\sqrt{3}}{2})^2 - (\\frac{\\sqrt{3}}{2})^2$.",
+   "Ab yeh plus aur minus wale terms aapas mein cut gaye.",
+   "Toh bacha sirf $2(1) = 2$, aur yeh raha tumhara final answer!",
+   "Yaad rakho: Yahan square karna bhool gaye ho: $\\tan^2 45^\\circ$, $\\cos^2 30^\\circ$ aur $\\sin^2 60^\\circ$ mein values ka square likhna zaroori hai."
+  ],
+  "drawing": [
+   "arrow",
+   "balance",
+   "bar",
+   "rect"
+  ],
+  "boardTitle": "Square ke bina value mat rakho",
+  "tutor": "Yeh sawaal hai: humein $2\\tan^2 45^\\circ + \\cos^2 30^\\circ - \\sin^2 60^\\circ$ ka value nikalna hai. Tumne lines 1 se 4 mein standard values bilkul sahi likhi hain. Ab line 5 dekho, tumne likha hai $2(1) + \\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{3}}{2}$. Batao, jab humein $\\tan^2 45^\\circ$ likhna hota hai, toh hum $\\tan 45^\\circ$ ki value ko kya karte hain?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 12,
+   "answer": "2",
+   "first": [
+    "Dekho, sawaal mein diya hai expression $2\\tan^2 45^\\circ + \\cos^2 30^\\circ - \\sin^2 60^\\circ$ aur humein iski value nikalni hai. | 2\\tan^2 45^\\circ + \\cos^2 30^\\circ - \\sin^2 60^\\circ",
+    "Trigonometric table se standard values yaad karo — $\\tan 45^\\circ$ ki value hoti hai $1$. | \\tan 45^\\circ = 1",
+    "Ab $\\cos 30^\\circ$ ki value dekho, yeh hoti hai $\\frac{\\sqrt{3}}{2}$. | \\cos 30^\\circ = \\frac{\\sqrt{3}}{2}"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Evaluate the trigonometric value expression: $\\sin^2 45^\\circ + \\cos^2 60^\\circ$",
+   "chapter": "Introduction to Trigonometry",
+   "reason": "Same chapter: Introduction to Trigonometry (a new question for you)"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unrea \\text{Sol:}",
+    "corre \\text{To evaluate: } 2 \\tan^2(45^\\circ) + \\cos^2(30^\\circ) - \\sin^2(60^\\circ)",
+    "unrea \\text{Standard trigonometric values:}",
+    "corre \\tan(45^\\circ) = 1",
+    "corre \\cos(30^\\circ) = \\text{sqrt}(3)/2",
+    "corre \\sin(60^\\circ) = \\text{sqrt}(3)/2",
+    "unrea \\text{Substituting values with powers:}",
+    "corre = 2(1)^2 + [\\text{sqrt}(3)/2]^2 - [\\text{sqrt}(3)/2]^2",
+    "corre = 2(1) + (3/4) - (3/4)",
+    "corre = 2 + 0",
+    "corre = 2",
+    "unver \\text{Ans: Value = 2}"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 12,
+   "answer": "2",
+   "first": [
+    "Dekho, sawaal mein diya hai expression $2\\tan^2 45^\\circ + \\cos^2 30^\\circ - \\sin^2 60^\\circ$ aur humein iski value nikalni hai. | 2\\tan^2 45^\\circ + \\cos^2 30^\\circ - \\sin^2 60^\\circ",
+    "Trigonometric table se standard values yaad karo — $\\tan 45^\\circ$ ki value hoti hai $1$. | \\tan 45^\\circ = 1",
+    "Ab $\\cos 30^\\circ$ ki value dekho, yeh hoti hai $\\frac{\\sqrt{3}}{2}$. | \\cos 30^\\circ = \\frac{\\sqrt{3}}{2}"
+   ]
+  },
+  "right_practice": {
+   "text": "Evaluate the value of the expression: $3\\tan 30^\\circ \\cdot \\sec 60^\\circ + 2\\cos^2 45^\\circ - \\sin 30^\\circ$",
+   "chapter": "Introduction to Trigonometry",
+   "reason": "Same chapter: Introduction to Trigonometry (a new question for you)"
+  },
+  "seconds": 35
+ },
+ {
+  "id": "c10_set_10_heights_shadow",
+  "class": 10,
+  "misconception": "Using sin 45° instead of tan 45° for height / base ratio",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "A vertical tower casts a $20\\text{ m}$ shadow on the ground when the sun's angle of elevation is $45^\\circ$. Find the height of the tower.",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 3,
+   "wrongLine": 5,
+   "mistake": "wrong formula or values",
+   "explanation": "Your answer goes wrong here: this line gives $10 \\sqrt{2}$, which is not what this question needs. The lines after it are calculated correctly — they just carry this value forward. Check two things in this line: is the formula right, and did each number go in the right place?",
+   "wrongLatex": "\\sin 45^\\circ = h / 20",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "note  \\text{Let tower height} = h",
+    "unver \\text{shadow} = 20 \\text{ m}",
+    "unver \\text{angle} = 45^\\circ",
+    "unrea \\text{Sol:}",
+    "incor \\sin 45^\\circ = h / 20",
+    "carri 1 / \\text{sqrt}(2) = h / 20",
+    "carri h = 20 / \\text{sqrt}(2)",
+    "carri h = 10 \\times \\text{sqrt}(2) \\text{ m}",
+    "incor \\text{Ans: } 10 \\text{ sqrt}(2) \\text{ m}"
+   ]
+  },
+  "insight": "Line 5 mein tumne perpendicular ke liye $\\sin 45^\\circ$ ka formula laga diya, jabki yahan base aur perpendicular ka relation hai toh $\\tan 45^\\circ$ use karna chahiye tha. Agli baar dhyan rakhna ki angle aur sides ke beech ka sahi trigonometric ratio chuno.",
+  "board": [
+   "Line 5 dekho. Tumne yahan $\\sin 45^\\circ = h / 20$ likha — galti yahin se shuru hoti hai.",
+   "Ab socho, yeh galat kyun hai. Tumhari is line ki wajah se value $10 \\sqrt{2}$ aati hai — jo is sawaal mein nahi chahiye. Baad ke saare steps bilkul theek hain, bas unhone ishi pehle wale number ko aage badhaya hai. Ab tum yeh check karo ki kya formula sahi tha, aur kya har number apni sahi jagah par gaya hai.",
+   "Line 5 mein tumne $\\sin 45^\\circ$ ka formula use kiya, jabki yahan base aur height ki baat ho rahi hai toh $\\tan 45^\\circ$ aana chahiye tha. Ab dekho, koshish karo ki angle ke hisaab se sahi ratio chuno.",
+   "Iske baad, agle step mein dekho kya banta hai. Yahan rule ke mutabiq $h = 20$ hona chahiye tha, jahan $h$ tower ki height hai aur $20$ shadow ki lambai hai.",
+   "Ab socho ki equation kaise kaam karti hai. Yeh ek taraazu ki tarah hai jahan dono taraf balance rakhna padta hai.",
+   "Bas, is tarah se tumhara calculation aage badhta hai, aur aakhiri step tak sab clear ho jata hai.",
+   "Yaad rakho: Line 5 mein tumne perpendicular ke liye $\\sin 45^\\circ$ ka formula laga diya, jabki yahan base aur perpendicular ka relation hai toh $\\tan 45^\\circ$ use karna chahiye tha."
+  ],
+  "drawing": [
+   "balance"
+  ],
+  "boardTitle": "Equation ek taraazu hai",
+  "tutor": "Yeh sawaal hai: ek tower ki height nikalni hai, jiska shadow 20 m hai aur sun ka angle 45 degree hai. Tumne pehle 4 lines mein values sahi se likh di hain: height $h$, shadow 20, aur angle 45. Ab line 5 dekho, yahan tumne $\\sin$ use kiya hai. Batao, jab humein perpendicular (height) aur base (shadow) dono ka ratio chahiye ho, toh kaunsa trigonometric ratio lagta hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 8,
+   "answer": "h = 20",
+   "first": [
+    "Dekho, sawaal mein kya diya hai? Ek vertical tower ka shadow ground par $20$ meters hai, aur sun ka angle of elevation $45^\\circ$ hai. Hame tower ki height nikalni hai. | None",
+    "Ab ek rough right-angled triangle socho jisme tower perpendicular hai, shadow base hai, aur angle $45^\\circ$ hai. Isme hum perpendicular aur base ka relation use karenge, toh trigonometry ka konsa formula lagega? Yaad hai na, $\\tan(\\theta) = \\frac{\\text{Perpendicular}}{\\text{Base}}$. | \\tan(\\theta) = \\frac{\\text{Perpendicular}}{\\text{Base}}",
+    "Yahan tower ki height ko $h$ maan lete hain, base $20$ meters hai, aur angle $45^\\circ$ hai. Ab in values ko formula mein daalo. | \\tan(45^{\\circ}) = \\frac{h}{20}"
+   ]
+  },
+  "wrong_practice": {
+   "text": "A tower casts a 20 m shadow when the sun's elevation is 45°. Find the height of the tower.",
+   "chapter": "Some Applications of Trigonometry",
+   "reason": "Same chapter: Some Applications of Trigonometry"
+  },
+  "right": {
+   "status": "graded",
+   "score": 3.0,
+   "max": 3,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Let AB be the vertical tower of height 'h' m.}",
+    "unver \\text{Let BC be the shadow on the ground = 20 m.}",
+    "unver \\text{Angle of elevation theta = } 45^\\circ.",
+    "unver \\text{In right triangle ABC right-angled at B:}",
+    "unver \\text{tan theta = Opposite / Adjacent",
+    "unver \\text{tan theta = AB / BC}",
+    "unver \\text{tan}(45^\\circ) = h / 20",
+    "unver \\text{Since } \\text{tan}(45^\\circ) = 1:",
+    "corre 1 = h / 20",
+    "corre h = 20 \\text{ m}",
+    "unver \\text{Ans: Height of tower is 20 m}"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 8,
+   "answer": "h = 20",
+   "first": [
+    "Dekho, sawaal mein kya diya hai? Ek vertical tower ka shadow ground par $20$ meters hai, aur sun ka angle of elevation $45^\\circ$ hai. Hame tower ki height nikalni hai. | None",
+    "Ab ek rough right-angled triangle socho jisme tower perpendicular hai, shadow base hai, aur angle $45^\\circ$ hai. Isme hum perpendicular aur base ka relation use karenge, toh trigonometry ka konsa formula lagega? Yaad hai na, $\\tan(\\theta) = \\frac{\\text{Perpendicular}}{\\text{Base}}$. | \\tan(\\theta) = \\frac{\\text{Perpendicular}}{\\text{Base}}",
+    "Yahan tower ki height ko $h$ maan lete hain, base $20$ meters hai, aur angle $45^\\circ$ hai. Ab in values ko formula mein daalo. | \\tan(45^{\\circ}) = \\frac{h}{20}"
+   ]
+  },
+  "right_practice": {
+   "text": "A tower casts a 20 m shadow when the sun's elevation is 45°. Find the height of the tower.",
+   "chapter": "Some Applications of Trigonometry",
+   "reason": "Same chapter: Some Applications of Trigonometry"
+  },
+  "seconds": 23
+ },
+ {
+  "id": "c10_set_11_circle_tangent_pythagoras",
+  "class": 10,
+  "misconception": "Adding squares instead of subtracting from hypotenuse: PT = sqrt(13^2 + 5^2)",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "A point $P$ is $13\\text{ cm}$ from the centre $O$ of a circle of radius $5\\text{ cm}$. Find the length of the tangent $PT$ drawn from $P$ to the circle.",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 3,
+   "wrongLine": 4,
+   "mistake": "wrong step",
+   "explanation": "This line does not follow from the line before it. Redo this one step slowly and compare.",
+   "wrongLatex": "PT^2 = 13^2 + 5^2",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "note  \\text{Given: } OP = 13 \\text{ cm}",
+    "note  \\text{Given: } OT = 5 \\text{ cm}",
+    "unrea \\text{Using Pythagoras theorem:}",
+    "incor PT^2 = 13^2 + 5^2",
+    "unver = 169 + 25",
+    "carri = 194",
+    "carri PT = \\text{sqrt}(194) \\text{ cm}",
+    "incor \\text{Ans: } \\text{sqrt}(194) \\text{ cm}"
+   ]
+  },
+  "insight": "Tangent aur radius ke beech ka angle $90^{\\circ}$ hota hai, isliye $OP$ hypotenuse banega, aur Pythagoras theorem mein hypotenuse ka square baaki dono sides ke squares ke sum ke barabar hota hai, isliye minus karna chahiye tha plus nahi.",
+  "board": [
+   "Line 4 dekho. Tumne yahan $PT^2 = 13^2 + 5^2$ likha — galti yahin se shuru hoti hai.",
+   "Kyun galat hai? This line does not follow from the line before it. Redo this one step slowly and compare.",
+   "Tangent aur radius ke beech ka angle $90^{\\circ}$ hota hai, isliye $OP$ hypotenuse banega, aur Pythagoras theorem mein hypotenuse ka square baaki dono sides ke squares ke sum ke barabar hota hai, isliye minus karna chahiye tha plus nahi.",
+   "$Q_{pt}^{2}$ aur $-144$ kone ke dabbe hain. Beech ka term nahi hai — do dabbe ek-doosre ko cancel karenge.",
+   "Aise do numbers chahiye jinka guna $-144$ aur jod $0$ ho: $12$ aur $-12$.",
+   "Rectangle ki sides hi factors hain: $(Q_{pt} - 12)(Q_{pt} + 12)$.",
+   "Yaad rakho: Tangent aur radius ke beech ka angle $90^{\\circ}$ hota hai, isliye $OP$ hypotenuse banega, aur Pythagoras theorem mein hypotenuse ka square baaki dono sides ke squares ke sum ke barabar hota hai, isliye minus karna chahiye tha plus nahi."
+  ],
+  "drawing": [
+   "arrow",
+   "rect"
+  ],
+  "boardTitle": "Middle term ko dabbon se todo",
+  "tutor": "Dekho, is sawaal mein humein circle ke ek external point $P$ se banaye gaye tangent $PT$ ki length nikalni hai, jahan $OP = 13\\text{ cm}$ aur $OT = 5\\text{ cm}$ diya hai. Tumne line 1 se 3 tak bilkul theek likha hai ki $OP = 13\\text{ cm}$, $OT = 5\\text{ cm}$ aur yahan Pythagoras theorem lagegi. Lekin line 4 mein tumne likha hai $PT^2 = 13^2 + 5^2$. Zara socho, ek right-angled triangle mein hypotenuse $OP$ hai, toh Pythagoras theorem ke mutabiq $OP^2$ kis-kis ke squares ke sum ke barabar hoga?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 13,
+   "answer": "Q_{pt} = 12",
+   "first": [
+    "Dekho, sawaal mein kya diya hai? Ek circle hai jiska centre $O$ hai, radius $5\\text{ cm}$ hai, aur centre se ek point $P$ ki doori $13\\text{ cm}$ hai. Humein tangent $PT$ ki length nikalni hai. | OP = 13, \\quad OT = 5",
+    "Yaad hai na circle ki theorem? Tangent radius par perpendicular hoti hai. Iska matlab triangle $OTP$ ek right-angled triangle hai. | \\angle OTP = 90^\\circ",
+    "Ab right-angled triangle mein Pythagoras theorem lagayenge. Hypotenuse ka square, baaki do sides ke squares ke sum ke barabar hota hai. | OP^2 = OT^2 + Q_{pt}^2"
+   ]
+  },
+  "wrong_practice": {
+   "text": "A point $P$ is $10\\text{ cm}$ from the centre $O$ of a circle of radius $6\\text{ cm}$. Find the length of the tangent $PT$ drawn from $P$ to the circle.",
+   "chapter": "Circles",
+   "reason": "Same chapter: Circles (a new question for you)"
+  },
+  "right": {
+   "status": "graded",
+   "score": 3.0,
+   "max": 3,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Let } O \\text{ be the centre, OT = radius",
+    "unver \\text{Let } O \\text{ be the centre, OT = } 5 \\text{ cm, OP",
+    "unver \\text{Let } O \\text{ be the centre, OT = } 13 \\text{ cm.}",
+    "unver \\text{Theorem: The tangent at any point is perpendicular to radius:}",
+    "unver \\text{Angle OTP = } 90^\\circ, \\text{ so triangle OTP is a right triangle (hypotenus}",
+    "unver \\text{By Pythagoras theorem: OP}^2 \\text{ = OT}^2 \\text{ + PT}^2",
+    "unver \\text{PT}^2 \\text{ = OP}^2 \\text{ - OT}^2",
+    "corre \\text{PT}^2 \\text{ = 13}^2 \\text{ - 5}^2 \\text{",
+    "corre \\text{PT}^2 \\text{ = 169 - 25",
+    "corre \\text{PT}^2 \\text{ = 144}",
+    "corre \\text{PT = sqrt(144)",
+    "corre \\text{PT = 12 cm}",
+    "unver \\text{Ans: Length of the tangent PT = 12 cm}"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 13,
+   "answer": "Q_{pt} = 12",
+   "first": [
+    "Dekho, sawaal mein kya diya hai? Ek circle hai jiska centre $O$ hai, radius $5\\text{ cm}$ hai, aur centre se ek point $P$ ki doori $13\\text{ cm}$ hai. Humein tangent $PT$ ki length nikalni hai. | OP = 13, \\quad OT = 5",
+    "Yaad hai na circle ki theorem? Tangent radius par perpendicular hoti hai. Iska matlab triangle $OTP$ ek right-angled triangle hai. | \\angle OTP = 90^\\circ",
+    "Ab right-angled triangle mein Pythagoras theorem lagayenge. Hypotenuse ka square, baaki do sides ke squares ke sum ke barabar hota hai. | OP^2 = OT^2 + Q_{pt}^2"
+   ]
+  },
+  "right_practice": {
+   "text": "A point $Q$ is $17\\text{ cm}$ from the centre $O$ of a circle of radius $8\\text{ cm}$. If a tangent $QT$ is drawn from $Q$ to the circle, and a secant line passes through $Q$ intersecting the circle at points $A$ and $B$ such that $QA = 6\\text{ cm}$, find the length of the entire secant segment $QB$.",
+   "chapter": "Circles",
+   "reason": "Same chapter: Circles (a new question for you)"
+  },
+  "seconds": 16
+ },
+ {
+  "id": "c10_set_12_hemisphere_volume",
+  "class": 10,
+  "misconception": "Using full sphere formula 4/3 pi*r^3 instead of hemisphere 2/3 pi*r^3",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "Find the volume of a solid hemisphere of radius $21\\text{ cm}$. (Use $\\pi = 22/7$)",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 3,
+   "mistake": "simplifying or collecting terms",
+   "explanation": "In this line the r^3 term should be 0, the line gives 4*pi/3; the r term should be 1, the line gives 0; the number term should be -21, the line gives 0.",
+   "wrongLatex": "\\text{volume} = (4/3) \\times \\pi \\times r^{\\wedge}3",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "note  \\text{Given: } r = 21 \\text{ cm}",
+    "unrea \\text{Sol:}",
+    "incor \\text{volume} = (4/3) \\times \\pi \\times r^{\\wedge}3",
+    "carri = (4/3) \\times (22/7) \\times 21 \\times 21 \\times 21",
+    "carri = 4 \\times 22 \\times 21 \\times 21",
+    "carri = 38,808 \\text{ cm}^{\\wedge}3",
+    "incor \\text{Ans: } 38808 \\text{ cm}^3"
+   ]
+  },
+  "insight": "Dekho, hemisphere ka volume $\\frac{2}{3}\\pi r^3$ hota hai, poore sphere ka $\\frac{4}{3}\\pi r^3$ nahi. Yaad rakho, solid hemisphere ke liye formula me fraction $\\frac{2}{3}$ use karte hain.",
+  "board": [
+   "Line 3 dekho. Tumne yahan $\\text{volume} = (4/3) \\times \\pi \\times r^{\\wedge}3$ likha — galti yahin se shuru hoti hai.",
+   "Ab socho, yeh galat kyun hai. Is line mein r^3 term 0 hona chahiye tha, par line se 4*pi/3 milta hai; r term 1 hona chahiye tha, par line 0 deti hai; aur number term -21 hona chahiye tha, par line 0 deti hai.",
+   "Dekho, hemisphere ka volume $\\frac{2}{3}\\pi r^3$ hota hai, poore sphere ka $\\frac{4}{3}\\pi r^3$ nahi. Yaad rakho, solid hemisphere ke liye formula me fraction $\\frac{2}{3}$ use karte hain.",
+   "Yeh hai hamara hemisphere — iske naap board par likhe hain.",
+   "Volume matlab andar kitni jagah — isme kitna paani ya kitne cubes bharenge.",
+   "Ab formula mein naap rakho.",
+   "Yaad rakho: Dekho, hemisphere ka volume $\\frac{2}{3}\\pi r^3$ hota hai, poore sphere ka $\\frac{4}{3}\\pi r^3$ nahi."
+  ],
+  "drawing": [
+   "ellipse",
+   "line",
+   "polygon"
+  ],
+  "boardTitle": "Hemisphere: dekho, phir naapo",
+  "tutor": "Sawaal yeh hai ki radius $21$ cm wale solid hemisphere ka volume nikalna hai. Tumne $r = 21$ cm sahi se identify kiya hai. Ab line 3 dekho, tumne $\\frac{4}{3} \\pi r^3$ likha hai. Batao, hemisphere ka volume formula kya hota hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 11,
+   "answer": "19404",
+   "first": [
+    "Dekho, sawaal mein humein ek solid hemisphere ka radius diya hai jo ki $21\\text{ cm}$ hai, aur humein uski volume nikalni hai. Yaad rakhna tumhein yahan volume ka formula lagana hai, kuch log galati se curved surface area ya total surface area ka formula laga dete hain, par humein toh andar ki total space yaani volume nikalni hai. | radius = 21",
+    "Ab solid hemisphere ki volume nikalne ka formula likhenge jo hota hai $\\frac{2}{3} \\pi r^3$. Yahan $r$ ka matlab radius hai jo ki $21\\text{ cm}$ hai. | Volume = \\frac{2}{3} \\pi r^3",
+    "Chalo ab values put karte hain, $\\pi$ ki jagah $22/7$ aur $r$ ki jagah $21$ rakh do, aur haan, $r$ cube hai toh $21$ ko teen baar multiply karna hoga. | Volume = \\frac{2}{3} \\times \\frac{22}{7} \\times 21 \\times 21 \\times 21"
+   ]
+  },
+  "wrong_practice": {
+   "text": "Find the volume of a solid hemisphere of radius $14\\text{ cm}$. (Use $\\pi = 22/7$)",
+   "chapter": "Surface Areas and Volumes",
+   "reason": "Same chapter: Surface Areas and Volumes (a new question for you)"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Given: Radius of hemisphere (r) = 21 \\text{cm}}",
+    "unrea \\text{Formula for Volume of a Hemisphere:}",
+    "unver V = (2/3) \\times \\text{pi} \\times r^3",
+    "corre = (2/3) \\times (22/7) \\times (21 \\times 21 \\times 21)",
+    "unver 3 \\times 7 = 21 \\text{ cancels with one } 21:",
+    "corre = 2 \\times 22 \\times (21 \\times 21)",
+    "corre = 44 \\times 441",
+    "corre = 19,404 \\text{ cm}^3",
+    "unver \\text{Ans: Volume of hemisphere = 19,404 cm}^3"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 11,
+   "answer": "19404",
+   "first": [
+    "Dekho, sawaal mein humein ek solid hemisphere ka radius diya hai jo ki $21\\text{ cm}$ hai, aur humein uski volume nikalni hai. Yaad rakhna tumhein yahan volume ka formula lagana hai, kuch log galati se curved surface area ya total surface area ka formula laga dete hain, par humein toh andar ki total space yaani volume nikalni hai. | radius = 21",
+    "Ab solid hemisphere ki volume nikalne ka formula likhenge jo hota hai $\\frac{2}{3} \\pi r^3$. Yahan $r$ ka matlab radius hai jo ki $21\\text{ cm}$ hai. | Volume = \\frac{2}{3} \\pi r^3",
+    "Chalo ab values put karte hain, $\\pi$ ki jagah $22/7$ aur $r$ ki jagah $21$ rakh do, aur haan, $r$ cube hai toh $21$ ko teen baar multiply karna hoga. | Volume = \\frac{2}{3} \\times \\frac{22}{7} \\times 21 \\times 21 \\times 21"
+   ]
+  },
+  "right_practice": {
+   "text": "Find the volume of a solid hemisphere whose total surface area is $4158\\text{ cm}^2$. (Use $\\pi = 22/7$)",
+   "chapter": "Surface Areas and Volumes",
+   "reason": "Same chapter: Surface Areas and Volumes (a new question for you)"
+  },
+  "seconds": 27
+ },
+ {
+  "id": "c10_set_13_triangles_thales",
+  "class": 10,
+  "misconception": "Inverting ratio in Thales theorem: AD/DB = EC/AE instead of AE/EC",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "In $\\Delta ABC$, $DE \\parallel BC$ with $D$ on $AB$ and $E$ on $AC$. If $AD = 2\\text{ cm}$, $DB = 3\\text{ cm}$, and $AE = 4\\text{ cm}$, find $EC$.",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 6,
+   "mistake": "wrong formula or values",
+   "explanation": "This line works out to $\\frac{8}{3}$ — the first place your wrong value appears — but this question needs a different value. Every line after it only simplifies this value. Check the formula here and every number you put into it.",
+   "wrongLatex": "AD / DB = EC / AE",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unrea \\text{Sol:}",
+    "unver \\text{Given: } DE \\parallel BC",
+    "note  AD = 2\\text{ cm}",
+    "note  DB = 3\\text{ cm}",
+    "note  AE = 4\\text{ cm}",
+    "incor AD / DB = EC / AE",
+    "carri 2 / 3 = EC / 4",
+    "carri 3 \\times EC = 8",
+    "carri EC = 8 / 3",
+    "incor EC = 2.67\\text{ cm}",
+    "carri \\text{Ans: } EC = 2.67\\text{ cm}"
+   ]
+  },
+  "insight": "Dekho, Thales Theorem mein ratio lete waqt $AD / DB = AE / EC$ hota hai, tumne $EC / AE$ likh diya. Agli baar formula mein sides ka order check karke values put karna.",
+  "board": [
+   "Line 6 dekho. Tumne yahan $AD / DB = EC / AE$ likha — galti yahin se shuru hoti hai.",
+   "Ab socho, yeh galat kyun hai. Yeh line $\\frac{8}{3}$ par aakar rukti hai — yeh pehli jagah hai jahan tumhari galat value aati hai — jabki is question ke liye doosri value chahiye. Iske baad ki har line bas ishi value ko simplify karti hai. Yahan formula aur usme daali gayi har ek value ko check karo.",
+   "Dekho, Thales Theorem mein ratio lete waqt $AD / DB = AE / EC$ hota hai, tumne $EC / AE$ likh diya. Agli baar formula mein sides ka order check karke values put karna.",
+   "Triangle ABC mein DE, BC ke parallel hai — yeh line dono sides ko ek hi ratio mein kaat'ti hai.",
+   "Upar ke tukde neeche ke tukdon se ek hi ratio mein hain.",
+   "Cross multiply karo aur x nikaalo.",
+   "Yaad rakho: Dekho, Thales Theorem mein ratio lete waqt $AD / DB = AE / EC$ hota hai, tumne $EC / AE$ likh diya."
+  ],
+  "drawing": [
+   "line",
+   "polygon"
+  ],
+  "boardTitle": "Parallel line, barabar ratio",
+  "tutor": "Dekho, yahan triangle mein ek line parallel hai, aur humein usi se $EC$ ki lambai nikalni hai. Tumne values sahi se likhi hain aur step 6 tak ka setup bhi theek hai. Ab line 6 par ruko aur mujhe batao: Basic Proportionality Theorem ke hisaab se, $\\frac{AD}{DB}$ ka ratio kis ratio ke barabar hota hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 8,
+   "answer": "6",
+   "first": [
+    "Dekho, sawaal mein kya diya hai? Ek triangle $ABC$ hai jisme $DE$ parallel hai $BC$ ke. $AD$ ka length $2\\text{ cm}$ hai, $DB$ $3\\text{ cm}$ hai, aur $AE$ $4\\text{ cm}$ hai. Humein $EC$ ki lambai nikalni hai. | AD = 2, DB = 3, AE = 4",
+    "Ab yaad karo jab bhi ek triangle mein line parallel hoti hai, kaun sa theorem lagta hai? Basic Proportionality Theorem, jisko hum Thales Theorem bhi kehte hain. Yeh kehta hai ki agar $DE \\parallel BC$ hai, toh sides proportional hongi. | \\frac{AD}{DB} = \\frac{AE}{EC}",
+    "Toh chalo, values ko formula mein daalte hain. $AD$ ki jagah $2$ likho, $DB$ ki jagah $3$, aur $AE$ ki jagah $4$. $EC$ humein pata nahi hai, toh waisa hi rehne do. | \\frac{2}{3} = \\frac{4}{EC}"
+   ]
+  },
+  "wrong_practice": {
+   "text": "In $\\Delta ABC$, $DE \\parallel BC$ with $D$ on $AB$ and $E$ on $AC$. If $AD = 4\\text{ cm}$, $DB = 6\\text{ cm}$, and $AE = 2\\text{ cm}$, find $EC$.",
+   "chapter": "Triangles",
+   "reason": "Same chapter: Triangles (a new question for you)"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Given: In triangle ABC, DE} \\parallel \\text{BC}",
+    "unver \\text{AD} = 2 \\text{ \\text{cm}}",
+    "unver \\text{DB} = 3 \\text{ \\text{cm}}",
+    "unver \\text{AE} = 4 \\text{ \\text{cm}}",
+    "unver \\text{By Thales Theorem (Basic Proportionality Theorem):}",
+    "unver \\text{AD} / \\text{DB} = \\text{AE} / \\text{EC}",
+    "unver 2 / 3 = 4 / \\text{EC}",
+    "unrea \\text{Cross multiplying:}",
+    "corre 2 \\times \\text{EC} = 3 \\times 4",
+    "corre 2 \\times \\text{EC} = 12",
+    "corre \\text{EC} = 12 / 2",
+    "unver \\text{EC} = 6 \\text{ \\text{cm}}",
+    "unver \\text{Ans: Length of EC} = 6 \\text{ \\text{cm}}"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 8,
+   "answer": "6",
+   "first": [
+    "Dekho, sawaal mein kya diya hai? Ek triangle $ABC$ hai jisme $DE$ parallel hai $BC$ ke. $AD$ ka length $2\\text{ cm}$ hai, $DB$ $3\\text{ cm}$ hai, aur $AE$ $4\\text{ cm}$ hai. Humein $EC$ ki lambai nikalni hai. | AD = 2, DB = 3, AE = 4",
+    "Ab yaad karo jab bhi ek triangle mein line parallel hoti hai, kaun sa theorem lagta hai? Basic Proportionality Theorem, jisko hum Thales Theorem bhi kehte hain. Yeh kehta hai ki agar $DE \\parallel BC$ hai, toh sides proportional hongi. | \\frac{AD}{DB} = \\frac{AE}{EC}",
+    "Toh chalo, values ko formula mein daalte hain. $AD$ ki jagah $2$ likho, $DB$ ki jagah $3$, aur $AE$ ki jagah $4$. $EC$ humein pata nahi hai, toh waisa hi rehne do. | \\frac{2}{3} = \\frac{4}{EC}"
+   ]
+  },
+  "right_practice": {
+   "text": "In $\\Delta PQR$, a line segment $LM$ is drawn parallel to $QR$, with $L$ on $PQ$ and $M$ on $PR$. If $PL = 5\\text{ cm}$, $LQ = 7\\text{ cm}$, and $PM = 9\\text{ cm}$, find the length of $MR$.",
+   "chapter": "Triangles",
+   "reason": "Same chapter: Triangles (a new question for you)"
+  },
+  "seconds": 18
+ },
+ {
+  "id": "c10_set_14_grouped_mean",
+  "class": 10,
+  "misconception": "Inverting division: calculating Sigma f / Sigma (f*x) instead of Sigma (f*x) / Sigma f",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "For a grouped frequency distribution, $\\Sigma(f \\cdot x) = 650$ and $\\Sigma f = 50$. Find the arithmetic mean.",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 3,
+   "mistake": "wrong formula or values",
+   "explanation": "This line works out to $\\frac{1}{13}$ — the first place your wrong value appears — but this question needs a different value. Every line after it only simplifies this value. Check the formula here and every number you put into it.",
+   "wrongLatex": "\\text{Sol: } \\text{Mean} = \\text{Sum}(f) / \\text{Sum}(fx)",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "note  \\text{Given: } \\text{Sum}(fx) = 650",
+    "note  \\text{Given: } \\text{Sum}(f) = 50",
+    "incor \\text{Sol: } \\text{Mean} = \\text{Sum}(f) / \\text{Sum}(fx)",
+    "carri = 50 / 650",
+    "carri = 5 / 65",
+    "carri = 1 / 13",
+    "carri = 0.077",
+    "carri \\text{Ans: } \\text{Mean} = 0.077"
+   ]
+  },
+  "insight": "Dekho, arithmetic mean ka formula $\\frac{\\Sigma(f \\cdot x)}{\\Sigma f}$ hota hai, isme tumne ulta likh diya. Agli baar dhyan rakhna ki sum of observations ko total frequency se divide karte hain, frequency ko upar nahi rakhte.",
+  "board": [
+   "Line 3 dekho. Tumne yahan $\\text{Sol: } \\text{Mean} = \\text{Sum}(f) / \\text{Sum}(fx)$ likha — galti yahin se shuru hoti hai.",
+   "Kyun galat hai? This line works out to $\\frac{1}{13}$ — the first place your wrong value appears — but this question needs a different value. Every line after it only simplifies this value. Check the formula here and every number you put into it.",
+   "Dekho, arithmetic mean ka formula $\\frac{\\Sigma(f \\cdot x)}{\\Sigma f}$ hota hai, isme tumne ulta likh diya. Agli baar dhyan rakhna ki sum of observations ko total frequency se divide karte hain, frequency ko upar nahi rakhte.",
+   "Dekho, tumne formula mein numerator aur denominator ulta likh diya. Chaliye dekhte hain isse kya galat value aati hai.",
+   "Yeh rahi tumhari written mistake — $\\text{Mean} = \\frac{\\Sigma f}{\\Sigma(f \\cdot x)}$. Yeh rule galat hai.",
+   "Jab values substitute kiye toh yeh bana $\\frac{50}{650}$, jo ki bahut chhota fraction hai.",
+   "Yaad hai na class mein kya padha tha? Arithmetic mean hota hai total sum of observations divided by total frequency!",
+   "Formula bilkul sahi likhte hain: $\\text{Mean} = \\frac{\\Sigma(f \\cdot x)}{\\Sigma f}$.",
+   "Ab values put karte hain: $\\frac{650}{50}$.",
+   "Zero se zero cut gaya, aur $65$ ko $5$ se divide karke mila $13$. Hamara arithmetic mean $13$ hai!",
+   "Yaad rakho: Agli baar dhyan rakhna ki sum of observations ko total frequency se divide karte hain, frequency ko upar nahi rakhte."
+  ],
+  "drawing": [
+   "bar"
+  ],
+  "boardTitle": "Finding Arithmetic Mean of Grouped Data",
+  "tutor": "Yeh sawaal grouped frequency distribution ka arithmetic mean nikalne ka hai. Tumne values sahi pakdi hain: $\\Sigma(f \\cdot x) = 650$ aur $\\Sigma f = 50$. Line 3 mein tumne formula likha hai, lekin order thoda ulta hai. Batao, mean nikalne ka formula kya hota hai? Pehle numerator (upar) mein kya aata hai aur denominator (neeche) mein kya aata hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 7,
+   "answer": "13",
+   "first": [
+    "Dekho, sawaal mein humein grouped frequency distribution ke liye kuch values di gayi hain. Ek toh sum of product of frequency and class mark, yaani $\\Sigma(f \\cdot x) = 650$, aur total frequency $\\Sigma f = 50$ di hai. Ab humein arithmetic mean nikalna hai. | \\Sigma(f \\cdot x) = 650, \\quad \\Sigma f = 50",
+    "Ab yaad karo, grouped data ka arithmetic mean nikalne ka seedha formula kya hota hai. Mean ko hum $\\bar{x}$ likhte hain. Iska formula hai $\\Sigma(f \\cdot x)$ ko $\\Sigma f$ se divide karna. Yeh formula isliye use karte hain kyunki yahan humein direct sums diye gaye hain. | \\bar{x} = \\frac{\\Sigma(f \\cdot x)}{\\Sigma f}",
+    "Toh ab values ko formula mein substitute karte hain. $\\Sigma(f \\cdot x)$ ki jagah $650$ rakh do aur $\\Sigma f$ ki jagah $50$ likh do. | \\bar{x} = \\frac{650}{50}"
+   ]
+  },
+  "wrong_practice": {
+   "text": "In a grouped frequency distribution, the sum of the product of frequencies and their corresponding class marks is $\\Sigma(f \\cdot x) = 480$ and the total frequency is $\\Sigma f = 40$. Calculate the arithmetic mean.",
+   "chapter": "Statistics",
+   "reason": "Same chapter: Statistics (a new question for you)"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Given: } \\text{Sum}(f \\cdot x) = 650",
+    "note  \\text{Given: } \\text{ Sum}(f) = N",
+    "note  \\text{Given: } \\text{ Sum}(f) = 50",
+    "unver \\text{Direct Method Formula for Arithmetic Mean } (x^-):",
+    "unver x^- = [\\text{Sum}(f \\cdot x)] / [\\text{Sum}(f)]",
+    "unver x^- = 650 / 50",
+    "corre \\text{Cancelling zero: } 65 / 5 = 13",
+    "unver x^- = 13",
+    "corre \\text{Ans: Arithmetic mean } = 13"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 7,
+   "answer": "13",
+   "first": [
+    "Dekho, sawaal mein humein grouped frequency distribution ke liye kuch values di gayi hain. Ek toh sum of product of frequency and class mark, yaani $\\Sigma(f \\cdot x) = 650$, aur total frequency $\\Sigma f = 50$ di hai. Ab humein arithmetic mean nikalna hai. | \\Sigma(f \\cdot x) = 650, \\quad \\Sigma f = 50",
+    "Ab yaad karo, grouped data ka arithmetic mean nikalne ka seedha formula kya hota hai. Mean ko hum $\\bar{x}$ likhte hain. Iska formula hai $\\Sigma(f \\cdot x)$ ko $\\Sigma f$ se divide karna. Yeh formula isliye use karte hain kyunki yahan humein direct sums diye gaye hain. | \\bar{x} = \\frac{\\Sigma(f \\cdot x)}{\\Sigma f}",
+    "Toh ab values ko formula mein substitute karte hain. $\\Sigma(f \\cdot x)$ ki jagah $650$ rakh do aur $\\Sigma f$ ki jagah $50$ likh do. | \\bar{x} = \\frac{650}{50}"
+   ]
+  },
+  "right_practice": {
+   "text": "In a grouped frequency distribution, the sum of the products of frequencies and class marks is $\\Sigma(f \\cdot x) = 4200$ and the total frequency is $\\Sigma f = 60$. Find the arithmetic mean.",
+   "chapter": "Statistics",
+   "reason": "Same chapter: Statistics (a new question for you)"
+  },
+  "seconds": 47
+ },
+ {
+  "id": "c10_set_15_probability_cards",
+  "class": 10,
+  "misconception": "Confusing number of Kings in deck as 2 (thinking only 1 red and 1 black) instead of 4",
+  "problems": [],
+  "understood": {
+   "status": "solved",
+   "text": "One card is drawn at random from a well-shuffled pack of $52$ playing cards. Find the probability of drawing a King.",
+   "answer": null,
+   "message": null
+  },
+  "wrong": {
+   "status": "graded",
+   "score": 0.0,
+   "max": 2,
+   "wrongLine": 6,
+   "mistake": "simplifying or collecting terms",
+   "explanation": "The line before equals $15.0 Q$, but this line equals $\\frac{1}{26}$ — they are not the same.",
+   "wrongLatex": "= 1 / 26",
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Q}15.",
+    "unver \\text{Total cards} = 52",
+    "unrea \\text{Sol:}",
+    "unver \\text{Kings} = 2 \\text{ (1 red, 1 black)}",
+    "unver P(\\text{King}) = 2 / 52",
+    "incor = 1 / 26",
+    "incor \\text{Ans: } 1 / 26"
+   ]
+  },
+  "insight": "Dekho, ek standard deck me total $4$ Kings hote hain, $2$ nahi. Isliye $P(\\text{King})$ nikalte waqt favorable outcomes me $4$ lena chahiye tha.",
+  "board": [
+   "Line 5 dekho. Tumne yahan $P(\\text{King}) = 2 / 52$ likha — galti yahin se shuru hoti hai.",
+   "Kyun galat hai? The line before equals $15.0 Q$, but this line equals $\\frac{1}{26}$ — they are not the same.",
+   "Dekho, ek standard deck me total $4$ Kings hote hain, $2$ nahi. Isliye $P(\\text{King})$ nikalte waqt favorable outcomes me $4$ lena chahiye tha.",
+   "Kul $52$ possible outcomes — har ek ek dabba.",
+   "Inme se $4$ hamare kaam ke hain.",
+   "Probability $= \\frac{4}{52} = \\frac{1}{13}$.",
+   "Yaad rakho: Dekho, ek standard deck me total $4$ Kings hote hain, $2$ nahi."
+  ],
+  "drawing": [
+   "grid"
+  ],
+  "boardTitle": "Kitne mein se kitne",
+  "tutor": "Dekho, yeh sawaal bas itna hi pooch raha hai ki 52 cards mein se ek King nikalne ke chances kya hain. Tumne total cards 52 sahi se likhe hain aur Kings ki ginti bhi shuru ki hai. Line 5 mein tumne likha hai $P(\\text{King}) = \\frac{2}{52}$. Batao, probability nikalne ka basic formula kya hota hai?",
+  "wrong_solution": {
+   "verified": true,
+   "steps": 6,
+   "answer": "\\frac{1}{13}",
+   "first": [
+    "Dekho, sabse pehle sawaal ko samjho. Ek well-shuffled pack se ek card draw karna hai. Total cards kitne hote hain ek standard deck mein? $52$ cards hote hain. | \\text{Total number of possible outcomes} = 52",
+    "Ab humein yeh nikalna hai ki ek King draw karne ki probability kya hogi. Pack mein total kitne Kings hote hain? Har suit mein ek hota hai, toh total $4$ Kings hue. | \\text{Number of favourable outcomes (Kings)} = 4",
+    "Probability ka formula yaad hai na? Wahin likhenge jo har basic probability question mein lagta hai. Probability barabar hoti hai favourable outcomes ko total outcomes se divide karne par. | P(\\text{King}) = \\frac{\\text{Number of favourable outcomes}}{\\text{Total number of possible outcomes}}"
+   ]
+  },
+  "wrong_practice": {
+   "text": "One card is drawn at random from a well-shuffled pack of $52$ playing cards. Find the probability of drawing a card whose number is $5$.",
+   "chapter": "Probability",
+   "reason": "Same chapter: Probability (a new question for you)"
+  },
+  "right": {
+   "status": "graded",
+   "score": 2.0,
+   "max": 2,
+   "wrongLine": null,
+   "mistake": null,
+   "explanation": null,
+   "wrongLatex": null,
+   "afterMistakeTicks": 0,
+   "lines": [
+    "unver \\text{Total number of possible outcomes} = 52 \\text{ cards}",
+    "unver \\text{There are } 4 \\text{ suits (Spades, Clubs, Hearts, Diamonds).}",
+    "unver \\text{Each suit contains } 1 \\text{ King, so total Kings} = 4.",
+    "unver \\text{Number of favorable outcomes} = 4",
+    "unver P(\\text{getting a King}) = (\\text{Number of Kings}) / (\\text{Total cards})",
+    "corre = 4 / 52",
+    "corre = 1 / 13",
+    "corre \\text{Ans: Probability of drawing a King is } 1/13"
+   ]
+  },
+  "right_solution": {
+   "verified": true,
+   "steps": 6,
+   "answer": "\\frac{1}{13}",
+   "first": [
+    "Dekho, sabse pehle sawaal ko samjho. Ek well-shuffled pack se ek card draw karna hai. Total cards kitne hote hain ek standard deck mein? $52$ cards hote hain. | \\text{Total number of possible outcomes} = 52",
+    "Ab humein yeh nikalna hai ki ek King draw karne ki probability kya hogi. Pack mein total kitne Kings hote hain? Har suit mein ek hota hai, toh total $4$ Kings hue. | \\text{Number of favourable outcomes (Kings)} = 4",
+    "Probability ka formula yaad hai na? Wahin likhenge jo har basic probability question mein lagta hai. Probability barabar hoti hai favourable outcomes ko total outcomes se divide karne par. | P(\\text{King}) = \\frac{\\text{Number of favourable outcomes}}{\\text{Total number of possible outcomes}}"
+   ]
+  },
+  "right_practice": {
+   "text": "One card is drawn at random from a well-shuffled pack of 52 playing cards. Find the probability of drawing a card that is either a King or a heart.",
+   "chapter": "Probability",
+   "reason": "Same chapter: Probability (a new question for you)"
+  },
+  "seconds": 8
+ }
+]
