@@ -352,6 +352,9 @@ def testTheAnswerIsWhatTheQuestionAsksFor() -> None:
 
     nature = runSolver("expression", {"expression": "(-4)^2 - 4 \\cdot 2 \\cdot 3"}, "Find the nature of the roots of 2x² − 4x + 3 = 0.")
     assert nature.answer["value"] == "no real roots"  # not the discriminant -8
+    # a reading with a wrong coefficient (D = 16 - 16 = 0) is overruled by the equation the question itself gives
+    misread = runSolver("expression", {"expression": "(-4)^2 - 4 \\cdot 2 \\cdot 2"}, "Find the nature of the roots of $2x^{2} - 4x + 3 = 0$.")
+    assert misread.answer["value"] == "no real roots"
     with pytest.raises(solvers.SolverError):  # zeroes are values of x, not '(x - 4)(x + 2)'
         runSolver("expression", {"expression": "x^2 - 2x - 8", "form": "factored"}, "Find the zeroes of the polynomial x² − 2x − 8.")
     # ...but a polynomial built FROM its zeroes is an expression answer

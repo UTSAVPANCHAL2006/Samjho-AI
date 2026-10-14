@@ -170,7 +170,11 @@ def runSolver(family: str, params: dict[str, Any], questionText: str = "") -> so
     solved = solveFamily(family, params, questionText)
     answer = solved.answer
     if ASKS_FOR_NATURE.search(questionText):
-        discriminant = checker.numericAnswerValue(answer)
+        # The equation is written in the question: SymPy works out b² − 4ac from it. A reading once set up the
+        # discriminant with a wrong coefficient and called 2x² − 4x + 3 = 0 "two equal real roots" (D is −8).
+        discriminant = discriminantInQuestion(questionText)
+        if discriminant is None:
+            discriminant = checker.numericAnswerValue(answer)
         if discriminant is None or not discriminant.is_real:
             raise solvers.SolverError("the question asks for the nature of the roots: work out the discriminant b² − 4ac")
         nature = "no real roots" if discriminant < 0 else "two equal real roots" if discriminant == 0 else "two distinct real roots"
@@ -188,6 +192,30 @@ def runSolver(family: str, params: dict[str, Any], questionText: str = "") -> so
         if expressionHasUnknown:  # '(x - 4)(x + 2)' answers "factorise", not "find the zeroes"
             raise solvers.SolverError("the question asks for the zeroes (the values of the unknown), not a factorised form")
     return solved
+
+
+def discriminantInQuestion(questionText: str) -> sympy.Expr | None:
+    """b² − 4ac of the quadratic equation written in the question (the longest run of words that is an equation in
+    one unknown: 'of' in 'roots of x² − 5x + 6 = 0' is not maths), or None when there is none."""
+    words = normalizeQuestion(questionText).replace("$", " ").split()
+    best: sympy.Poly | None = None
+    bestLength = 0
+    for start in range(len(words)):
+        for end in range(len(words), start, -1):
+            candidate = " ".join(words[start:end]).strip(" .,:;?")
+            if end - start <= bestLength or "=" not in candidate:
+                continue
+            try:
+                equation = parseLatex(candidate)
+                symbols = getFreeSymbols(equation)
+                if isinstance(equation, sympy.Eq) and len(symbols) == 1:
+                    best, bestLength = sympy.Poly(equation.lhs - equation.rhs, *symbols), end - start
+            except (LatexParseError, sympy.PolynomialError):
+                continue
+    if best is None or best.degree() != 2:
+        return None
+    a, b, c = best.all_coeffs()
+    return sympy.nsimplify(b**2 - 4 * a * c)
 
 
 def solveFamily(family: str, params: dict[str, Any], questionText: str = "") -> solvers.Solved:
