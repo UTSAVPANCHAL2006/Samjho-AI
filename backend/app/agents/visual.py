@@ -453,8 +453,10 @@ def addRememberCard(visual: dict[str, Any], insight: str, language: str) -> dict
     texts = [str(element.get("text") or "") for element in visual["elements"]] + [str(frame.get("caption") or "") for frame in visual["frames"]]
     if any(re.match(r"\s*(Yaad rakho|Remember)\s*:", text, re.IGNORECASE) for text in texts):
         return visual
-    rule = pickRuleSentence(insight)
-    if rule.count("$") % 2:
+    # 'Dekho, sector ka area...' is how a teacher starts talking, not how a rule to remember starts
+    rule = re.sub(r"^\s*(?:dekho|suno|look|see|so|toh|achha|ok)\b\s*[,!:—-]?\s*", "", pickRuleSentence(insight), flags=re.IGNORECASE)
+    rule = rule[:1].upper() + rule[1:]
+    if not rule or rule.count("$") % 2:
         return visual
     label = "Remember" if language == "en" else "Yaad rakho"
     frame = len(visual["frames"])

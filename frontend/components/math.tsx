@@ -4,6 +4,7 @@ import katex from "katex";
 
 const SYMBOLS: [RegExp, string][] = [
   [/\\(?:times|cdot)/g, "×"],
+  [/\s*\*\s*/g, " × "],
   [/\\div/g, "÷"],
   [/\\pm/g, "±"],
   [/\\(?:approx|sim)/g, "≈"],
@@ -52,10 +53,15 @@ export function readableLatex(latex: string): string {
 
 const wrap = (part: string) => (/^[\w.]+$/.test(part.trim()) ? part.trim() : `(${part.trim()})`);
 
+/** A reader often writes the student's '×' as '*', and KaTeX shows a raw asterisk: show the × they wrote. */
+export function asWritten(latex: string): string {
+  return latex.replace(/\s*\*\s*/g, " \\times ");
+}
+
 export function MathText({ latex, display = false }: { latex: string; display?: boolean }) {
   let html: string | null = null;
   try {
-    html = katex.renderToString(latex, { displayMode: display, throwOnError: true, strict: "ignore" });
+    html = katex.renderToString(asWritten(latex), { displayMode: display, throwOnError: true, strict: "ignore" });
   } catch {
     return <span className="italic">{readableLatex(latex)}</span>; // broken LaTeX never breaks the page, nor shows raw
   }

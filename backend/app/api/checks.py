@@ -28,7 +28,7 @@ from app.agents.visual_templates import joinVisuals
 from app.ai.models import AiModels
 from app.ai.photos import PHOTO_PROBLEMS, NotAnImageError, readMediaType
 from app.ai.prompts import LANGUAGES
-from app.ai.speech import speakMaths, toSpokenText
+from app.ai.speech import removeStrayScripts, speakMaths, toSpokenText
 from app.api import getAi
 from app.config import Settings, getSettings
 from app.db import Check, Question, Student, getDbSession, newId
@@ -313,6 +313,9 @@ def buildCheckVisual(session: Session, check: Check, language: str, ai: AiModels
             visual = addRememberCard(visual, insight, language)
     for element in (visual or {}).get("elements", []):
         if element.get("type") == "text":
-            element["text"] = cleanBoardText(str(element.get("text") or ""))
+            element["text"] = cleanBoardText(removeStrayScripts(str(element.get("text") or "")))
+    for frame in (visual or {}).get("frames", []):
+        frame["caption"] = removeStrayScripts(str(frame.get("caption") or ""))
+    insight = removeStrayScripts(insight) if insight else insight
     # 'complete' tells the app to ask again later: the picture is often ready a few seconds after a busy moment.
     return {"visual": visual, "insight": insight, "numbers": numbers, "rightSoFar": rightSoFar, "complete": hasPicture}

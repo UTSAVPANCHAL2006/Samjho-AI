@@ -31,7 +31,7 @@ from app.ai.prompts import (
     cleanAddress,
     restoreLostBackslashes,
 )
-from app.ai.speech import toSpokenText
+from app.ai.speech import removeStrayScripts, toSpokenText
 from app.maths import checker
 from app.maths.parser import LatexParseError, getFreeSymbols, hasPlainWords, parseLatex
 
@@ -550,6 +550,7 @@ def writeReply(state: TutorState, ai: AiModels) -> dict[str, Any]:
         fallbacks = FALLBACK_REPLIES_EN if state["language"] == "en" else FALLBACK_REPLIES
         reply, asked = splitAsked(ai.askText(messages) or fallbacks[task].format(**values))
         reply = restoreLostBackslashes(cleanAddress(" ".join(re.split(r"(?<=[.!?])\s+", reply.strip())[:6])[:800]))
+        reply = removeStrayScripts(reply)
     if state["nextStage"] != "hints":
         asked = None  # small questions are only tracked while guiding towards the fix
     if state["nextStage"] == "quick_check" and state.get("quickCheck"):

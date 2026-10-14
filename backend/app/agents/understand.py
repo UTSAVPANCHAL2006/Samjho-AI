@@ -137,7 +137,29 @@ MEASURE = re.compile(
 )
 
 
+# A number with a unit or a degree sign ('60°', '6 cm', '8%') is a measurement the question gives on purpose.
+MEASUREMENT = re.compile(
+    r"(\d+(?:\.\d+)?)\s*(?:\$\s*)?(?:\\text\{\s*|\\,|\\ )*"
+    r"(?:°|\^\s*\{?\s*\\circ|degrees?\b|cm\b|mm\b|km\b|m\b|metres?\b|meters?\b|kg\b|g\b|litres?\b|ml\b|%|\\%|percent\b)",
+    re.IGNORECASE,
+)
+
+
+def findIgnoredMeasurements(params: dict[str, Any], questionText: str) -> set[Fraction]:
+    """Measurements the question gives that the reading never uses. 'Area of a sector, radius 6 cm, angle 60°' was
+    once read as a whole circle of radius 6: both readings dropped the 60° and agreed on the wrong area, 792/7."""
+    given = {Fraction(number) for number in MEASUREMENT.findall(questionText)}
+    used = readNumbers({key: value for key, value in params.items() if key != "pi"} if isinstance(params, dict) else params)
+    # 'diameter 12 cm' may be read as radius 6, and a percentage as a fraction: the same measurement, not ignored
+    nearby = used | {value * 2 for value in used} | {value / 2 for value in used} | {value * 100 for value in used}
+    return given - nearby
+
+
 def runSolver(family: str, params: dict[str, Any], questionText: str = "") -> solvers.Solved:
+    ignored = findIgnoredMeasurements(params, questionText) if questionText else set()
+    if ignored:
+        numbers = ", ".join(sorted(str(value) for value in ignored))
+        raise solvers.SolverError(f"it did not use {numbers}, which the question gives")
     get = params.get
     if family == "equations":
         positive = [str(name) for name in get("positive") or []]

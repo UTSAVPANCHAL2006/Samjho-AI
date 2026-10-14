@@ -109,6 +109,16 @@ def speakMaths(latex: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[{}\\]", " ", text)).strip()
 
 
+# Letters of scripts a Hinglish or English lesson never uses (Bengali to Malayalam, Arabic, Cyrillic, CJK). A model
+# once wrote "Hમેe sirf 60° wale tukde..." (Gujarati inside a Roman word): the board showed it and the voice stumbled.
+STRAY_SCRIPTS = re.compile(r"[\u0980-\u0DFF\u0600-\u06FF\u0400-\u04FF\u3040-\u30FF\u4E00-\u9FFF\uAC00-\uD7AF]+")
+
+
+def removeStrayScripts(text: str) -> str:
+    """Drop letters of a script the lesson is not written in; Roman, Devanagari and maths symbols stay."""
+    return re.sub(r"  +", " ", STRAY_SCRIPTS.sub("", text))
+
+
 def toSpokenText(reply: str) -> str:
     """Every $...$ maths span in a tutor reply becomes words; the rest stays as it is."""
     return re.sub(r"\$([^$]+)\$", lambda match: speakMaths(match.group(1)), reply).strip()

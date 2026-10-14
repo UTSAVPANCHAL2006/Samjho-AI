@@ -698,6 +698,8 @@ const NOTE_STYLES: Record<Tone, string> = {
 /** The last frame's "Yaad rakho: ..." line is the lesson's one rule: shown as a card, not as another note. */
 const REMEMBER = /^(yaad rakho|remember)\s*:\s*/i;
 const isRememberNote = (note: Note) => REMEMBER.test(note.text);
+const ruleWords = (text: string) => text.replace(REMEMBER, "").replace(/[$\s]/g, "").toLowerCase();
+const isSameRule = (caption: string, rule: string) => ruleWords(caption) === ruleWords(rule);
 
 /** One idea at a time, like a teacher at the board: this frame's lines large, the two before it faint,
  * anything older folded away behind "+N pehle ke steps". */
@@ -808,7 +810,12 @@ export function ConceptVisual({
       statusLabel={player.isPlaying ? "playing" : "paused"}
       footer={
         <PlayerBar
-          caption={<MixedMath text={cleanNoteText(visual.frames[frame]?.caption ?? "")} />}
+          caption={
+            // the finale card already shows the rule in big chalk: the same words again underneath is noise
+            remember && isSameRule(visual.frames[frame]?.caption ?? "", remember.text) ? null : (
+              <MixedMath text={cleanNoteText(visual.frames[frame]?.caption ?? "")} />
+            )
+          }
           index={frame}
           count={visual.frames.length}
           share={player.overallShare}

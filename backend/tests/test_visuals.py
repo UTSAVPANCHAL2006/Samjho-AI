@@ -92,3 +92,18 @@ def testANegativePowerIsAStaircaseOfDivisionsNotANegativeNumber() -> None:
     assert picture is not None
     texts = [element["text"] for element in picture["elements"] if element["type"] == "text"]
     assert any("-8" in text for text in texts) and any(text.startswith("Yaad rakho") for text in texts)
+
+
+def testTheRuleToRememberDoesNotStartLikeAConversation() -> None:
+    # The finale card once read "Dekho, sector ka area ..." — a teacher's opener, not a rule.
+    from app.agents.visual import addRememberCard
+
+    board = addRememberCard({"frames": [], "elements": []}, "Dekho, sector ka area $\\pi r^2$ se nikalta hai.", "hinglish")
+    assert board["elements"][-1]["text"].startswith("Yaad rakho: Sector ka area")
+
+
+def testLettersOfAnotherScriptNeverReachTheBoardOrTheVoice() -> None:
+    from app.ai.speech import removeStrayScripts
+
+    assert removeStrayScripts("Hમેe sirf $60^\\circ$ wala tukda") == "He sirf $60^\\circ$ wala tukda"
+    assert removeStrayScripts("हमें $\\frac{1}{6}$ hissa chahiye") == "हमें $\\frac{1}{6}$ hissa chahiye"  # Hindi stays

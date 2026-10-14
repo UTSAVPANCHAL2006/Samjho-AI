@@ -305,3 +305,13 @@ def testCardCountsAreWorldKnowledge(ai: FakeAi) -> None:
     ai.json[PLAN] = plan("expression", {"expression": "\\frac{20}{52}"})
     result = understandQuestion("A card is drawn from a well-shuffled deck of 52 cards. Find the probability that it is a red card which is not a face card.", ai)
     assert result.status == "solved" and answerOf(result) == "\\frac{5}{13}"
+
+
+def testAReadingThatIgnoresAGivenMeasurementIsNeverTheAnswerKey() -> None:
+    # Both readings of "sector, radius 6 cm, angle 60°" once dropped the 60° and agreed on the whole circle (792/7).
+    from app.agents.understand import findIgnoredMeasurements
+
+    question = "Find the area of a sector of a circle with radius $6 \\text{ cm}$ if angle of the sector is $60^\\circ$."
+    assert findIgnoredMeasurements({"shape": "circle", "quantity": "area", "dimensions": {"radius": 6}}, question) == {60}
+    assert not findIgnoredMeasurements({"shape": "sector", "quantity": "area", "dimensions": {"radius": 6, "angle": 60}}, question)
+    assert not findIgnoredMeasurements({"dimensions": {"radius": 6}}, "A circle has diameter 12 cm. Find its area.")

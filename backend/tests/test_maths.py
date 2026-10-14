@@ -506,3 +506,9 @@ def testDegreesWithALostBackslashAreStillDegrees() -> None:
     for latex in ["2 \\tan^2 45^circ + \\cos^2 30^circ - \\sin^2 60^circ", "2\\tan^{2} 45^{circ} + \\cos^{2} 30^{ circ } - \\sin^{2} 60^{circ}"]:
         assert parseLatex(latex) == 2
     assert parseLatex("\\sin 30^\\circ") == sympy.Rational(1, 2)  # the normal form is unchanged
+
+
+def testAGivenValueIsNeverComparedTermByTermWithASumOfNumbers() -> None:
+    # Live, a sector's wrong line was explained as "the r term should be 1, the line gives 0": nonsense for a student.
+    assert checker.describeMistake("r = 6", "(60/360) \\times 2 \\times (22/7) \\times 6") is None
+    assert checker.describeMistake("2x + 3 = 11", "2x = 11 + 3") is not None  # real algebra is still explained

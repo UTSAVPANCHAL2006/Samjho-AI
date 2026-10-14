@@ -757,6 +757,10 @@ def describeMistake(previousLatex: str, wrongLatex: str) -> tuple[str, str] | No
         )
     if len(symbols) != 1:
         return None
+    if bool(getFreeSymbols(previous)) != bool(getFreeSymbols(wrong)):
+        # 'r = 6' then '(60/360) × 2 × 22/7 × 6': a given value and a sum of numbers are not two forms of one
+        # equation. Comparing them "term by term in r" once told a student "the r term should be 1, the line gives 0".
+        return None
     variable = symbols.pop()
     single = describeWholeValues(previous, wrong)
     if single:

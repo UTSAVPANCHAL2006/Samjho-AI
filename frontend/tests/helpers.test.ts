@@ -1,7 +1,7 @@
 // Tests for small helpers: maths text splitting and readable fallbacks, question labels, WAV encoding, red-pen lines.
 
 import { describe, expect, it } from "vitest";
-import { getQuestionLabel, readableLatex, splitMath } from "@/components/math";
+import { asWritten, getQuestionLabel, readableLatex, splitMath } from "@/components/math";
 import { encodeWav } from "@/lib/voice";
 import { isWordLine } from "@/components/red-pen";
 
@@ -37,5 +37,12 @@ describe("voice recording", () => {
     expect([text(0), text(8), text(36)]).toEqual(["RIFF", "WAVE", "data"]);
     expect([view.getUint16(22, true), view.getUint32(24, true), view.getUint16(34, true)]).toEqual([1, 16000, 16]);
     expect(wav.size).toBe(44 + 16000 * 2);
+  });
+});
+
+describe("asWritten", () => {
+  it("shows a student's multiplication as ×, never a raw asterisk", () => {
+    expect(asWritten("(60/360)*2*(22/7)*6")).toBe("(60/360) \\times 2 \\times (22/7) \\times 6");
+    expect(asWritten("\\frac{1}{2} \\times 6")).toBe("\\frac{1}{2} \\times 6"); // already right: unchanged
   });
 });
