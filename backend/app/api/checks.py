@@ -3,6 +3,7 @@
 
 
 import logging
+import time
 from concurrent.futures import Future, ThreadPoolExecutor
 from typing import Any
 
@@ -46,6 +47,7 @@ LESSON_LANGUAGE = "hinglish"  # the lesson's default language; another language 
 PREPARE_WAIT_SECONDS = 90
 preparer = ThreadPoolExecutor(max_workers=2, thread_name_prefix="prepare")
 preparing: dict[str, Future[dict[str, Any] | None]] = {}
+preparedBoards: dict[str, dict[str, Any]] = {}  # the board is ready before the tutor's steps: do not wait for both
 
 
 def loadCheck(session: Session, checkId: str) -> Check:
@@ -98,6 +100,7 @@ def gradeAndSave(session: Session, check: Check, ai: AiModels, settings: Setting
 def startPreparing(session: Session, checkId: str, ai: AiModels) -> None:
     for key in [key for key, future in preparing.items() if future.done()]:
         preparing.pop(key, None)  # finished work nobody asked for: it is in the AI cache and the database anyway
+        preparedBoards.pop(key, None)
     engine = session.get_bind()
     preparing[checkId] = preparer.submit(prepareLesson, engine, checkId, ai)
 
@@ -107,21 +110,29 @@ def prepareLesson(engine: Any, checkId: str, ai: AiModels) -> dict[str, Any] | N
     try:
         with Session(bind=engine) as session:
             check = loadCheck(session, checkId)
-            getDetailedSteps(check.question, LESSON_LANGUAGE, ai)  # the tutor's walkthrough, saved on the question
+            board = buildCheckVisual(session, check, LESSON_LANGUAGE, ai)  # first: the student opens the board first
+            preparedBoards[checkId] = board
+            getDetailedSteps(check.question, LESSON_LANGUAGE, ai)  # then the tutor's walkthrough, saved on the question
             session.commit()
-            return buildCheckVisual(session, check, LESSON_LANGUAGE, ai)
+            return board
     except Exception:
         logger.warning("preparing the lesson failed; it will be made when asked", exc_info=True)
         return None
 
 
-def waitForPreparation(checkId: str) -> dict[str, Any] | None:
-    """The board prepared in the background (waiting for it if it is still being made), or None."""
+def waitForPreparation(checkId: str, boardOnly: bool = False) -> dict[str, Any] | None:
+    """The board prepared in the background (waiting for it if it is still being made), or None.
+    boardOnly: return as soon as the board is ready, without waiting for the tutor's steps."""
     future = preparing.get(checkId)
     if future is None:
         return None
+    deadline = time.monotonic() + PREPARE_WAIT_SECONDS
+    while boardOnly and not future.done() and time.monotonic() < deadline:
+        if checkId in preparedBoards:
+            return preparedBoards[checkId]
+        time.sleep(0.2)
     try:
-        return future.result(timeout=PREPARE_WAIT_SECONDS)
+        return future.result(timeout=max(0.0, deadline - time.monotonic()))
     except Exception:
         return None
 
@@ -251,7 +262,7 @@ def getCheckVisual(
     """The concept visual for this attempt: it shows the student's own mistake when there is one."""
     check = loadCheck(session, check_id)
     if language == LESSON_LANGUAGE:
-        prepared = waitForPreparation(check_id)
+        prepared = waitForPreparation(check_id, boardOnly=True)
         if prepared and prepared.get("complete"):
             return prepared
     return buildCheckVisual(session, check, language, ai)
