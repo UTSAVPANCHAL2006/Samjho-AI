@@ -1,0 +1,40 @@
+# Local full stack: Postgres + backend + frontend.  Run: docker compose up --build
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: homi
+      POSTGRES_PASSWORD: homi
+      POSTGRES_DB: samjho
+    ports: ["5432:5432"]
+    volumes: [db-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U homi -d samjho"]
+      interval: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    env_file: [./backend/.env]
+    environment:
+      DATABASE_URL: postgresql+psycopg://homi:homi@db:5432/samjho
+      CORS_ORIGINS: '["http://localhost:3000"]'
+    ports: ["8000:8000"]
+    volumes: [backend-storage:/app/storage]
+    depends_on:
+      db: {condition: service_healthy}
+
+  frontend:
+    image: node:22-slim
+    working_dir: /app
+    command: sh -c "npm ci && npm run build && npm run start -- -p 3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports: ["3000:3000"]
+    volumes: [./frontend:/app, frontend-node-modules:/app/node_modules]
+    depends_on: [backend]
+
+volumes:
+  db-data:
+  backend-storage:
+  frontend-node-modules:
