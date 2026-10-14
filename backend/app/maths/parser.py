@@ -233,6 +233,8 @@ def unwrapMathsText(text: str) -> str:
 def normalizeLatex(latex: str) -> str:
     """Clean up a LaTeX string so the parser has the best chance of reading it."""
     text = re.sub(r"\\checkmark|✓|✔", " ", latex)  # a tick the student drew is not maths
+    # '45^{circ}', '30^circ': a model that lost the backslash still means degrees, never the letters c·i·r·c
+    text = re.sub(r"\^\s*\{\s*circ\s*\}|\^\s*circ\b", r"^{\\circ}", text)
     text = re.sub(r"\\(?:bar|overline)\{\s*x\s*\}", r"\\text{Mean}", text)  # '\\bar{x}' is the mean
     text = unwrapMathsText(text.strip().strip("$").strip())
     # An empty '\\text{ }' BETWEEN two operands ('(x \\text{ } 7)') is a symbol the reader lost — never guess it.

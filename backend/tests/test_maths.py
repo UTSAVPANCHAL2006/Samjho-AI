@@ -499,3 +499,10 @@ def testEachLineIsParsedOnlyOnce(monkeypatch: pytest.MonkeyPatch) -> None:
 def testOneNumberWithAThousandsCommaIsNotTwoRoots() -> None:
     assert checker.splitAnswerLines(["x = 1,000"]) == ["x = 1,000"]
     assert checker.splitAnswerLines(["x = 2, 3"]) == ["x = 2", "x = 3"]
+
+
+def testDegreesWithALostBackslashAreStillDegrees() -> None:
+    # A reading of "2 tan²45° + cos²30° − sin²60°" came back as '45^{circ}': it was read as c·i·r·c and refused.
+    for latex in ["2 \\tan^2 45^circ + \\cos^2 30^circ - \\sin^2 60^circ", "2\\tan^{2} 45^{circ} + \\cos^{2} 30^{ circ } - \\sin^{2} 60^{circ}"]:
+        assert parseLatex(latex) == 2
+    assert parseLatex("\\sin 30^\\circ") == sympy.Rational(1, 2)  # the normal form is unchanged
