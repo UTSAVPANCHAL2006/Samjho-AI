@@ -1,0 +1,35 @@
+# Render blueprint: the Samjho API (Docker) and its Postgres database.
+# Render dashboard -> New -> Blueprint -> pick this repo. Then fill in the keys marked "sync: false".
+databases:
+  - name: samjho-db
+    plan: free
+    databaseName: samjho
+    user: samjho
+
+services:
+  - type: web
+    name: samjho-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL # 'postgresql://' from Render is switched to the psycopg driver by app/config.py
+        fromDatabase:
+          name: samjho-db
+          property: connectionString
+      - key: CORS_ORIGINS # your Vercel URL, e.g. https://samjho-ai.vercel.app
+        sync: false
+      - key: OPENAI_API_KEY # recommended: reads photos fast and reliably
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: SARVAM_API_KEY # Indian-accent voice
+        sync: false
+      - key: SPEECH_PROVIDER
+        value: sarvam
