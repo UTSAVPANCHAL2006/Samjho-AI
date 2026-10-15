@@ -31,7 +31,7 @@ The AI reads photos and explains. It never decides a mark.
 
 | Check | Command | Result |
 |---|---|---|
-| Unit tests (no AI calls) | `make test` | 472 backend + 16 frontend pass |
+| Unit tests (no AI calls) | `make test` | 475 backend + 16 frontend pass |
 | Grading eval: 54 hand-labelled attempts, 124 lines | `make eval` | 0 false accusations · 0 marks for zero-mark work · line verdicts and marks agree 100% |
 | Full student journey on the class-wise sets in `docs/test-sets-all` (live models) | `cd backend && uv run python ../evals/run_full_e2e.py` | See [`evals/full_e2e_report.md`](evals/full_e2e_report.md) |
 | Question understanding: 121 hand-written Class 6–10 questions, real models | `make eval-live` | 119/121 pass · **0 wrong answers** · 2 refusals where the AI's own figure could not be checked ([report](evals/curriculum_report.md)) |

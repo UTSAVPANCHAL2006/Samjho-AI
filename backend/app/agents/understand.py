@@ -484,10 +484,15 @@ def solvePart(
             return Understanding("unsupported", UNSUPPORTED_MESSAGE.format(reason=why or "this kind of question"))
         retry = solveReading(retryPlan, partIndex)
         if retry is None:
+            # One more fresh reading before asking the student: on live, a Class 10 AP sum and a Thales question
+            # each got two bad readings in a row, and a third one read them right. Agreement checks still follow.
+            retry = solveReading(planQuestion(ai, readingText, temperature=0.4), partIndex)
+        if retry is None:
             if isinstance(error, solvers.SolverError):
+                reason = str(error).replace("'None' is not a number", "a value was missing")
                 return Understanding(
                     "needs_clarification",
-                    f"I read the question, but {error}. Could you check the question?",
+                    f"I read the question, but {reason}. Could you check the question?",
                     [str(item) for item in flatten(params)][:6],
                 )
             return Understanding(

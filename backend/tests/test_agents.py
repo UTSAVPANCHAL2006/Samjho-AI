@@ -725,3 +725,20 @@ def testEnglishChatNeverFallsBackToHinglish(ai: FakeAi) -> None:
     assert FALLBACK_REPLIES_EN.keys() == FALLBACK_REPLIES.keys()
     result = runTutorTurn(ai, tutorState("hints", "(x+1)(x+6)=0", language="en"))
     assert result["reply"] and not re.search(r"\b(dekho|sahi|galti|ab|karo|hai)\b", result["reply"], re.IGNORECASE)
+
+
+def testTheBoardDoesNotReadTheEnglishRedPenNoteInsideAHinglishLesson(ai: FakeAi) -> None:
+    # Live, a Hinglish board read "Kyun galat hai? Your answer goes wrong here: this line gives 17 ..." (four English
+    # sentences). With a teacher's note that explains the why in Hinglish, that scene is left to the red-pen card.
+    from types import SimpleNamespace
+
+    from app.agents.visual import buildMistakeIntro
+
+    question = SimpleNamespace(text="Find the distance of P(5, 12) from the origin.", class_level=9, traps=[], solution={})
+    facts = "Your answer goes wrong here: this line gives $17$, which is not what this question needs. Check the formula."
+    insight = "Distance nikalne ke liye squares jod kar square root lete hain, seedha add nahi karte."
+    withNote = buildMistakeIntro(question, "hinglish", ai, 2, "OP = 5 + 12", facts, None, insight)  # type: ignore[arg-type]
+    assert not any("Your answer goes wrong" in frame["caption"] for frame in withNote["frames"])
+    withoutNote = buildMistakeIntro(question, "hinglish", ai, 2, "OP = 5 + 12", facts, None)  # type: ignore[arg-type]
+    captions = [frame["caption"] for frame in withoutNote["frames"]]
+    assert any(caption.startswith("Kyun galat hai? Your answer goes wrong here") and "Check the formula" not in caption for caption in captions)

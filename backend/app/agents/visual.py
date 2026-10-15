@@ -229,8 +229,13 @@ def buildMistakeIntro(
         f"Look at line {lineNo}. You wrote ${wrongLatex}$ — this is where the mistake starts.",
     )
     board.write(frame, f"Line {lineNo}: ${wrongLatex}$", "wrong")
-    frame = board.say(f"Kyun galat hai? {facts}", f"Why is it wrong? {facts}")
-    board.write(frame, facts)
+    if not insight:
+        # The facts are written for the red-pen card (English, several sentences). When the teacher's note explains
+        # the why in the lesson's language, reading them aloud again only mixes languages; otherwise say the first one.
+        shortFacts = FIRST_SENTENCE.match(facts.strip())
+        why = shortFacts.group(1) if shortFacts and shortFacts.group(1).count("$") % 2 == 0 else facts
+        frame = board.say(f"Kyun galat hai? {why}", f"Why is it wrong? {why}")
+        board.write(frame, why)
     for fact in numbers or []:
         addNumbersFrame(board, fact)
     if insight:

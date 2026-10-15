@@ -369,3 +369,20 @@ def testATrigTermNextToABracketMultipliesIt() -> None:
 
     identity = parseLatex("(1 - \\cos^2 A) \\sec^2 A = \\tan^2 A")
     assert sympy.simplify(identity.lhs - identity.rhs) == 0
+
+
+def testAThirdFreshReadingIsTriedBeforeAskingTheStudent(ai: FakeAi) -> None:
+    # Live, an AP sum got two unusable readings in a row ("'None' is not a number"); a third read it right.
+    ai.json[PLAN] = plan("progression", {"terms": [1, 4, 7, 10], "ask": "sum", "n": None})
+    ai.secondJson[PLAN] = plan("progression", {"terms": [1, 4, 7, 10], "ask": "sum", "n": None})
+    ai.thirdJson[PLAN] = plan("progression", {"terms": [1, 4, 7, 10], "ask": "sum", "n": 20})
+    result = understandQuestion("Find the sum of the first 20 terms of the AP: 1, 4, 7, 10, ...", ai)
+    assert answerOf(result) == "590"
+
+
+def testAMissingValueIsExplainedInPlainWords(ai: FakeAi) -> None:
+    ai.json[PLAN] = plan("progression", {"terms": [1, 4, 7, 10], "ask": "sum", "n": None})
+    ai.secondJson[PLAN] = ai.json[PLAN]
+    ai.thirdJson[PLAN] = ai.json[PLAN]
+    result = understandQuestion("Find the sum of the first 20 terms of the AP: 1, 4, 7, 10, ...", ai)
+    assert result.status == "needs_clarification" and "None" not in (result.message or "")
