@@ -42,7 +42,8 @@ Tried to break it on purpose: right and wrong working, blank page, "skip" on pap
 ## Known limits (honest scope)
 
 - The test photos are rendered or AI-generated pages; real student handwriting has not been evaluated at scale yet.
-- On the free Render plan a notebook photo takes about 5–15 s to grade (it took 74 s until profiling showed the LaTeX parser re-reading each line up to 151 times; it is now cached). Without `OPENAI_API_KEY`, photos are read by free-tier models and can be slower under load.
+- On the free Render plan a notebook photo takes about 5–15 s to grade (it took 74 s until profiling showed the LaTeX parser re-reading each line up to 151 times; it is now cached).
+- A vision model can "autocorrect" a student's work while reading it. In the final live check, gpt-4.1-mini read a forgotten `2a` as written correctly (580 read as 590), so a wrong answer got full marks; Gemini copied the same page exactly, so photos are now read by Gemini first, with OpenAI as the fallback. A second, independent reading of the final answer is the next safeguard.
 - Working for a *different* question scores 0, but the explanation describes that other question's mistake.
 - One server: rate limits and the AI cache live in its memory and disk.
 
@@ -60,7 +61,7 @@ make frontend                          # http://localhost:3000
 
 1. **Backend + database on Render.** Dashboard -> **New -> Blueprint** -> pick this repo. `render.yaml` creates the API
    (Docker, `Dockerfile` at the repo root) and a free Postgres database, and wires `DATABASE_URL` in. Fill in the keys it asks
-   for (`OPENAI_API_KEY` recommended, `SARVAM_API_KEY` for voice). Tables and the question bank are created on start.
+   for (`GEMINI_API_KEY` for reading photos, `OPENAI_API_KEY` recommended as the fallback, `SARVAM_API_KEY` for voice). Tables and the question bank are created on start.
 2. **Frontend on Vercel.** **Add New -> Project** -> this repo -> **Root Directory: `frontend`**. Set the environment
    variable `NEXT_PUBLIC_API_URL` to the Render URL (e.g. `https://samjho-api.onrender.com`) and deploy.
 3. **Connect them.** On Render, set `CORS_ORIGINS` to the Vercel URL (e.g. `https://samjho-ai.vercel.app`) and redeploy.

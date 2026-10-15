@@ -21,6 +21,8 @@ LANGUAGES = {
 
 READ_WORKING_PROMPT = """This photo shows a student's HANDWRITTEN maths working (CBSE Class 6-10).
 Copy what is written. Do NOT solve, correct or improve anything — mistakes must stay as written.
+A wrong formula, a wrong number or a wrong answer is copied exactly as it is, even if a margin note or the rough work
+says what it should be ("forgot 2a!"): the working lines are exactly what the student wrote in the working.
 - One item per written line, top to bottom of the MAIN working, as LaTeX without $ signs. Use \\pi, ^\\circ for degrees,
   \\text{cm} for units, x_1 / y_2 for subscripts. Keep words the student wrote ("Given:", "Ans:") inside \\text{}.
 - Several final values on one line ("x = 2, 3") become separate lines ("x = 2", "x = 3").

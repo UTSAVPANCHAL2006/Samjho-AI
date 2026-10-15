@@ -47,10 +47,12 @@ class Settings(BaseSettings):
 
     # AI models, tried in this order. Every provider speaks the OpenAI chat API.
     # Each entry is "provider:model"; providers: openai, groq, gemini, openrouter. A provider without a key is skipped.
-    # Photo reading tries OpenAI first when OPENAI_API_KEY is set: free tiers throttle under a burst of photos.
+    # Photo reading tries Gemini first (it copies mistakes faithfully); OpenAI takes over when Gemini is rate limited.
     # a third provider: when the free Groq and Gemini quotas run out (429), a student still gets an answer
     text_models: str = "groq:qwen/qwen3.8-27b,openai:gpt-4.1-mini,gemini:gemini-3.5-flash-lite,openrouter:dots-studio/dots-3-note-preview:free"
-    vision_models: str = "openai:gpt-4.1-mini,gemini:gemini-3.5-flash-lite,openrouter:dots-studio/dots-3-note-preview:free"
+    # Gemini reads first: on live, gpt-4.1-mini "corrected" a student's forgotten 2a (580 read as 590), so a wrong
+    # answer got full marks. Gemini copied the same page exactly. A red pen must read what was written.
+    vision_models: str = "gemini:gemini-3.5-flash-lite,openai:gpt-4.1-mini,openrouter:dots-studio/dots-3-note-preview:free"
     openai_api_key: str = ""
     groq_api_key: str = ""
     gemini_api_key: str = ""
