@@ -12,13 +12,13 @@ Status rules: *Implemented and tested* = every case passes with ≥2 answers com
 | 6 | Perimeter and Area | 2 | 2 | Implemented and tested |
 | 6 | Fractions | 2 | 2 | Implemented and tested |
 | 6 | Playing with Constructions | 1 | 1 | Not yet supported (refused honestly) |
-| 6 | Symmetry | 1 | 1 | Not yet supported (refused honestly) |
+| 6 | Symmetry | 1 | 1 | Partially supported |
 | 6 | The Other Side of Zero (integers) | 2 | 2 | Implemented and tested |
 | 7 | Large Numbers Around Us | 1 | 0 | Not yet supported |
 | 7 | Arithmetic Expressions (order of operations, brackets) | 1 | 1 | Implemented, insufficiently tested |
 | 7 | A Peek Beyond the Point (decimals) | 1 | 1 | Implemented, insufficiently tested |
 | 7 | Expressions using Letter-Numbers (algebraic expressions) | 2 | 2 | Implemented and tested |
-| 7 | Parallel and Intersecting Lines | 1 | 1 | Implemented, insufficiently tested |
+| 7 | Parallel and Intersecting Lines | 1 | 1 | Partially supported |
 | 7 | Number Play (parity, sequences) | 0 | 0 | Not tested |
 | 7 | A Tale of Three Intersecting Lines (triangles) | 2 | 2 | Implemented and tested |
 | 7 | Working with Fractions | 2 | 2 | Implemented and tested |

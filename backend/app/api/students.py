@@ -137,8 +137,9 @@ def isSameSum(question: Question, source: Question) -> bool:
     """The same sum under another id ('Add 2/3 + 1/4' in the bank and the student's photo of it): the same
     answer AND the same numbers. Practice must be a NEW sum — but 'a red king from 52 cards' is new even though
     every card question has 52, and 'a queen' vs 'a king' (same numbers, same answer) is not."""
-    numbers = checker.readNumbers(question.text)
-    sameNumbers = bool(numbers) and numbers == checker.readNumbers(source.text)
+    # 'from the origin (0, 0)' and 'from the origin' are the same sum: a 0 or a 1 never makes a sum new
+    numbers = checker.readNumbers(question.text) - {"0", "1"}
+    sameNumbers = bool(numbers) and numbers == checker.readNumbers(source.text) - {"0", "1"}
     return question.answer == source.answer and (sameNumbers or question.text.strip() == source.text.strip())
 
 

@@ -466,6 +466,9 @@ FALLBACK_REPLIES = {
 }
 
 
+ENGLISH_PRAISE = {"sahi": "Right", "bilkul sahi": "Exactly right", "shabash": "Well done", "bahut badhiya": "Very good", "badhiya": "Good"}
+HINGLISH_PRAISE = re.compile(r"\b(bilkul sahi|bahut badhiya|shabash|badhiya|sahi)\b(?=\s*[!,.])", re.IGNORECASE)
+
 FALLBACK_REPLIES_EN = {
     "probe": "Look at line {root_line}: ${root_latex}$. Say the rule you used in this line once more.",
     "guide_next": "Right! Now look at line {root_line} again: ${root_latex}$. What should change in it?",
@@ -551,6 +554,9 @@ def writeReply(state: TutorState, ai: AiModels) -> dict[str, Any]:
         reply, asked = splitAsked(ai.askText(messages) or fallbacks[task].format(**values))
         reply = restoreLostBackslashes(cleanAddress(" ".join(re.split(r"(?<=[.!?])\s+", reply.strip())[:6])[:800]))
         reply = removeStrayScripts(reply)
+        if state["language"] == "en":
+            # The model still opened an English chat with "Sahi!" on live: praise words are fixed by code
+            reply = HINGLISH_PRAISE.sub(lambda match: ENGLISH_PRAISE[match.group(1).lower()], reply)
     if state["nextStage"] != "hints":
         asked = None  # small questions are only tracked while guiding towards the fix
     if state["nextStage"] == "quick_check" and state.get("quickCheck"):

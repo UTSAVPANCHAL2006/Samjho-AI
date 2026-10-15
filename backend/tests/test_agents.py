@@ -742,3 +742,9 @@ def testTheBoardDoesNotReadTheEnglishRedPenNoteInsideAHinglishLesson(ai: FakeAi)
     withoutNote = buildMistakeIntro(question, "hinglish", ai, 2, "OP = 5 + 12", facts, None)  # type: ignore[arg-type]
     captions = [frame["caption"] for frame in withoutNote["frames"]]
     assert any(caption.startswith("Kyun galat hai? Your answer goes wrong here") and "Check the formula" not in caption for caption in captions)
+
+
+def testAnEnglishReplyNeverOpensWithHinglishPraise(ai: FakeAi) -> None:
+    ai.text = "Sahi! You fixed the sign: $x = 2$ and $x = 3$ work. Shabash, well done."
+    result = runTutorTurn(ai, tutorState("hints", "(x-2)(x-3)=0", language="en"))
+    assert result["reply"].startswith("Right! You fixed the sign") and "Shabash" not in result["reply"]

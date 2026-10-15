@@ -1,4 +1,4 @@
-# Curriculum eval (121 cases, real models, 2026-10-14)
+# Curriculum eval (121 cases, real models, 2026-10-15)
 
 | Outcome | Cases |
 |---|---|
@@ -8,8 +8,8 @@
 | wrong status | 0/121 |
 | provider limit | 0/121 |
 
-Trust of solved answers: verified 108, AI agreement only 1, single reading 0 (of 109).
-Latency per question: median 0.1 s; AI calls per question: 1.6 on average (cached calls included).
+Trust of solved answers: verified 107, AI agreement only 3, single reading 0 (of 110).
+Latency per question: median 1.5 s; AI calls per question: 1.6 on average (cached calls included).
 
 ## By class
 

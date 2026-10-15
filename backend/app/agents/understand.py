@@ -161,8 +161,33 @@ ASKS_FOR_POLYNOMIAL = re.compile(r"\bpolynomial whose\b|\bwhose zero|\bfind (?:a
 ASKS_FOR_NATURE = re.compile(r"\bnature of (?:the )?roots\b", re.IGNORECASE)
 
 
+GIVEN_VALUE = re.compile(r"(?<![A-Za-z\\])([A-Z]{1,3})\s*=\s*(-?\d+(?:\.\d+)?)(?![\d.])")
+FIRST_N_TERMS = re.compile(r"\bfirst\s+(\d+)\s+terms\b|\b(\d+)\s*(?:st|nd|rd|th)\s+term\b", re.IGNORECASE)
+
+
+def fillGivenValues(family: str, params: dict[str, Any], questionText: str) -> dict[str, Any]:
+    """Put in values the question itself states that a reading left out, so a reading is not wasted on them.
+    Live, 'If AD = 2 cm, DB = 3 cm, AE = 4 cm, find EC' was read as 'AD/DB = AE/EC' with no numbers, three times,
+    and 'the sum of the first 20 terms' came back without n = 20. Only values written in the question are used."""
+    text = questionText.replace("$", " ")
+    if family == "equations":
+        given = {name: value for name, value in GIVEN_VALUE.findall(text) if name != str(params.get("ask") or "")}
+        equations = []
+        for equation in params.get("equations") or []:
+            for name, value in given.items():
+                equation = re.sub(rf"(?<![A-Za-z]){name}(?![A-Za-z])", f"({value})", str(equation))
+            equations.append(equation)
+        return {**params, "equations": equations}
+    if family == "progression" and params.get("n") in (None, "", "null") and str(params.get("ask")) in ("sum", "term", "nth_term"):
+        found = FIRST_N_TERMS.search(text)
+        if found:
+            return {**params, "n": int(found.group(1) or found.group(2))}
+    return params
+
+
 def runSolver(family: str, params: dict[str, Any], questionText: str = "") -> solvers.Solved:
     """Solve one reading, then make sure it answers what the question ASKS (zeroes are values, not factors)."""
+    params = fillGivenValues(family, params, questionText) if questionText else params
     ignored = findIgnoredMeasurements(params, questionText) if questionText else set()
     if ignored:
         numbers = ", ".join(sorted(str(value) for value in ignored))
@@ -182,7 +207,17 @@ def runSolver(family: str, params: dict[str, Any], questionText: str = "") -> so
                   "two equal real roots": ["equal", "coincident"],
                   "two distinct real roots": ["distinct", "unequal", "different"]}[nature]  # fmt: skip
         sign = "less than 0" if discriminant < 0 else "0" if discriminant == 0 else "greater than 0"
-        solved.step(f"The discriminant is {sign}, so the equation has {nature}.", f"D = {sympy.latex(discriminant)}")
+        relation = "<" if discriminant < 0 else "=" if discriminant == 0 else ">"
+        coefficients = quadraticInQuestion(questionText)
+        if coefficients is not None:
+            # Written from the equation itself, like a CBSE answer: the formula, a b c, the values put in, the rule
+            a, b, c = (sympy.latex(value) for value in coefficients)
+            square, product = sympy.latex(coefficients[1] ** 2), sympy.latex(4 * coefficients[0] * coefficients[2])
+            solved.steps = []
+            solved.step("For $ax^2 + bx + c = 0$, the nature of the roots depends on the discriminant.", "D = b^2 - 4ac")
+            solved.step("Read a, b and c from the equation.", f"a = {a}, \\quad b = {b}, \\quad c = {c}")
+            solved.step("Put the values in.", f"D = ({b})^2 - 4 \\times {a} \\times {c} = {square} - {product} = {sympy.latex(discriminant)}")
+        solved.step(f"The discriminant is {sign}, so the equation has {nature}.", f"D {relation} 0")
         solved.answer = {"type": "text", "value": nature, "accept": accept}
     elif ASKS_FOR_ZEROES.search(questionText) and not ASKS_FOR_POLYNOMIAL.search(questionText) and answer.get("type") == "expression":
         try:
@@ -194,8 +229,8 @@ def runSolver(family: str, params: dict[str, Any], questionText: str = "") -> so
     return solved
 
 
-def discriminantInQuestion(questionText: str) -> sympy.Expr | None:
-    """b² − 4ac of the quadratic equation written in the question (the longest run of words that is an equation in
+def quadraticInQuestion(questionText: str) -> tuple[sympy.Expr, sympy.Expr, sympy.Expr] | None:
+    """(a, b, c) of the quadratic equation written in the question (the longest run of words that is an equation in
     one unknown: 'of' in 'roots of x² − 5x + 6 = 0' is not maths), or None when there is none."""
     words = normalizeQuestion(questionText).replace("$", " ").split()
     best: sympy.Poly | None = None
@@ -215,7 +250,12 @@ def discriminantInQuestion(questionText: str) -> sympy.Expr | None:
     if best is None or best.degree() != 2:
         return None
     a, b, c = best.all_coeffs()
-    return sympy.nsimplify(b**2 - 4 * a * c)
+    return a, b, c
+
+
+def discriminantInQuestion(questionText: str) -> sympy.Expr | None:
+    found = quadraticInQuestion(questionText)
+    return None if found is None else sympy.nsimplify(found[1] ** 2 - 4 * found[0] * found[2])
 
 
 def solveFamily(family: str, params: dict[str, Any], questionText: str = "") -> solvers.Solved:

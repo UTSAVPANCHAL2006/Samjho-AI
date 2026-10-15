@@ -384,5 +384,25 @@ def testAMissingValueIsExplainedInPlainWords(ai: FakeAi) -> None:
     ai.json[PLAN] = plan("progression", {"terms": [1, 4, 7, 10], "ask": "sum", "n": None})
     ai.secondJson[PLAN] = ai.json[PLAN]
     ai.thirdJson[PLAN] = ai.json[PLAN]
-    result = understandQuestion("Find the sum of the first 20 terms of the AP: 1, 4, 7, 10, ...", ai)
+    result = understandQuestion("Find the sum of the AP: 1, 4, 7, 10, ...", ai)  # how many terms is really missing
     assert result.status == "needs_clarification" and "None" not in (result.message or "")
+
+
+def testValuesTheQuestionStatesAreFilledInWhenAReadingLeavesThemOut() -> None:
+    # Live readings: 'AD/DB = AE/EC' with no numbers (three times), and an AP sum without n = 20.
+    from app.agents.understand import runSolver
+
+    thales = "If $AD = 2$ cm, $DB = 3$ cm, and $AE = 4$ cm, find $EC$."
+    solved = runSolver("equations", {"equations": ["AD/DB = AE/EC"], "positive": ["EC"], "ask": "EC"}, thales)
+    assert solved.answer["values"] == ["6"]
+    apSum = runSolver("progression", {"terms": [1, 4, 7, 10], "ask": "sum", "n": None}, "Find the sum of the first 20 terms of the AP: 1, 4, 7, 10, ...")
+    assert apSum.answer["latex"] == "590"
+
+
+def testTheNatureOfTheRootsIsWorkedOutLikeACbseAnswer() -> None:
+    from app.agents.understand import runSolver
+
+    solved = runSolver("property", {"check": "compare", "value": "4^2 - 4(2)(3)", "other": 0}, "Find the nature of the roots of 2x² − 4x + 3 = 0.")
+    assert [step["latex"] for step in solved.steps] == [
+        "D = b^2 - 4ac", "a = 2, \\quad b = -4, \\quad c = 3", "D = (-4)^2 - 4 \\times 2 \\times 3 = 16 - 24 = -8", "D < 0",
+    ]  # fmt: skip

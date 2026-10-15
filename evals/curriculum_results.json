@@ -12,7 +12,7 @@
   "status": "solved",
   "got": "100",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 0.9,
   "calls": 2
  },
  {
@@ -28,7 +28,7 @@
   "status": "solved",
   "got": "100",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 0.7,
   "calls": 2
  },
  {
@@ -45,7 +45,7 @@
   "status": "solved",
   "got": "x = 55",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 0.9,
   "calls": 2
  },
  {
@@ -62,7 +62,7 @@
   "status": "solved",
   "got": "x = 144",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 0.9,
   "calls": 2
  },
  {
@@ -78,7 +78,7 @@
   "status": "needs_clarification",
   "got": "[needs_clarification] The question does not seem to give all the numbers needed (I would have to guess 10001). Please take a photo of the whole question.",
   "trust": "-",
-  "seconds": 0.0,
+  "seconds": 1.8,
   "calls": 2
  },
  {
@@ -94,7 +94,7 @@
   "status": "solved",
   "got": "7",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.9,
   "calls": 1
  },
  {
@@ -110,7 +110,7 @@
   "status": "solved",
   "got": "12",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.4,
   "calls": 1
  },
  {
@@ -126,7 +126,7 @@
   "status": "solved",
   "got": "60",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.6,
   "calls": 1
  },
  {
@@ -143,7 +143,7 @@
   "status": "solved",
   "got": "\\text{no}",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.5,
   "calls": 1
  },
  {
@@ -159,7 +159,7 @@
   "status": "solved",
   "got": "40",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.5,
   "calls": 2
  },
  {
@@ -178,7 +178,7 @@
   "status": "solved",
   "got": "x = 9",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.8,
   "calls": 2
  },
  {
@@ -194,7 +194,7 @@
   "status": "solved",
   "got": "\\frac{17}{12}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.9,
   "calls": 2
  },
  {
@@ -210,7 +210,7 @@
   "status": "solved",
   "got": "\\frac{11}{24}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 2.3,
   "calls": 2
  },
  {
@@ -226,7 +226,7 @@
   "status": "solved",
   "got": "0",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 0.8,
   "calls": 2
  },
  {
@@ -242,7 +242,7 @@
   "status": "solved",
   "got": "5",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 0.8,
   "calls": 2
  },
  {
@@ -256,11 +256,11 @@
    "status:unsupported"
   ],
   "outcome": "pass",
-  "status": "unsupported",
-  "got": "[unsupported] I understood the question, but I can't check This is a conceptual geometry question about the properties of a regular polygon, which does not fit into the calculation-based families (equations, mensuration, etc.). yet. Calculation, equation and formula questions work best.",
-  "trust": "-",
-  "seconds": 0.0,
-  "calls": 1
+  "status": "solved",
+  "got": "6",
+  "trust": "ai_agreement",
+  "seconds": 1.8,
+  "calls": 2
  },
  {
   "class": 6,
@@ -273,9 +273,9 @@
   ],
   "outcome": "pass",
   "status": "unsupported",
-  "got": "[unsupported] I understood the question, but I can't check Geometric construction yet. Calculation, equation and formula questions work best.",
+  "got": "[unsupported] I understood the question, but I can't check geometric construction yet. Calculation, equation and formula questions work best.",
   "trust": "-",
-  "seconds": 0.0,
+  "seconds": 1.7,
   "calls": 1
  },
  {
@@ -289,9 +289,9 @@
   ],
   "outcome": "unnecessary refusal",
   "status": "needs_clarification",
-  "got": "[needs_clarification] The question does not seem to give all the numbers needed (I would have to guess 304500000). Please take a photo of the whole question.",
+  "got": "[needs_clarification] The question does not seem to give all the numbers needed (I would have to guess 34500000). Please take a photo of the whole question.",
   "trust": "-",
-  "seconds": 0.0,
+  "seconds": 1.3,
   "calls": 2
  },
  {
@@ -307,7 +307,7 @@
   "status": "solved",
   "got": "21",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.7,
   "calls": 2
  },
  {
@@ -323,7 +323,7 @@
   "status": "solved",
   "got": "12.27",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.9,
   "calls": 2
  },
  {
@@ -339,7 +339,7 @@
   "status": "solved",
   "got": "1",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.7,
   "calls": 2
  },
  {
@@ -355,7 +355,7 @@
   "status": "solved",
   "got": "14",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.3,
   "calls": 2
  },
  {
@@ -371,7 +371,7 @@
   "status": "solved",
   "got": "3 x + 4 y",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.9,
   "calls": 2
  },
  {
@@ -386,8 +386,8 @@
   "outcome": "pass",
   "status": "solved",
   "got": "65",
-  "trust": "verified",
-  "seconds": 0.0,
+  "trust": "ai_agreement",
+  "seconds": 1.7,
   "calls": 2
  },
  {
@@ -403,7 +403,7 @@
   "status": "solved",
   "got": "x = 70",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.1,
   "calls": 2
  },
  {
@@ -419,7 +419,7 @@
   "status": "solved",
   "got": "80",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.0,
   "calls": 2
  },
  {
@@ -435,7 +435,7 @@
   "status": "solved",
   "got": "30",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.9,
   "calls": 2
  },
  {
@@ -451,7 +451,7 @@
   "status": "solved",
   "got": "6",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.5,
   "calls": 2
  },
  {
@@ -466,9 +466,9 @@
   ],
   "outcome": "pass",
   "status": "unsupported",
-  "got": "[unsupported] I understood the question, but I can't check Congruence rule identification question is not supported by standard families. yet. Calculation, equation and formula questions work best.",
+  "got": "[unsupported] I understood the question, but I can't check Congruence rule identification based on side-side-side criterion cannot be represented as an equation, expression, or numerical property. yet. Calculation, equation and formula questions work best.",
   "trust": "-",
-  "seconds": 0.0,
+  "seconds": 3.5,
   "calls": 2
  },
  {
@@ -484,7 +484,7 @@
   "status": "solved",
   "got": "-14",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.2,
   "calls": 2
  },
  {
@@ -500,7 +500,7 @@
   "status": "solved",
   "got": "12",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.2,
   "calls": 1
  },
  {
@@ -517,7 +517,7 @@
   "status": "solved",
   "got": "26",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.8,
   "calls": 2
  },
  {
@@ -550,7 +550,7 @@
   "status": "solved",
   "got": "x = 6",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.3,
   "calls": 2
  },
  {
@@ -564,9 +564,9 @@
   ],
   "outcome": "pass",
   "status": "unsupported",
-  "got": "[unsupported] I understood the question, but I can't check geometric construction yet. Calculation, equation and formula questions work best.",
+  "got": "[unsupported] I understood the question, but I can't check This is a geometric construction question, which cannot be answered by calculation. yet. Calculation, equation and formula questions work best.",
   "trust": "-",
-  "seconds": 0.0,
+  "seconds": 1.7,
   "calls": 1
  },
  {
@@ -582,7 +582,7 @@
   "status": "solved",
   "got": "42",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 0.8,
   "calls": 2
  },
  {
@@ -598,7 +598,7 @@
   "status": "solved",
   "got": "14",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 0.7,
   "calls": 2
  },
  {
@@ -614,7 +614,7 @@
   "status": "solved",
   "got": "25",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.0,
   "calls": 1
  },
  {
@@ -630,7 +630,7 @@
   "status": "solved",
   "got": "1",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.9,
   "calls": 2
  },
  {
@@ -646,7 +646,7 @@
   "status": "solved",
   "got": "0.00045",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.8,
   "calls": 2
  },
  {
@@ -662,7 +662,7 @@
   "status": "solved",
   "got": "\\frac{3}{8}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.1,
   "calls": 2
  },
  {
@@ -678,7 +678,7 @@
   "status": "solved",
   "got": "x = 120",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.3,
   "calls": 2
  },
  {
@@ -694,7 +694,7 @@
   "status": "solved",
   "got": "40",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.4,
   "calls": 2
  },
  {
@@ -711,7 +711,7 @@
   "status": "solved",
   "got": "\\text{yes}",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.5,
   "calls": 1
  },
  {
@@ -727,7 +727,7 @@
   "status": "solved",
   "got": "2 x^{2} - 7 x - 15",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.6,
   "calls": 2
  },
  {
@@ -743,7 +743,7 @@
   "status": "solved",
   "got": "9991",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.6,
   "calls": 2
  },
  {
@@ -759,7 +759,7 @@
   "status": "solved",
   "got": "105",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.7,
   "calls": 2
  },
  {
@@ -775,7 +775,7 @@
   "status": "solved",
   "got": "750",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 0.8,
   "calls": 2
  },
  {
@@ -791,7 +791,7 @@
   "status": "solved",
   "got": "45",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 0.8,
   "calls": 2
  },
  {
@@ -807,7 +807,7 @@
   "status": "solved",
   "got": "680",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.5,
   "calls": 2
  },
  {
@@ -823,7 +823,7 @@
   "status": "solved",
   "got": "2100",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.5,
   "calls": 1
  },
  {
@@ -839,7 +839,7 @@
   "status": "solved",
   "got": "25",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.5,
   "calls": 2
  },
  {
@@ -855,8 +855,8 @@
   "status": "solved",
   "got": "x = 15",
   "trust": "verified",
-  "seconds": 0.1,
-  "calls": 3
+  "seconds": 6.0,
+  "calls": 5
  },
  {
   "class": 8,
@@ -871,7 +871,7 @@
   "status": "solved",
   "got": "x = 5",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.4,
   "calls": 2
  },
  {
@@ -887,7 +887,7 @@
   "status": "solved",
   "got": "9",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.4,
   "calls": 2
  },
  {
@@ -903,7 +903,7 @@
   "status": "solved",
   "got": "18",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 2.2,
   "calls": 1
  },
  {
@@ -919,7 +919,7 @@
   "status": "solved",
   "got": "7",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.4,
   "calls": 1
  },
  {
@@ -967,7 +967,7 @@
   "status": "solved",
   "got": "32",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 0.9,
   "calls": 1
  },
  {
@@ -983,7 +983,7 @@
   "status": "solved",
   "got": "96",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.8,
   "calls": 1
  },
  {
@@ -999,7 +999,7 @@
   "status": "solved",
   "got": "10",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 0.7,
   "calls": 1
  },
  {
@@ -1017,7 +1017,7 @@
   "status": "solved",
   "got": "\\text{second quadrant}",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.7,
   "calls": 1
  },
  {
@@ -1033,7 +1033,7 @@
   "status": "solved",
   "got": "x = 2",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.6,
   "calls": 2
  },
  {
@@ -1049,7 +1049,7 @@
   "status": "solved",
   "got": "-1",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.6,
   "calls": 2
  },
  {
@@ -1065,7 +1065,7 @@
   "status": "solved",
   "got": "\\frac{\\sqrt{3} + \\sqrt{5}}{2}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.6,
   "calls": 2
  },
  {
@@ -1081,7 +1081,7 @@
   "status": "solved",
   "got": "\\frac{4}{11}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.7,
   "calls": 2
  },
  {
@@ -1097,7 +1097,7 @@
   "status": "solved",
   "got": "7",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.7,
   "calls": 2
  },
  {
@@ -1113,7 +1113,7 @@
   "status": "solved",
   "got": "(3 x - 4 y) (3 x + 4 y)",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.6,
   "calls": 2
  },
  {
@@ -1129,7 +1129,7 @@
   "status": "solved",
   "got": "9975",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.7,
   "calls": 2
  },
  {
@@ -1145,7 +1145,7 @@
   "status": "solved",
   "got": "(x + 3) (x^{2} - 3 x + 9)",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.5,
   "calls": 2
  },
  {
@@ -1161,7 +1161,7 @@
   "status": "solved",
   "got": "24",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 0.9,
   "calls": 2
  },
  {
@@ -1177,7 +1177,7 @@
   "status": "solved",
   "got": "84",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 0.8,
   "calls": 1
  },
  {
@@ -1193,7 +1193,7 @@
   "status": "solved",
   "got": "\\frac{1}{3}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 2.2,
   "calls": 2
  },
  {
@@ -1209,7 +1209,7 @@
   "status": "solved",
   "got": "-35",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.8,
   "calls": 1
  },
  {
@@ -1223,9 +1223,9 @@
   ],
   "outcome": "pass",
   "status": "solved",
-  "got": "x = 110",
+  "got": "110",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.5,
   "calls": 2
  },
  {
@@ -1242,7 +1242,7 @@
   "status": "solved",
   "got": "7",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 2.4,
   "calls": 2
  },
  {
@@ -1258,7 +1258,7 @@
   "status": "solved",
   "got": "\\frac{539}{3}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.8,
   "calls": 1
  },
  {
@@ -1274,7 +1274,7 @@
   "status": "solved",
   "got": "220",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.3,
   "calls": 1
  },
  {
@@ -1290,7 +1290,7 @@
   "status": "solved",
   "got": "19",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 2.2,
   "calls": 1
  },
  {
@@ -1306,7 +1306,7 @@
   "status": "solved",
   "got": "4",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.4,
   "calls": 1
  },
  {
@@ -1322,7 +1322,7 @@
   "status": "solved",
   "got": "360",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 0.8,
   "calls": 1
  },
  {
@@ -1338,7 +1338,7 @@
   "status": "unsupported",
   "got": "[unsupported] I understood the question, but I can't check written proofs yet. Calculation, equation and formula questions work best.",
   "trust": "-",
-  "seconds": 0.0,
+  "seconds": 1.0,
   "calls": 1
  },
  {
@@ -1354,8 +1354,8 @@
   "status": "solved",
   "got": "x = -2 \\text{ or } x = 4",
   "trust": "verified",
-  "seconds": 0.1,
-  "calls": 3
+  "seconds": 2.6,
+  "calls": 2
  },
  {
   "class": 10,
@@ -1370,7 +1370,7 @@
   "status": "solved",
   "got": "x^{2} + 3 x + 2",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.3,
   "calls": 2
  },
  {
@@ -1418,7 +1418,7 @@
   "status": "solved",
   "got": "x = 3, y = 5",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 2.0,
   "calls": 2
  },
  {
@@ -1435,7 +1435,7 @@
   "status": "solved",
   "got": "6",
   "trust": "ai_agreement",
-  "seconds": 0.0,
+  "seconds": 4.1,
   "calls": 3
  },
  {
@@ -1499,7 +1499,7 @@
   "status": "solved",
   "got": "\\text{no real roots}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.6,
   "calls": 2
  },
  {
@@ -1517,7 +1517,7 @@
   "status": "solved",
   "got": "x = 17",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 0.9,
   "calls": 2
  },
  {
@@ -1533,7 +1533,7 @@
   "status": "solved",
   "got": "990",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 0.9,
   "calls": 2
  },
  {
@@ -1549,8 +1549,8 @@
   "status": "solved",
   "got": "16",
   "trust": "verified",
-  "seconds": 0.0,
-  "calls": 1
+  "seconds": 1.1,
+  "calls": 2
  },
  {
   "class": 10,
@@ -1565,8 +1565,8 @@
   "status": "solved",
   "got": "178",
   "trust": "verified",
-  "seconds": 0.1,
-  "calls": 2
+  "seconds": 3.8,
+  "calls": 3
  },
  {
   "class": 10,
@@ -1581,7 +1581,7 @@
   "status": "solved",
   "got": "30",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 3.0,
   "calls": 3
  },
  {
@@ -1597,7 +1597,7 @@
   "status": "solved",
   "got": "x = 2",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.7,
   "calls": 2
  },
  {
@@ -1613,7 +1613,7 @@
   "status": "solved",
   "got": "2 \\sqrt{2}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.5,
   "calls": 1
  },
  {
@@ -1629,7 +1629,7 @@
   "status": "solved",
   "got": "x = 1, y = 3",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.4,
   "calls": 1
  },
  {
@@ -1645,7 +1645,7 @@
   "status": "solved",
   "got": "1",
   "trust": "verified",
-  "seconds": 0.2,
+  "seconds": 1.8,
   "calls": 2
  },
  {
@@ -1661,7 +1661,7 @@
   "status": "solved",
   "got": "\\frac{4}{5}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.6,
   "calls": 2
  },
  {
@@ -1675,9 +1675,9 @@
   ],
   "outcome": "pass",
   "status": "solved",
-  "got": "(1 - \\cos^2 A) \\sec^2 A = \\tan^2 A",
+  "got": "(1 - \\cos^{2}A) \\sec^{2}A = \\tan^{2}A",
   "trust": "verified",
-  "seconds": 0.3,
+  "seconds": 2.4,
   "calls": 1
  },
  {
@@ -1693,7 +1693,7 @@
   "status": "solved",
   "got": "h = 10 \\sqrt{3}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.1,
   "calls": 2
  },
  {
@@ -1709,7 +1709,7 @@
   "status": "solved",
   "got": "r = 3",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.0,
   "calls": 2
  },
  {
@@ -1725,7 +1725,7 @@
   "status": "solved",
   "got": "\\frac{471}{25}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 2.2,
   "calls": 1
  },
  {
@@ -1741,7 +1741,7 @@
   "status": "solved",
   "got": "1540",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.8,
   "calls": 1
  },
  {
@@ -1757,7 +1757,7 @@
   "status": "solved",
   "got": "4158",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.9,
   "calls": 1
  },
  {
@@ -1773,7 +1773,7 @@
   "status": "solved",
   "got": "27",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 16.9,
   "calls": 1
  },
  {
@@ -1789,7 +1789,7 @@
   "status": "solved",
   "got": "28",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.4,
   "calls": 1
  },
  {
@@ -1805,7 +1805,7 @@
   "status": "solved",
   "got": "\\frac{3}{8}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 0.8,
   "calls": 2
  },
  {
@@ -1821,7 +1821,7 @@
   "status": "solved",
   "got": "\\frac{3}{4}",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.9,
   "calls": 2
  },
  {
@@ -1838,7 +1838,7 @@
   "status": "solved",
   "got": "x = 5",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 1.5,
   "calls": 2
  },
  {
@@ -1854,7 +1854,7 @@
   "status": "solved",
   "got": "39, 210",
   "trust": "verified",
-  "seconds": 0.0,
+  "seconds": 2.2,
   "calls": 1
  },
  {
@@ -1869,9 +1869,9 @@
   ],
   "outcome": "pass",
   "status": "needs_clarification",
-  "got": "[needs_clarification] Something is missing: The right-hand side of the equation is missing (e.g., $2x + 3 = 7$).",
+  "got": "[needs_clarification] Something is missing: The right-hand side of the equation is missing.",
   "trust": "-",
-  "seconds": 0.0,
+  "seconds": 1.4,
   "calls": 1
  },
  {
@@ -1885,9 +1885,9 @@
   ],
   "outcome": "pass",
   "status": "needs_clarification",
-  "got": "[needs_clarification] Something is missing: The radius or diameter of the circle is missing.",
+  "got": "[needs_clarification] Something is missing: Radius or diameter of the circle",
   "trust": "-",
-  "seconds": 0.0,
+  "seconds": 1.6,
   "calls": 1
  },
  {
@@ -1920,7 +1920,7 @@
   "status": "solved",
   "got": "x = 8",
   "trust": "verified",
-  "seconds": 0.1,
+  "seconds": 1.5,
   "calls": 2
  },
  {
@@ -1936,7 +1936,7 @@
   "status": "not_maths",
   "got": "[not_maths] I only check Class 6–10 maths questions. Try a maths question!",
   "trust": "-",
-  "seconds": 0.0,
+  "seconds": 1.3,
   "calls": 1
  },
  {
@@ -1952,7 +1952,7 @@
   "status": "not_maths",
   "got": "[not_maths] This looks like maths beyond Class 10. For now I check Class 6–10 questions.",
   "trust": "-",
-  "seconds": 0.0,
+  "seconds": 1.5,
   "calls": 1
  }
 ]

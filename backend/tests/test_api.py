@@ -324,3 +324,18 @@ def testTheLessonIsPreparedWhileTheStudentReadsTheRedPen(client: TestClient, ai:
     board = client.get(f"/api/checks/{checkId}/visual", params={"language": "hinglish"}).json()
     assert board == prepared and len(ai.calls) == callsAfterPreparing  # served from the background work, no new AI call
     assert client.post("/api/tutor", json={"check_id": checkId, "language": "hinglish"}).status_code == 201
+
+
+def testPracticeIsNeverTheSameSumWrittenSlightlyDifferently() -> None:
+    # Live, 'Find the distance of the point P(5, 12) from the origin (0, 0).' got the bank's '... (5, 12) from the
+    # origin.' as its "new" practice question: the extra 0 made the numbers look different.
+    from types import SimpleNamespace
+
+    from app.api.students import isSameSum
+
+    answer = {"type": "expression", "latex": "13"}
+    photo = SimpleNamespace(text="Find the distance of the point $P(5, 12)$ from the origin $(0, 0)$.", answer=answer)
+    bank = SimpleNamespace(text="Find the distance of the point (5, 12) from the origin.", answer=answer)
+    other = SimpleNamespace(text="Find the distance between the points (6, 4) and (1, −8).", answer=answer)
+    assert isSameSum(bank, photo)  # type: ignore[arg-type]
+    assert not isSameSum(other, photo)  # type: ignore[arg-type]  # same answer, a different sum: real practice
